@@ -1,0 +1,458 @@
+/* ==========================================================
+   Gambacua - Categorías de Productos (productos.css)
+   Tarjetas con los colores de marca (Pale Ice Blue & Navy)
+   Diseño de la imagen de referencia: centrado y botón esquinero
+   ========================================================== */
+
+.product-categories-section {
+  padding-block: 54px 84px;
+}
+
+.product-categories-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.product-categories-heading h2 {
+  color: var(--navy);
+  font-size: clamp(32px, 4vw, 48px);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.product-categories-heading p {
+  max-width: 480px;
+  margin: 6px 0 0;
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ----------------------------------------------------------
+   Controles del Carrusel (Móvil / Tablet)
+   ---------------------------------------------------------- */
+.categories-carousel-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cat-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  color: var(--navy);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px -2px rgba(13, 73, 100, 0.08);
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms var(--ease-brand), box-shadow 180ms ease;
+}
+
+.cat-nav-btn:hover {
+  background: var(--navy);
+  color: #ffffff;
+  border-color: var(--navy);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px -4px rgba(13, 73, 100, 0.2);
+}
+
+.cat-nav-btn:active {
+  transform: scale(0.95);
+}
+
+.cat-nav-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ----------------------------------------------------------
+   Pista del Carrusel (Track)
+   En desktop: 2 columnas completas y balanceadas
+   En móvil: desplazamiento horizontal fluido con snap
+   ---------------------------------------------------------- */
+.categories-carousel-track {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  padding: 8px 2px 20px 2px;
+}
+
+/* ----------------------------------------------------------
+   Tarjetas con Estilo de Referencia + Colores de la Página
+   ---------------------------------------------------------- */
+.cat-brand-card {
+  height: 450px;
+  border-radius: 28px;
+  padding: 34px 28px 26px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  scroll-snap-align: start;
+  transition: transform 260ms var(--ease-brand), box-shadow 260ms var(--ease-brand), border-color 220ms ease, background-color 220ms ease;
+}
+
+.cat-brand-card:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 4px;
+}
+
+/* Cabecera de la Tarjeta */
+.cat-card-header {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cat-card-title {
+  font-size: clamp(28px, 2.6vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.cat-card-sub {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Centro de la Tarjeta: Objeto 3D Flotante */
+.cat-card-media {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.cat-card-media img {
+  width: auto;
+  max-width: 330px;
+  max-height: 240px;
+  object-fit: contain;
+  transition: transform 280ms var(--ease-brand);
+}
+
+.cat-brand-card:hover .cat-card-media img {
+  transform: scale(1.07) translateY(-6px);
+}
+
+/* ----------------------------------------------------------
+   1. Tarjeta INGREDIENTES (Color Pale Ice Blue)
+   ---------------------------------------------------------- */
+.cat-card-ingredientes {
+  background-color: #e8f2f5;
+  border: 1px solid #d0e2e8;
+  box-shadow: 0 14px 34px -8px rgba(13, 73, 100, 0.12);
+}
+
+.cat-card-ingredientes .cat-card-title {
+  color: var(--navy);
+}
+
+.cat-card-ingredientes .cat-card-sub {
+  color: #55727e;
+}
+
+.cat-card-ingredientes .cat-card-media img {
+  filter: drop-shadow(0 16px 22px rgba(13, 73, 100, 0.18));
+}
+
+.cat-card-ingredientes:hover {
+  background-color: #deedf1;
+  border-color: #b7d6df;
+  box-shadow: 0 24px 48px -10px rgba(13, 73, 100, 0.22);
+  transform: translateY(-6px);
+}
+
+/* Bolsillo esquinero de Ingredientes */
+.cat-card-ingredientes .cat-card-corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 68px;
+  height: 68px;
+  background: #d6e7ec;
+  border-top-left-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: background-color 220ms ease;
+}
+
+.cat-card-ingredientes .cat-card-corner::before {
+  content: '';
+  position: absolute;
+  top: -18px;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-bottom-right-radius: 18px;
+  box-shadow: 6px 6px 0 6px #d6e7ec;
+  pointer-events: none;
+  transition: box-shadow 220ms ease;
+}
+
+.cat-card-ingredientes .cat-card-corner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -18px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-bottom-right-radius: 18px;
+  box-shadow: 6px 6px 0 6px #d6e7ec;
+  pointer-events: none;
+  transition: box-shadow 220ms ease;
+}
+
+.cat-card-ingredientes:hover .cat-card-corner {
+  background: #cde1e7;
+}
+
+.cat-card-ingredientes:hover .cat-card-corner::before,
+.cat-card-ingredientes:hover .cat-card-corner::after {
+  box-shadow: 6px 6px 0 6px #cde1e7;
+}
+
+.cat-card-ingredientes .cat-card-circle-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 220ms ease, transform 220ms var(--ease-brand);
+}
+
+.cat-card-ingredientes:hover .cat-card-circle-btn {
+  background: var(--teal);
+  transform: scale(1.08);
+}
+
+/* ----------------------------------------------------------
+   2. Tarjeta INOCUIDAD (Color Deep Navy)
+   ---------------------------------------------------------- */
+.cat-card-inocuidad {
+  background-color: var(--navy);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 16px 38px -8px rgba(13, 73, 100, 0.4);
+}
+
+.cat-card-inocuidad .cat-card-title {
+  color: #ffffff;
+}
+
+.cat-card-inocuidad .cat-card-sub {
+  color: #8fd3df;
+}
+
+.cat-card-inocuidad .cat-card-media img {
+  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.35));
+}
+
+.cat-card-inocuidad:hover {
+  background-color: #093c52;
+  border-color: rgba(95, 194, 209, 0.4);
+  box-shadow: 0 26px 54px -10px rgba(13, 73, 100, 0.6);
+  transform: translateY(-6px);
+}
+
+/* Bolsillo esquinero de Inocuidad */
+.cat-card-inocuidad .cat-card-corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 68px;
+  height: 68px;
+  background: #083447;
+  border-top-left-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: background-color 220ms ease;
+}
+
+.cat-card-inocuidad .cat-card-corner::before {
+  content: '';
+  position: absolute;
+  top: -18px;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-bottom-right-radius: 18px;
+  box-shadow: 6px 6px 0 6px #083447;
+  pointer-events: none;
+  transition: box-shadow 220ms ease;
+}
+
+.cat-card-inocuidad .cat-card-corner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -18px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-bottom-right-radius: 18px;
+  box-shadow: 6px 6px 0 6px #083447;
+  pointer-events: none;
+  transition: box-shadow 220ms ease;
+}
+
+.cat-card-inocuidad:hover .cat-card-corner {
+  background: #062837;
+}
+
+.cat-card-inocuidad:hover .cat-card-corner::before,
+.cat-card-inocuidad:hover .cat-card-corner::after {
+  box-shadow: 6px 6px 0 6px #062837;
+}
+
+.cat-card-inocuidad .cat-card-circle-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #17607a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 220ms ease, transform 220ms var(--ease-brand), color 220ms ease;
+}
+
+.cat-card-inocuidad:hover .cat-card-circle-btn {
+  background: #5fc2d1;
+  color: var(--navy);
+  transform: scale(1.08);
+}
+
+/* Flecha diagonal */
+.cat-card-circle-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.2;
+  transition: transform 220ms var(--ease-brand);
+}
+
+.cat-brand-card:hover .cat-card-circle-btn svg {
+  transform: translate(2px, -2px);
+}
+
+/* Indicadores de Puntos */
+.categories-carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.cat-dot {
+  width: 26px;
+  height: 8px;
+  border-radius: 4px;
+  background: #cbdfe5;
+  cursor: pointer;
+  transform: scaleX(.31);
+  transition: transform 220ms var(--ease-brand), background-color 220ms ease;
+  border: 0;
+  padding: 0;
+}
+
+.cat-dot.is-active {
+  transform: scaleX(1);
+  background: var(--navy);
+}
+
+/* ----------------------------------------------------------
+   Responsive Móvil y Tablet: Comportamiento de Carrusel Deslizable
+   ---------------------------------------------------------- */
+@media (min-width: 769px) {
+  .categories-carousel-nav {
+    display: none;
+  }
+  .categories-carousel-dots {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-categories-section {
+    padding-block: 38px 56px;
+  }
+  .product-categories-heading {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .categories-carousel-nav {
+    display: flex;
+  }
+  .categories-carousel-dots {
+    display: flex;
+  }
+  .categories-carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 16px;
+    padding-bottom: 16px;
+  }
+  .categories-carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+  .cat-brand-card {
+    flex: 0 0 calc(100% - 24px);
+    max-width: 360px;
+    height: 405px;
+    padding: 28px 20px 20px 20px;
+  }
+  .cat-card-title {
+    font-size: 26px;
+  }
+  .cat-card-media {
+    padding: 6px 10px 14px;
+  }
+  .cat-card-media img {
+    max-width: 230px;
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-categories-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .cat-brand-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,457 @@
+/* ==========================================================
+   Gambacua - Contacto (contacto.php)
+   Formulario de atención comercial, teléfono y mapa de sede
+   ========================================================== */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 80px;
+  padding-bottom: 90px;
+}
+
+.contact-layout h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-layout p {
+  font-size: 14px;
+}
+
+.contact-phone {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 22px;
+  color: var(--navy);
+  min-height: 54px;
+  font-weight: 700;
+}
+
+.contact-phone:hover {
+  text-decoration: underline;
+}
+
+.address-block {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: none;
+}
+
+.address-block h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.address-block address {
+  font-style: normal;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.address-block p {
+  margin-top: 15px;
+}
+
+/* ----------------------------------------------------------
+   Formulario de Contacto en Cuadrícula
+   ---------------------------------------------------------- */
+.contact-form-section {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 28px;
+  padding-bottom: 0;
+  margin-bottom: 48px;
+  border-bottom: 0;
+  align-items: stretch;
+}
+
+.contact-form {
+  background: var(--pale);
+  padding: 32px;
+  min-width: 0;
+}
+
+.form-hint {
+  font-size: 11px;
+  margin-bottom: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 20px;
+}
+
+.form-field {
+  min-width: 0;
+}
+
+.form-field-wide {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-field label span {
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid #90aab4;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  border-radius: 0;
+  padding: 12px;
+  min-height: 48px;
+  caret-color: var(--navy);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 145px;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.form-field [aria-invalid=true] {
+  border-color: #a43131;
+}
+
+.field-error {
+  display: block;
+  color: #962727;
+  font-size: 11px;
+  margin-top: 7px;
+}
+
+.form-notice {
+  background: #fff3e7;
+  color: #713c13;
+  padding: 16px;
+  margin-bottom: 22px;
+  font-size: 13px;
+}
+
+.form-success {
+  background: #dbeee6;
+  color: #225139;
+}
+
+.form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 26px;
+}
+
+.form-submit p {
+  font-size: 10px;
+  max-width: 200px;
+  margin: 0;
+}
+
+.form-submit button {
+  border: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.form-submit button:disabled {
+  opacity: .65;
+  cursor: wait;
+  transform: none;
+}
+
+.form-trap {
+  display: none;
+}
+
+/* ----------------------------------------------------------
+   Mapa de Contacto
+   ---------------------------------------------------------- */
+.contact-form-map {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.contact-form-map iframe {
+  flex: 1;
+  min-height: 430px;
+  border: 0;
+}
+
+.map-caption {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 20px 22px;
+}
+
+.map-caption > svg {
+  margin-top: 2px;
+}
+
+.map-caption strong,
+.map-caption span {
+  display: block;
+}
+
+.map-caption strong {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.map-caption span {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.map-caption a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  min-height: 44px;
+  margin-top: 5px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.map-caption a svg {
+  width: 14px;
+  height: 14px;
+}
+
+.map-panel {
+  background: var(--pale);
+  align-self: start;
+}
+
+.map-panel iframe {
+  width: 100%;
+  height: 415px;
+  display: block;
+  border: 0;
+  background: #e3eef0;
+}
+
+.map-panel > p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* ----------------------------------------------------------
+   Media Queries Contacto
+   ---------------------------------------------------------- */
+@media (max-width: 1000px) {
+  .contact-form-section {
+    gap: 22px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-form {
+    padding: 24px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-submit {
+    align-items: start;
+    flex-direction: column;
+  }
+  .contact-form-map iframe {
+    min-height: 510px;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-form-section {
+    grid-template-columns: 1fr;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+  .contact-form {
+    padding: 24px 20px;
+  }
+  .form-grid {
+    gap: 20px;
+  }
+  .form-submit {
+    gap: 18px;
+  }
+  .form-submit button {
+    width: 100%;
+  }
+  .form-submit p {
+    max-width: none;
+  }
+  .contact-form-map iframe {
+    min-height: 320px;
+  }
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-bottom: 45px;
+  }
+  .contact-phone {
+    font-size: 18px;
+  }
+}
+
+/* ----------------------------------------------------------
+   Sección de Información Directa (Horario, Correo, Ubicación)
+   ---------------------------------------------------------- */
+.contact-info-section {
+  padding-bottom: 84px;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.contact-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 26px 24px;
+  background: #ffffff;
+  border: 0;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  box-shadow: 0 4px 18px -4px rgba(13, 73, 100, 0.07), 0 1px 3px rgba(13, 73, 100, 0.03);
+  transition: transform 180ms var(--ease-brand), box-shadow 180ms var(--ease-brand);
+}
+
+.contact-info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -6px rgba(13, 73, 100, 0.14);
+}
+
+.contact-info-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(46, 151, 174, 0.12);
+  color: #147086;
+  border: 0;
+  clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 7px 100%, 0 calc(100% - 7px));
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.contact-info-card:hover .contact-info-icon {
+  background: var(--navy);
+  color: #ffffff;
+}
+
+.contact-info-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-info-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.contact-info-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #527a89;
+  margin-bottom: 6px;
+}
+
+.contact-info-value {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.contact-info-link {
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+  text-decoration: none;
+  margin-bottom: 4px;
+  word-break: break-all;
+  transition: color 160ms ease;
+}
+
+.contact-info-link:hover {
+  color: var(--teal);
+  text-decoration: underline;
+}
+
+.contact-info-note {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.contact-info-address {
+  font-style: normal;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.contact-info-address span {
+  display: block;
+  margin-top: 3px;
+  color: #4b7484;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-info-section {
+    padding-bottom: 50px;
+  }
+  .contact-info-card {
+    padding: 20px 18px;
+  }
+}

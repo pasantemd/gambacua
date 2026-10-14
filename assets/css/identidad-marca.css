@@ -1,0 +1,661 @@
+/* Lenguaje compartido derivado del isotipo de Gambacua. */
+:root {
+  --brand-cut: 18px;
+  --brand-angle-mark: linear-gradient(110deg,
+    var(--teal) 0 34%,
+    transparent 34% 45%,
+    var(--navy) 45% 79%,
+    transparent 79% 100%);
+  --brand-angle-mark-inverse: linear-gradient(110deg,
+    #78cad7 0 34%,
+    transparent 34% 45%,
+    #ffffff 45% 79%,
+    transparent 79% 100%);
+  --brand-ribbon-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='120 0 31 37.3'%3E%3Cg fill='%2378cad7' fill-opacity='.17'%3E%3Cpath d='M136.37 21.23c.2-.02.4-.03.6-.05.36-.03.67-.25.82-.58l4.07-9.36 1.66-3.82h.05l5.39 12.82c.15.35.48.58.86.59 1.71.05 3.41.15 5.11.28.74.06 1.27-.68.97-1.36l-8.26-18.47c-.16-.35-.5-.58-.89-.58h-6.66c-.38 0-.73.22-.89.57l-8.69 19.12c-.32.7.25 1.46 1.01 1.37 1.61-.2 3.22-.38 4.84-.53z'/%3E%3Cpath d='M126.45 30.38c-.32.06-.59.27-.72.56l-1.86 4.09c-.29.64.18 1.38.89 1.38h5.03c.38 0 .72-.22.88-.56l2.33-4.91c.33-.69-.23-1.48-.99-1.39-1.86.23-3.71.51-5.56.83z'/%3E%3C/g%3E%3C/svg%3E");
+  --brand-ribbon-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='120 0 31 37.3'%3E%3Cg fill='%23004766' fill-opacity='.085'%3E%3Cpath d='M136.37 21.23c.2-.02.4-.03.6-.05.36-.03.67-.25.82-.58l4.07-9.36 1.66-3.82h.05l5.39 12.82c.15.35.48.58.86.59 1.71.05 3.41.15 5.11.28.74.06 1.27-.68.97-1.36l-8.26-18.47c-.16-.35-.5-.58-.89-.58h-6.66c-.38 0-.73.22-.89.57l-8.69 19.12c-.32.7.25 1.46 1.01 1.37 1.61-.2 3.22-.38 4.84-.53z'/%3E%3Cpath d='M126.45 30.38c-.32.06-.59.27-.72.56l-1.86 4.09c-.29.64.18 1.38.89 1.38h5.03c.38 0 .72-.22.88-.56l2.33-4.91c.33-.69-.23-1.48-.99-1.39-1.86.23-3.71.51-5.56.83z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Líneas diagonales institucionales del sistema gráfico de Gambacua. */
+.hero-shell {
+  background-image:
+    var(--brand-ribbon-dark),
+    linear-gradient(135deg, #00364d 0%, var(--navy) 64%, #17617d 100%);
+  background-repeat: no-repeat;
+  background-position: right top, center;
+  background-size: auto 100%, 100% 100%;
+}
+
+.cd-hero-banner,
+.cv-grid,
+.ec-blue-hero,
+.culture-layout,
+.compact-dry-banner,
+.cat-card-inocuidad,
+.cat-card-inocuidad:hover,
+.inocuidad-lines-grid > .is-featured .inocuidad-line-card,
+.page-intro:not(.page-intro-has-cover) {
+  background-image:
+    var(--brand-ribbon-dark),
+    linear-gradient(135deg, #00364d 0%, var(--navy) 62%, #17617d 100%);
+  background-repeat: no-repeat;
+  background-position: right top, center;
+  background-size: auto 100%, 100% 100%;
+}
+
+.cat-card-ingredientes,
+.cat-card-ingredientes:hover {
+  background-image:
+    var(--brand-ribbon-light),
+    linear-gradient(135deg, #f2f8fa 0%, #e8f2f5 64%, #dbe8ed 100%);
+  background-repeat: no-repeat;
+  background-position: right top, center;
+  background-size: auto 100%, 100% 100%;
+}
+
+/* Evita que las diagonales decorativas anteriores dupliquen la A oficial. */
+.hero-shell::before,
+.hero-shell::after,
+.cd-hero-banner::after,
+.compact-dry-banner::after {
+  display: none;
+}
+
+.page-intro:not(.page-intro-has-cover) .page-intro-backdrop .intro-beam {
+  display: none;
+}
+
+.page-intro:not(.page-intro-has-cover) {
+  background-position: right top, center;
+  background-size: auto 100%, 100% 100%;
+}
+
+/* Firma de dos trazos inspirada en la construcción de la A del isotipo. */
+.hero-copy h1,
+.page-intro-title,
+#contenido h2:not(.histamine-product-title-visually-hidden):not(.cd-modal-title):not(.cv-title) {
+  position: relative;
+}
+
+.hero-copy h1::after,
+.page-intro-title::after,
+#contenido h2:not(.histamine-product-title-visually-hidden):not(.cd-modal-title):not(.cv-title)::after {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 5px;
+  margin-top: 15px;
+  background: var(--brand-angle-mark);
+  transform: skewX(-22deg);
+  transform-origin: left center;
+}
+
+.hero-copy h1::after,
+.page-intro-title::after,
+.cd-hero-title::after,
+.ec-blue-title::after {
+  background: var(--brand-angle-mark-inverse);
+}
+
+.timeline-header h2::after,
+.supply-tips-header h2::after,
+.sampling-bags-header h2::after,
+.catalog-special-header h2::after,
+.filtros-header h2::after,
+.dispensadores-header h2::after,
+.culture-minimal-header h2::after {
+  margin-inline: auto;
+}
+
+.team-heading::before {
+  display: none;
+}
+
+/* Superficies principales con el corte de esquina usado en el logo. */
+.ingredient-card,
+.timeline-card,
+.catalog-panel,
+.contact-form,
+.contact-form-map,
+.inocuidad-pillar-card,
+.cat-brand-card {
+  border: 0 !important;
+  border-radius: 0;
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--brand-cut)) 0,
+    100% var(--brand-cut),
+    100% 100%,
+    var(--brand-cut) 100%,
+    0 calc(100% - var(--brand-cut))
+  );
+}
+
+.values article,
+.ingredient-card,
+.timeline-card,
+.catalog-panel,
+.contact-form,
+.contact-form-map,
+.inocuidad-pillar-card,
+.cat-brand-card,
+.compact-benefit-card,
+.step-card,
+.cd-section-tab,
+.cd-plate-card,
+.cv-metric-card,
+.cv-benefit-card,
+.cv-benefit-card-front,
+.cv-benefit-card-back,
+.cv-resource-card,
+.cd-faq-card {
+  border: 0 !important;
+}
+
+.timeline-media-wrap,
+.timeline-media-slot {
+  border-radius: 0;
+}
+
+/* Acento diagonal discreto que une las tarjetas sin añadir ruido. */
+.ingredient-card::after,
+.inocuidad-pillar-card::after,
+.catalog-panel::after,
+.contact-form::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 26px;
+  width: 38px;
+  height: 4px;
+  background: var(--teal);
+  transform: skewX(-24deg);
+  pointer-events: none;
+}
+
+.ingredient-card::after,
+.inocuidad-pillar-card::after,
+.catalog-panel::after,
+.contact-form::after {
+  display: none;
+}
+
+.catalog-panel,
+.contact-form {
+  position: relative;
+}
+
+/* Sistema unificado de botones con los cortes diagonales de la marca. */
+:is(
+  .button,
+  nav > a:last-child,
+  .section-rail a,
+  .cd-filter-btn,
+  .cd-empty-reset-btn,
+  .cd-btn-cut,
+  .ec-category-nav-btn,
+  .ec-documento,
+  .inocuidad-subnav-card,
+  .compact-dry-btn,
+  .inocuidad-card-btn,
+  .inocuidad-featured-btn,
+  .cd-btn-medios,
+  .cd-btn-vision,
+  .cd-cta-card-btn,
+  .catalog-book__pdf,
+  .catalog-book__download,
+  .catalog-book__button,
+  .catalog-book__text-button
+) {
+  --control-cut: 11px;
+  border-radius: 0 !important;
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--control-cut)) 0,
+    100% var(--control-cut),
+    100% 100%,
+    var(--control-cut) 100%,
+    0 calc(100% - var(--control-cut))
+  );
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    filter 180ms ease,
+    transform 180ms var(--ease-brand),
+    box-shadow 180ms var(--ease-brand);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :is(
+    .button,
+    nav > a:last-child,
+    .section-rail a,
+    .cd-filter-btn,
+    .cd-empty-reset-btn,
+    .cd-btn-cut,
+    .ec-category-nav-btn,
+    .ec-documento,
+    .inocuidad-subnav-card,
+    .compact-dry-btn,
+    .inocuidad-card-btn,
+    .inocuidad-featured-btn,
+    .cd-btn-medios,
+    .cd-btn-vision,
+    .cd-cta-card-btn,
+    .catalog-book__pdf,
+    .catalog-book__download,
+    .catalog-book__button,
+    .catalog-book__text-button
+  ):hover {
+    filter: saturate(1.06) brightness(.94);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -12px rgba(0, 47, 68, .5);
+  }
+}
+
+:is(
+  .button,
+  nav > a:last-child,
+  .section-rail a,
+  .cd-filter-btn,
+  .cd-empty-reset-btn,
+  .cd-btn-cut,
+  .ec-category-nav-btn,
+  .ec-documento,
+  .inocuidad-subnav-card,
+  .compact-dry-btn,
+  .inocuidad-card-btn,
+  .inocuidad-featured-btn,
+  .cd-btn-medios,
+  .cd-btn-vision,
+  .cd-cta-card-btn,
+  .catalog-book__pdf,
+  .catalog-book__download,
+  .catalog-book__button,
+  .catalog-book__text-button
+):active {
+  filter: brightness(.88);
+  transform: scale(.98);
+  transition-duration: 70ms;
+}
+
+/* Documentos técnicos: alternancia con los dos azules oficiales. */
+.ec-documentos .ec-documento {
+  border: 0 !important;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.ec-documentos .ec-documento:nth-child(odd) {
+  background: var(--navy);
+}
+
+.ec-documentos .ec-documento:nth-child(even) {
+  background: var(--teal);
+}
+
+.ec-documentos .ec-documento :is(strong, small, svg) {
+  color: #ffffff;
+}
+
+.ec-documentos .ec-documento small {
+  opacity: .82;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ec-documentos .ec-documento:hover {
+    border: 0;
+    color: #ffffff;
+    filter: saturate(1.08) brightness(.9);
+  }
+}
+
+@media (max-width: 600px) {
+  :root { --brand-cut: 13px; }
+
+  :is(
+    .button,
+    nav > a:last-child,
+    .section-rail a,
+    .cd-filter-btn,
+    .cd-empty-reset-btn,
+    .cd-btn-cut,
+    .ec-category-nav-btn,
+    .ec-documento,
+    .inocuidad-subnav-card,
+    .compact-dry-btn,
+    .inocuidad-card-btn,
+    .inocuidad-featured-btn,
+    .cd-btn-medios,
+    .cd-btn-vision,
+    .cd-cta-card-btn,
+    .catalog-book__pdf,
+    .catalog-book__download,
+    .catalog-book__button,
+    .catalog-book__text-button
+  ) {
+    --control-cut: 9px;
+  }
+
+  .hero-shell,
+  .cd-hero-banner,
+  .cv-grid,
+  .ec-blue-hero,
+  .culture-layout,
+  .compact-dry-banner,
+  .cat-card-inocuidad,
+  .cat-card-inocuidad:hover,
+  .inocuidad-lines-grid > .is-featured .inocuidad-line-card,
+  .page-intro:not(.page-intro-has-cover) {
+    background-image:
+      var(--brand-ribbon-dark),
+      linear-gradient(135deg, #00364d 0%, var(--navy) 68%, #17617d 100%);
+    background-position: right top, center;
+    background-size: auto 100%, 100% 100%;
+  }
+
+  .cat-card-ingredientes,
+  .cat-card-ingredientes:hover {
+    background-image:
+      var(--brand-ribbon-light),
+      linear-gradient(135deg, #f2f8fa 0%, #e8f2f5 64%, #dbe8ed 100%);
+    background-position: right top, center;
+    background-size: auto 100%, 100% 100%;
+  }
+
+  .section-heading h2::after,
+  .product-categories-heading h2::after,
+  .timeline-header h2::after,
+  .ingredients-catalog-section > .section-heading h2::after,
+  .catalog-content h2::after,
+  .contact-form > h2::after,
+  .legal-pending > h2::after,
+  .cd-catalog-title-row h2::after,
+  .cd-faq-title::after {
+    width: 58px;
+    margin-top: 12px;
+  }
+}
+
+/* Pulido cromático compartido: contraste, profundidad y ritmo de marca. */
+.site-header {
+  border-bottom-color: rgba(0, 71, 102, .12);
+  box-shadow: 0 12px 32px -30px rgba(0, 54, 77, .72);
+}
+
+.page-breadcrumbs-bar {
+  background: transparent;
+  border: none;
+}
+
+.section-rail a {
+  background: var(--surface-strong);
+  box-shadow: inset 0 0 0 1px rgba(0, 71, 102, .045);
+}
+
+.section-rail a.is-active,
+.section-rail a[aria-current="true"],
+.section-rail a[aria-current="location"] {
+  background: linear-gradient(135deg, var(--navy-deep), var(--navy));
+  box-shadow: 0 12px 24px -18px rgba(0, 54, 77, .8);
+}
+
+:is(
+  .values article,
+  .cat-brand-card,
+  .inocuidad-pillar-card,
+  .contact-info-card,
+  .catalog-item
+) {
+  box-shadow: 0 18px 42px -32px rgba(0, 54, 77, .5);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :is(
+    .values article,
+    .cat-brand-card,
+    .inocuidad-pillar-card,
+    .contact-info-card,
+    .catalog-item
+  ):hover {
+    box-shadow: 0 24px 48px -30px rgba(0, 54, 77, .58);
+  }
+}
+
+/* Franja de Contacto Institucional (Contact Strip) */
+.contact-strip {
+  position: relative;
+  background: #eaf4f7;
+  color: var(--navy);
+  padding: 46px 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 76px;
+  border: 0;
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--brand-cut, 20px)) 0,
+    100% var(--brand-cut, 20px),
+    100% 100%,
+    var(--brand-cut, 20px) 100%,
+    0 calc(100% - var(--brand-cut, 20px))
+  );
+  box-shadow: none;
+  filter: none;
+}
+
+.contact-strip > div {
+  max-width: 720px;
+}
+
+.contact-strip h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--navy, #004766);
+  font-size: clamp(24px, 2.4vw, 34px);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.contact-strip h2::after {
+  display: none !important;
+  content: none !important;
+}
+
+.contact-strip p {
+  color: #274754;
+  font-size: 15px;
+  line-height: 1.58;
+  margin: 12px 0 0;
+  max-width: 620px;
+  font-weight: 400;
+}
+
+/* Botón CTA destacado — NUNCA blanco, resalta con fuerte presencia institucional */
+.contact-strip .button,
+.contact-strip .button.button-light {
+  background: linear-gradient(135deg, #004766 0%, #005a80 100%) !important;
+  color: #ffffff !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 15px 28px;
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 0 !important;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  ) !important;
+  filter: drop-shadow(0 8px 18px rgba(0, 54, 77, 0.35));
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+              filter 180ms cubic-bezier(0.16, 1, 0.3, 1),
+              background 180ms ease;
+  cursor: pointer;
+}
+
+.contact-strip .button .icon,
+.contact-strip .button.button-light .icon {
+  width: 14px;
+  height: 14px;
+  stroke: #ffffff;
+  stroke-width: 2.3;
+  fill: none;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-strip .button:hover,
+.contact-strip .button.button-light:hover {
+  background: linear-gradient(135deg, #00364d 0%, #004d6e 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  filter: drop-shadow(0 12px 24px rgba(0, 54, 77, 0.45));
+}
+
+.contact-strip .button:hover .icon,
+.contact-strip .button.button-light:hover .icon {
+  transform: translate(3px, -3px);
+}
+
+.contact-strip .button:active,
+.contact-strip .button.button-light:active {
+  transform: translateY(0);
+  filter: drop-shadow(0 4px 10px rgba(0, 54, 77, 0.3));
+}
+
+.contact-strip .button:focus-visible,
+.contact-strip .button.button-light:focus-visible {
+  outline: 2px solid var(--action, #3097b2);
+  outline-offset: 3px;
+}
+
+.culture-media-table,
+.centrifuge-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.culture-media-table thead th,
+.centrifuge-table thead th {
+  background: var(--navy);
+  color: #fff;
+}
+
+:is(.page-medios-cultivo, .page-filtracion-membrana, .page-materiales-insumos)
+  :is(.culture-media-table, .centrifuge-table) thead th {
+  background: var(--navy);
+  color: #fff;
+}
+
+.culture-media-table tbody tr:nth-child(even),
+.centrifuge-table tbody tr:nth-child(even) {
+  background: #edf5f6;
+}
+
+.culture-media-table tbody tr:nth-child(odd),
+.centrifuge-table tbody tr:nth-child(odd) {
+  background: #fff;
+}
+
+.culture-media-table :is(th, td),
+.centrifuge-table :is(th, td) {
+  border-bottom-color: rgba(0, 71, 102, .1);
+}
+
+.form-field :is(input, textarea, select),
+.cd-search-input {
+  background-color: #fff;
+  border-color: var(--line-strong);
+}
+
+.site-footer {
+  position: relative;
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 64%, #075574 100%);
+  border-top: 3px solid var(--teal);
+}
+
+.footer-column h2 {
+  color: #9ce4ed;
+}
+
+.footer-column a,
+.footer-contact p,
+.footer-bottom {
+  color: #e0f0f3;
+}
+
+.footer-socials a {
+  border-color: rgba(156, 228, 237, .42);
+  background: rgba(255, 255, 255, .025);
+}
+
+@media (max-width: 860px) {
+  .contact-strip {
+    padding: 38px 36px;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 680px) {
+  .contact-strip {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 30px 22px;
+    gap: 22px;
+    margin-bottom: 44px;
+  }
+
+  .contact-strip > div {
+    max-width: 100%;
+  }
+
+  .contact-strip h2 {
+    font-size: clamp(20px, 5.8vw, 25px);
+    line-height: 1.32;
+  }
+
+  .contact-strip p {
+    font-size: 14px;
+    line-height: 1.52;
+    margin-top: 10px;
+  }
+
+  .contact-strip .button,
+  .contact-strip .button.button-light {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 22px;
+    font-size: 14.5px;
+    justify-content: space-between;
+  }
+
+  .contact-strip .compact-contact-actions,
+  .contact-strip > div:not(:first-child) {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-strip .button,
+  .contact-strip .button.button-light,
+  .contact-strip .button .icon,
+  .contact-strip .button.button-light .icon {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+

@@ -1,0 +1,21 @@
+# Configuración local y credenciales
+.env
+.env.*
+!.env.example
+
+# Dependencias y salidas locales
+node_modules/
+/vendor/
+*.log
+*.tmp
+
+# Evidencia de pruebas generada localmente
+tools/screenshots/
+.bug-hunter/
+
+# Editores y sistema operativo
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

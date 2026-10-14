@@ -1,0 +1,235 @@
+.histamine-page {
+  padding-top: 10px;
+  padding-bottom: clamp(48px, 6vw, 84px);
+}
+
+.page-histamina .page-intro-lead {
+  display: none;
+}
+
+.histamine-product {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(280px, .78fr) minmax(0, 1.22fr);
+  gap: clamp(28px, 5vw, 76px);
+  align-items: center;
+  overflow: hidden;
+  min-height: auto;
+  padding: 10px 0 clamp(34px, 5vw, 64px);
+  background: transparent;
+  border: 0;
+  clip-path: none;
+}
+
+.histamine-product-copy {
+  max-width: 470px;
+  animation: histamine-fade-up 420ms var(--ease-brand) both;
+}
+
+.histamine-product-logo {
+  display: block;
+  width: min(100%, 390px);
+  height: auto;
+  margin: 0 0 clamp(24px, 4vw, 36px);
+  transform: translateZ(0);
+  transition: transform 240ms var(--ease-brand), filter 240ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .histamine-product-logo:hover {
+    transform: scale(1.02);
+    filter: drop-shadow(0 4px 12px rgba(0, 71, 102, 0.12));
+  }
+}
+
+.histamine-product-title-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.histamine-product h2 {
+  margin: 0 0 20px;
+  color: var(--navy);
+  font-size: clamp(31px, 4vw, 52px);
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.histamine-product-description {
+  margin: 0 0 clamp(28px, 4vw, 42px);
+  color: var(--ink);
+  font-size: clamp(15px, 1.25vw, 17px);
+  line-height: 1.72;
+}
+
+.histamine-product-details {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.histamine-product-details div {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(110px, .55fr) minmax(0, 1fr);
+  gap: 18px;
+  padding: 17px 18px;
+  background: var(--teal);
+  border: 0;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  transform: translateZ(0);
+  transition: transform 220ms var(--ease-brand), box-shadow 220ms var(--ease-brand);
+  will-change: transform;
+}
+
+.histamine-product-details div::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  background: #fff;
+  clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 9px 100%, 0 calc(100% - 9px));
+  transition: background-color 200ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .histamine-product-details div:hover {
+    transform: translateX(6px);
+    box-shadow: 0 4px 16px -2px rgba(48, 151, 178, 0.24);
+  }
+
+  .histamine-product-details div:hover::before {
+    background: #fdfefe;
+  }
+}
+
+.histamine-product-details div:active {
+  transform: translateX(3px) scale(0.99);
+}
+
+.histamine-product-details dt,
+.histamine-product-details dd {
+  position: relative;
+  margin: 0;
+}
+
+.histamine-product-details dt {
+  color: #527582;
+  font-size: 13px;
+  font-weight: 650;
+  transition: color 200ms ease;
+}
+
+.histamine-product-details dd {
+  color: var(--navy);
+  font-weight: 800;
+  transition: color 200ms ease;
+}
+
+.histamine-product-visual {
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  animation: histamine-fade-up 500ms var(--ease-brand) 70ms both;
+}
+
+.histamine-product-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 24px rgba(0, 45, 63, .14));
+  transform: translateZ(0);
+  transition: transform 340ms var(--ease-brand), filter 340ms ease;
+  animation: histamine-float 5.5s ease-in-out infinite;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .histamine-product-visual:hover img {
+    animation-play-state: paused;
+    transform: translateY(-8px) scale(1.025);
+    filter: drop-shadow(0 30px 32px rgba(0, 45, 63, .22));
+  }
+}
+
+.histamine-product-visual figcaption {
+  margin-top: 10px;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 800;
+  transition: color 200ms ease;
+}
+
+@keyframes histamine-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes histamine-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .histamine-product-copy,
+  .histamine-product-visual,
+  .histamine-product-visual img,
+  .histamine-product-logo,
+  .histamine-product-details div {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .histamine-product {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .histamine-product-copy {
+    max-width: none;
+  }
+
+  .histamine-product-visual {
+    order: -1;
+  }
+
+  .histamine-product-visual img {
+    max-height: 430px;
+  }
+}
+
+@media (max-width: 520px) {
+  .histamine-product {
+    padding: 10px 0 32px;
+  }
+
+  .histamine-product-details div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

@@ -1,0 +1,40 @@
+/* ==========================================================
+   Gambacua - Marco Legal (legal.php)
+   Políticas de privacidad, términos de uso y cookies
+   ========================================================== */
+
+.legal-pending {
+  padding-block: 40px 90px;
+}
+
+.legal-pending h2 {
+  font-size: 26px;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+
+.legal-pending p {
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 720px;
+}
+
+.legal-section-block {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: none;
+}
+
+.legal-section-block h3 {
+  font-size: 20px;
+  color: var(--navy);
+  margin-bottom: 14px;
+}
+
+.legal-section-block ul {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+  padding-left: 20px;
+}

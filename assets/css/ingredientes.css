@@ -1,0 +1,281 @@
+/* ==========================================================
+   Gambacua - Línea de Ingredientes (ingredientes.php)
+   Catálogo de ovoproductos, certificaciones y planta de producción
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   Catálogo de Ovoproductos
+   ---------------------------------------------------------- */
+.ingredients-intro-section {
+  padding-top: 40px;
+}
+
+.ingredients-catalog-section {
+  padding-top: 60px;
+}
+
+.ingredient-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 34px;
+}
+
+.ingredient-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 1px 3px 0 rgba(13, 73, 100, .04), 0 1px 2px -1px rgba(13, 73, 100, .04);
+  transition: transform 220ms var(--ease-brand), box-shadow 220ms var(--ease-brand);
+}
+
+
+.ingredient-card-media {
+  height: 130px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+}
+
+.ingredient-card-media img {
+  max-height: 115px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 220ms var(--ease-brand);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ingredient-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -3px rgba(13, 73, 100, .08), 0 22px 28px -5px rgba(13, 73, 100, .06), 0 1px 3px 0 rgba(13, 73, 100, .04);
+  }
+
+  .ingredient-card:hover .ingredient-card-media img {
+    transform: scale(1.08);
+  }
+}
+
+.ingredient-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  background: var(--pale);
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+
+.ingredient-num {
+  color: var(--teal);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.ingredient-card h3 {
+  color: var(--navy);
+  font-size: 19px;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.ingredient-card p {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+.ingredient-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: none;
+  padding-top: 16px;
+  font-size: 11.5px;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ingredient-specs li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ingredient-specs li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+/* ----------------------------------------------------------
+   Franja de Calidad y Cápsulas
+   ---------------------------------------------------------- */
+.quality-strip {
+  background: var(--pale);
+  padding-block: 65px;
+}
+
+.quality-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.capsule-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.capsule-item {
+  background: #fff;
+  border: 1px solid #b5d4dc;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* ----------------------------------------------------------
+   Certificaciones de Inocuidad y Calidad
+   ---------------------------------------------------------- */
+.certs-strip {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-block: 60px 30px;
+}
+
+.certs-info {
+  max-width: 560px;
+}
+
+.certs-info h3 {
+  color: var(--navy);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.certs-info p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.certs-badges {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.cert-row-img {
+  height: auto;
+  max-height: 56px;
+  width: auto;
+  max-width: 540px;
+  object-fit: contain;
+}
+
+/* ----------------------------------------------------------
+   Banner Planta de Producción
+   ---------------------------------------------------------- */
+.plant-production-banner {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0d4964 url('../images/produccion/bg-planta.webp') center/cover no-repeat;
+  color: #fff;
+  padding: 70px 50px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.plant-production-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(13, 73, 100, 0.15) 0%, rgba(13, 73, 100, 0.45) 30%, rgba(13, 73, 100, 0.88) 60%, rgba(13, 73, 100, 0.97) 100%);
+}
+
+.plant-production-content {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+  margin-left: auto;
+}
+
+.plant-production-content h2 {
+  color: #fff;
+  font-size: clamp(26px, 2.8vw, 38px);
+  margin-bottom: 16px;
+}
+
+.plant-production-content p {
+  color: #d4e9ee;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ----------------------------------------------------------
+   Media Queries Ingredientes
+   ---------------------------------------------------------- */
+@media (max-width: 960px) {
+  .ingredient-grid {
+    grid-template-columns: 1fr;
+  }
+  .quality-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .certs-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 10px 0;
+  }
+  .certs-badges {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .cert-row-img {
+    max-height: 48px;
+    width: auto;
+    max-width: 100%;
+  }
+  .plant-production-banner {
+    padding: 40px 24px;
+  }
+  .plant-production-banner::before {
+    background: linear-gradient(180deg, rgba(13, 73, 100, 0.7) 0%, rgba(13, 73, 100, 0.95) 100%);
+  }
+  .plant-production-content {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}

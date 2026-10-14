@@ -1,0 +1,269 @@
+/* ==========================================================
+   Gambacua - Estilos del Pie de Página (footer.css)
+   Pie de página institucional, enlaces y datos de contacto
+   ========================================================== */
+
+.site-footer {
+  background: var(--navy);
+  color: #fff;
+  padding-top: 65px;
+  border-top: 0;
+}
+
+.site-footer a:hover {
+  color: #9ee5ef;
+}
+
+.site-footer a:focus-visible {
+  outline-color: #9ee5ef;
+}
+
+.footer-row {
+  display: grid;
+  grid-template-columns: 1fr .8fr 1.35fr 1fr;
+  gap: 48px;
+  padding-bottom: 42px;
+  align-items: start;
+}
+
+.footer-identity .footer-brand {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  margin-bottom: 22px;
+}
+
+.footer-brand img {
+  filter: brightness(0) invert(1);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-socials a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #588698;
+  border-radius: 50%;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.footer-socials a:hover {
+  background: #24637b;
+  color: white;
+}
+
+.footer-socials svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-column h2 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #8fdee8;
+  letter-spacing: 0;
+  margin: 3px 0 19px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 12px;
+  line-height: 1.8;
+  gap: 10px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact svg {
+  width: 17px;
+  height: 17px;
+}
+
+.footer-contact address {
+  font-style: normal;
+  margin-top: 8px;
+}
+
+.footer-contact address a {
+  align-items: flex-start;
+}
+
+.footer-contact address svg {
+  margin-top: 4px;
+}
+
+.footer-contact p {
+  font-size: 11px;
+  color: #d3e8ee;
+  margin: 12px 0 0 27px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #42758a;
+  padding-block: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 9px;
+  color: #d3e8ee;
+}
+
+/* ----------------------------------------------------------
+   Media Queries Footer
+   ---------------------------------------------------------- */
+@media (max-width: 1000px) {
+  .footer-row {
+    gap: 25px;
+    grid-template-columns: .9fr .8fr 1.2fr 1fr;
+  }
+  .footer-column a {
+    font-size: 11px;
+  }
+  .footer-identity .footer-brand {
+    width: 150px;
+  }
+}
+
+@media (max-width: 760px) {
+  .footer-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+  .footer-column a {
+    font-size: 12px;
+  }
+  .footer-identity .footer-brand {
+    width: 170px;
+  }
+  .footer-column h2 {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-footer {
+    padding-top: 40px;
+  }
+
+  .footer-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-bottom: 32px;
+    text-align: center;
+  }
+
+  .footer-identity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-identity .footer-brand {
+    width: 170px;
+    margin: 0 auto 18px;
+  }
+
+  .footer-socials {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-column h2 {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .footer-column ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .footer-column a {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-contact a {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-contact address {
+    width: 100%;
+    margin-top: 6px;
+    text-align: center;
+  }
+
+  .footer-contact address a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
+    min-height: auto;
+    padding-block: 4px;
+  }
+
+  .footer-contact address a span {
+    text-align: center;
+  }
+
+  .footer-contact address svg {
+    margin: 0;
+  }
+
+  .footer-contact p {
+    margin: 10px auto 0;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    padding-block: 18px;
+    font-size: 9px;
+  }
+
+  .footer-bottom span {
+    text-align: center;
+  }
+}

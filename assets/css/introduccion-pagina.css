@@ -1,0 +1,316 @@
+/* ==========================================================
+   Gambacua - Introducción de Página y Hero Institucional (page-intro.css)
+   Diseño con ambientación de marca, tipografía clara y sin cuadros
+   ========================================================== */
+
+main > .page-intro {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: none;
+  padding-inline: 0;
+  padding-block: 64px 74px;
+  background: 
+    radial-gradient(ellipse 700px 380px at 85% 25%, rgba(95, 194, 209, 0.16), transparent 70%),
+    radial-gradient(ellipse 500px 320px at 15% 100%, rgba(46, 151, 174, 0.12), transparent 60%),
+    linear-gradient(135deg, #00364d 0%, var(--navy) 55%, #17617d 100%);
+  color: #fff;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
+  border-bottom: 2px solid rgba(95, 194, 209, 0.28);
+}
+
+/* Fondo decorativo con haces diagonales */
+.page-intro-backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.page-intro-backdrop .intro-beam {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(95, 194, 209, 0.2) 0%, rgba(95, 194, 209, 0.02) 100%);
+  transform: skewX(-24deg);
+}
+
+.page-intro-backdrop .beam-1 {
+  width: 44px;
+  height: 140%;
+  top: -20%;
+  right: 28%;
+  opacity: 0.7;
+}
+
+.page-intro-backdrop .beam-2 {
+  width: 18px;
+  height: 90%;
+  top: 10%;
+  right: 24%;
+  opacity: 0.5;
+}
+
+.page-intro-backdrop .beam-3 {
+  width: 90px;
+  height: 150%;
+  top: -25%;
+  right: 8%;
+  background: linear-gradient(180deg, rgba(46, 151, 174, 0.12) 0%, rgba(13, 73, 100, 0.02) 100%);
+}
+
+.intro-glow {
+  position: absolute;
+  width: 480px;
+  height: 300px;
+  right: 10%;
+  top: 15%;
+  background: radial-gradient(circle, rgba(95, 194, 209, 0.18) 0%, transparent 65%);
+  filter: blur(40px);
+}
+
+/* Movimiento ambiental contextual (acuicultura e inocuidad: fluidez sutil y luminosa) */
+@media (prefers-reduced-motion: no-preference) {
+  .page-intro-backdrop .beam-1 {
+    animation: intro-beam-drift 10s ease-in-out infinite alternate;
+  }
+  .page-intro-backdrop .beam-2 {
+    animation: intro-beam-drift 13s ease-in-out 1.5s infinite alternate-reverse;
+  }
+  .intro-glow {
+    animation: intro-glow-pulse 9s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes intro-beam-drift {
+  0% {
+    transform: skewX(-24deg) translateY(0);
+    opacity: 0.55;
+  }
+  100% {
+    transform: skewX(-24deg) translateY(14px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes intro-glow-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+/* Page Intro con Portada / Imagen de fondo */
+.page-intro.page-intro-has-cover {
+  position: relative;
+  isolation: isolate;
+  background: #072635;
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 76px 86px;
+  border-bottom: none !important;
+  border: none !important;
+}
+
+.page-intro-cover-img {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: -4px;
+  right: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  object-fit: cover;
+  object-position: right center;
+  z-index: 1;
+  pointer-events: none;
+  border: none !important;
+  outline: none !important;
+}
+
+.page-intro-cover-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 38, 53, 0.96) 0%,
+    rgba(6, 38, 53, 0.88) 42%,
+    rgba(6, 38, 53, 0.58) 62%,
+    rgba(6, 38, 53, 0.12) 82%,
+    rgba(6, 38, 53, 0.25) 100%
+  );
+}
+
+.page-intro-has-cover .page-intro-inner {
+  position: relative;
+  z-index: 3;
+  max-width: 640px;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+.page-intro-has-cover .page-intro-title {
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+
+.page-intro-has-cover .page-intro-lead {
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  color: #e0f2f7 !important;
+  text-align: left;
+}
+
+/* Contenedor interno sin cuadrículas innecesarias */
+.page-intro-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* Barra de Breadcrumbs: Limpia y sin bordes ni fondo */
+.page-breadcrumbs-bar {
+  background: transparent;
+  border: none;
+  padding: 20px 0 14px;
+  position: relative;
+  z-index: 5;
+}
+
+.page-breadcrumbs-bar .breadcrumbs {
+  margin: 0;
+}
+
+.page-breadcrumbs-bar .breadcrumbs-list {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.page-breadcrumbs-bar .breadcrumbs-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.page-breadcrumbs-bar .breadcrumbs-item a {
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.page-breadcrumbs-bar .breadcrumbs-item a:hover {
+  color: var(--navy);
+  text-decoration: underline;
+  text-decoration-color: var(--teal);
+}
+
+.page-breadcrumbs-bar .breadcrumbs-separator {
+  color: #9cb5c2;
+  font-size: 12px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.page-breadcrumbs-bar .breadcrumbs-item.is-active span,
+.page-breadcrumbs-bar .breadcrumbs-item[aria-current=page] span {
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* Título y texto de introducción */
+.page-intro h1,
+.page-intro-title {
+  color: #ffffff !important;
+  font-size: clamp(34px, 4.2vw, 54px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  margin: 0 0 16px 0;
+  text-wrap: balance;
+}
+
+.page-intro p,
+.page-intro-lead {
+  color: #d1e8ef !important;
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.72;
+  max-width: 650px;
+  margin: 0;
+}
+
+/* ----------------------------------------------------------
+   Media Queries Page Intro
+   ---------------------------------------------------------- */
+@media (max-width: 960px) {
+  .page-intro.page-intro-has-cover {
+    min-height: 360px;
+    padding-block: 60px 70px;
+  }
+  .page-intro-has-cover .page-intro-cover-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(6, 38, 53, 0.96) 0%,
+      rgba(6, 38, 53, 0.9) 50%,
+      rgba(6, 38, 53, 0.45) 100%
+    );
+  }
+}
+
+@media (max-width: 600px) {
+  main > .page-intro {
+    padding-block: 42px 48px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+  }
+  .page-intro.page-intro-has-cover {
+    min-height: 320px;
+    padding-block: 46px 54px;
+  }
+  .page-intro-has-cover .page-intro-cover-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(6, 38, 53, 0.95) 0%,
+      rgba(6, 38, 53, 0.88) 60%,
+      rgba(6, 38, 53, 0.65) 100%
+    );
+  }
+  .page-intro h1,
+  .page-intro-title {
+    font-size: clamp(28px, 7.5vw, 38px);
+  }
+  .page-intro p,
+  .page-intro-lead {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+  .page-breadcrumbs-bar {
+    padding: 14px 0 10px;
+  }
+  .page-breadcrumbs-bar .breadcrumbs-list {
+    gap: 8px;
+  }
+  .page-breadcrumbs-bar .breadcrumbs-item a,
+  .page-breadcrumbs-bar .breadcrumbs-item span,
+  .page-breadcrumbs-bar .breadcrumbs-separator {
+    font-size: 12px;
+  }
+}
