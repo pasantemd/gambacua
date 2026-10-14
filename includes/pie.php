@@ -47,6 +47,7 @@
                     <h2>Contacto</h2>
                     <a href="tel:+526621101511"><?= icono('phone') ?> +52 662 110 1511</a>
                     <a href="mailto:ventas@gambacua.com"><?= icono('mail') ?> ventas@gambacua.com</a>
+                    <a href="mailto:ventasingredientes@gambacua.com"><?= icono('mail') ?> ventasingredientes@gambacua.com</a>
                     <address>
                         <a href="https://www.google.com/maps/search/?api=1&amp;query=Blvd.+Garcia+Morales+1279+M+La+Manga+Hermosillo+83220" target="_blank" rel="noopener noreferrer">
                             <?= icono('pin') ?>
@@ -73,36 +74,43 @@
         </div>
     </footer>
 
-    <!-- Script de retiro del Skeleton e inicialización fluida sin saltos bruscos -->
+    <?php if ($paginaActual === 'index'): ?>
+    <!-- Retiro del preloader exclusivo de Inicio -->
     <script>
     (function() {
-        function dismissSkeleton() {
-            var sk = document.getElementById('page-skeleton');
-            if (sk && !sk.classList.contains('is-loaded')) {
-                sk.classList.add('is-loaded');
-                document.body.classList.add('is-page-ready');
-                setTimeout(function() {
-                    if (sk && sk.parentNode) sk.parentNode.removeChild(sk);
-                }, 320);
-            } else {
-                document.body.classList.add('is-page-ready');
-            }
+        var startTime = performance.now();
+        var isReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var minDisplay = isReduced ? 0 : 750;
+
+        function dismissPreloader() {
+            var elapsed = performance.now() - startTime;
+            var delay = Math.max(0, minDisplay - elapsed);
+
+            setTimeout(function() {
+                var el = document.getElementById('site-preloader');
+                if (el && !el.classList.contains('is-loaded')) {
+                    el.classList.add('is-loaded');
+                    document.body.classList.add('is-page-ready');
+                    setTimeout(function() {
+                        if (el && el.parentNode) el.parentNode.removeChild(el);
+                    }, 400);
+                } else {
+                    document.body.classList.add('is-page-ready');
+                }
+            }, delay);
         }
-        if (document.readyState === 'complete' || document.readyState === 'interactive') {
-            window.requestAnimationFrame(function() {
-                setTimeout(dismissSkeleton, 40);
-            });
+
+        if (document.readyState === 'complete') {
+            window.requestAnimationFrame(dismissPreloader);
         } else {
-            document.addEventListener('DOMContentLoaded', function() {
-                window.requestAnimationFrame(function() {
-                    setTimeout(dismissSkeleton, 40);
-                });
-            });
-            window.addEventListener('load', dismissSkeleton);
+            window.addEventListener('load', function() {
+                window.requestAnimationFrame(dismissPreloader);
+            }, { once: true });
         }
-        setTimeout(dismissSkeleton, 1200);
+        setTimeout(dismissPreloader, 2200);
     })();
     </script>
+    <?php endif; ?>
 </body>
 </html>
 

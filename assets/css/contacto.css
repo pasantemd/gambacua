@@ -1,66 +1,14 @@
 /* ==========================================================
    Gambacua - Contacto (contacto.php)
-   Formulario de atención comercial, teléfono y mapa de sede
+   Formulario de atención comercial, mapa y tarjetas informativas
    ========================================================== */
 
-.contact-layout {
-  display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 80px;
-  padding-bottom: 90px;
-}
-
-.contact-layout h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.contact-layout p {
-  font-size: 14px;
-}
-
-.contact-phone {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  font-size: 22px;
-  color: var(--navy);
-  min-height: 54px;
-  font-weight: 700;
-}
-
-.contact-phone:hover {
-  text-decoration: underline;
-}
-
-.address-block {
-  margin-top: 32px;
-  padding-top: 28px;
-  border-top: none;
-}
-
-.address-block h3 {
-  font-size: 18px;
-  margin-bottom: 16px;
-}
-
-.address-block address {
-  font-style: normal;
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 10px;
-}
-
-.address-block p {
-  margin-top: 15px;
-}
-
 /* ----------------------------------------------------------
-   Formulario de Contacto en Cuadrícula
+   1. Formulario de Contacto (.contact-form-section)
    ---------------------------------------------------------- */
 .contact-form-section {
   display: grid;
-  grid-template-columns: 1.08fr .92fr;
+  grid-template-columns: 1.08fr 0.92fr;
   gap: 28px;
   padding-bottom: 0;
   margin-bottom: 48px;
@@ -131,7 +79,7 @@
   outline-offset: 2px;
 }
 
-.form-field [aria-invalid=true] {
+.form-field [aria-invalid="true"] {
   border-color: #a43131;
 }
 
@@ -163,10 +111,53 @@
   margin-top: 26px;
 }
 
-.form-submit p {
-  font-size: 10px;
-  max-width: 200px;
-  margin: 0;
+.form-consent {
+  flex: 1;
+  max-width: 380px;
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.form-checkbox-label input[type="checkbox"] {
+  appearance: auto;
+  accent-color: #3097b2;
+  width: 18px;
+  height: 18px;
+  margin: 1px 0 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.form-checkbox-label input[type="checkbox"][aria-invalid="true"] {
+  outline: 2px solid #a43131;
+  outline-offset: 2px;
+}
+
+.form-checkbox-text {
+  font-size: 11px;
+  color: var(--navy);
+  line-height: 1.5;
+}
+
+.form-checkbox-text a {
+  color: #147086;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 150ms ease;
+}
+
+.form-checkbox-text a:hover {
+  color: var(--navy);
+}
+
+.form-consent .field-error {
+  margin-top: 4px;
+  margin-left: 28px;
 }
 
 .form-submit button {
@@ -176,7 +167,7 @@
 }
 
 .form-submit button:disabled {
-  opacity: .65;
+  opacity: 0.65;
   cursor: wait;
   transform: none;
 }
@@ -186,18 +177,22 @@
 }
 
 /* ----------------------------------------------------------
-   Mapa de Contacto
+   2. Mapa de Ubicación (.contact-form-map)
    ---------------------------------------------------------- */
 .contact-form-map {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  background: var(--pale);
 }
 
 .contact-form-map iframe {
   flex: 1;
+  width: 100%;
   min-height: 430px;
   border: 0;
+  display: block;
+  background: #e3eef0;
 }
 
 .map-caption {
@@ -243,88 +238,8 @@
   height: 14px;
 }
 
-.map-panel {
-  background: var(--pale);
-  align-self: start;
-}
-
-.map-panel iframe {
-  width: 100%;
-  height: 415px;
-  display: block;
-  border: 0;
-  background: #e3eef0;
-}
-
-.map-panel > p {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 16px 20px;
-  font-size: 12px;
-  margin: 0;
-}
-
 /* ----------------------------------------------------------
-   Media Queries Contacto
-   ---------------------------------------------------------- */
-@media (max-width: 1000px) {
-  .contact-form-section {
-    gap: 22px;
-    grid-template-columns: 1fr 1fr;
-  }
-  .contact-form {
-    padding: 24px;
-  }
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-  .form-submit {
-    align-items: start;
-    flex-direction: column;
-  }
-  .contact-form-map iframe {
-    min-height: 510px;
-  }
-}
-
-@media (max-width: 700px) {
-  .contact-form-section {
-    grid-template-columns: 1fr;
-    padding-bottom: 40px;
-    margin-bottom: 40px;
-    gap: 20px;
-  }
-  .contact-form {
-    padding: 24px 20px;
-  }
-  .form-grid {
-    gap: 20px;
-  }
-  .form-submit {
-    gap: 18px;
-  }
-  .form-submit button {
-    width: 100%;
-  }
-  .form-submit p {
-    max-width: none;
-  }
-  .contact-form-map iframe {
-    min-height: 320px;
-  }
-  .contact-layout {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding-bottom: 45px;
-  }
-  .contact-phone {
-    font-size: 18px;
-  }
-}
-
-/* ----------------------------------------------------------
-   Sección de Información Directa (Horario, Correo, Ubicación)
+   3. Información Directa de Atención (.contact-info-section)
    ---------------------------------------------------------- */
 .contact-info-section {
   padding-bottom: 84px;
@@ -339,13 +254,24 @@
 .contact-info-card {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
-  padding: 26px 24px;
+  gap: 14px;
+  padding: 26px 18px;
   background: #ffffff;
   border: 0;
-  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
-  box-shadow: 0 4px 18px -4px rgba(13, 73, 100, 0.07), 0 1px 3px rgba(13, 73, 100, 0.03);
-  transition: transform 180ms var(--ease-brand), box-shadow 180ms var(--ease-brand);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 12px) 0,
+    100% 12px,
+    100% 100%,
+    12px 100%,
+    0 calc(100% - 12px)
+  );
+  box-shadow:
+    0 4px 18px -4px rgba(13, 73, 100, 0.07),
+    0 1px 3px rgba(13, 73, 100, 0.03);
+  transition:
+    transform 180ms var(--ease-brand),
+    box-shadow 180ms var(--ease-brand);
 }
 
 .contact-info-card:hover {
@@ -363,8 +289,17 @@
   background: rgba(46, 151, 174, 0.12);
   color: #147086;
   border: 0;
-  clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 7px 100%, 0 calc(100% - 7px));
-  transition: background-color 180ms ease, color 180ms ease;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 7px) 0,
+    100% 7px,
+    100% 100%,
+    7px 100%,
+    0 calc(100% - 7px)
+  );
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 .contact-info-card:hover .contact-info-icon {
@@ -418,6 +353,25 @@
   text-decoration: underline;
 }
 
+.contact-email-item {
+  margin-bottom: 10px;
+}
+
+.contact-email-role {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #6a8594;
+  margin-bottom: 2px;
+  text-transform: none;
+}
+
+.contact-email-item .contact-info-link {
+  font-size: 13.5px;
+  letter-spacing: -0.01em;
+  margin-bottom: 0;
+}
+
 .contact-info-note {
   margin: 0;
   font-size: 13px;
@@ -440,6 +394,29 @@
   font-weight: 500;
 }
 
+/* ----------------------------------------------------------
+   4. Media Queries Contacto
+   ---------------------------------------------------------- */
+@media (max-width: 1000px) {
+  .contact-form-section {
+    gap: 22px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-form {
+    padding: 24px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-submit {
+    align-items: start;
+    flex-direction: column;
+  }
+  .contact-form-map iframe {
+    min-height: 510px;
+  }
+}
+
 @media (max-width: 900px) {
   .contact-info-grid {
     grid-template-columns: 1fr;
@@ -448,6 +425,30 @@
 }
 
 @media (max-width: 700px) {
+  .contact-form-section {
+    grid-template-columns: 1fr;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+  .contact-form {
+    padding: 24px 20px;
+  }
+  .form-grid {
+    gap: 20px;
+  }
+  .form-submit {
+    gap: 18px;
+  }
+  .form-submit button {
+    width: 100%;
+  }
+  .form-consent {
+    max-width: none;
+  }
+  .contact-form-map iframe {
+    min-height: 320px;
+  }
   .contact-info-section {
     padding-bottom: 50px;
   }

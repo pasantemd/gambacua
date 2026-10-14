@@ -22,7 +22,8 @@ $campos = [
     'telefono' => '',
     'empresa' => '',
     'asunto' => '',
-    'mensaje' => ''
+    'mensaje' => '',
+    'privacidad' => ''
 ];
 
 $campos['asunto'] = isset($_GET['asunto']) && is_string($_GET['asunto']) ? trim($_GET['asunto']) : '';
@@ -39,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach ($campos as $clave => $valor) {
         $campos[$clave] = isset($_POST[$clave]) && is_string($_POST[$clave]) ? trim($_POST[$clave]) : '';
     }
+    $campos['privacidad'] = !empty($_POST['privacidad']) ? '1' : '';
 
     $token = $_POST['token'] ?? '';
 
@@ -56,6 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (mb_strlen($campos['empresa']) > 150) $errores['empresa'] = 'Usa un máximo de 150 caracteres.';
         if (mb_strlen($campos['asunto']) < 3 || mb_strlen($campos['asunto']) > 160 || preg_match('/[\r\n]/', $campos['asunto'])) $errores['asunto'] = 'Escribe un asunto de entre 3 y 160 caracteres.';
         if (mb_strlen($campos['mensaje']) < 10 || mb_strlen($campos['mensaje']) > 5000) $errores['mensaje'] = 'Escribe un mensaje de entre 10 y 5000 caracteres.';
+        if (empty($campos['privacidad'])) $errores['privacidad'] = 'Debes aceptar los términos y las políticas de privacidad.';
 
         if (!$errores) {
             $destinatario = getenv('GAMBACUA_CONTACT_TO');

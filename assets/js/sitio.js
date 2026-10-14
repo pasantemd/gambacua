@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (barraProgreso) {
     document.addEventListener('click', evento => {
+      if (evento.defaultPrevented || evento.button !== 0 || evento.metaKey || evento.ctrlKey || evento.shiftKey || evento.altKey) return;
+
       const enlace = evento.target.closest('a');
       if (!enlace?.href || enlace.target === '_blank' || enlace.hasAttribute('download')) return;
       if (enlace.href.startsWith('mailto:') || enlace.href.startsWith('tel:') || enlace.href.includes('#')) return;

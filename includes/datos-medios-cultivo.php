@@ -40,11 +40,6 @@ $categoriasMediosCultivo = [
             'Suplementos',
             'Medios cromogénicos RiverChrome'
         ],
-        'products' => [
-            'Medios de cultivo deshidratados',
-            'Suplementos',
-            'Medios cromogénicos RiverChrome'
-        ]
     ],
     [
         'id' => 'medios-dosificados',

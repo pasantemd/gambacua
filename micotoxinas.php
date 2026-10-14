@@ -29,11 +29,13 @@ introduccionPagina(
         </nav>
 
         <div class="micotoxins-sections">
+            <!-- 1. Marca y Encabezado General -->
             <header class="micotoxins-brand">
                 <h2><?= htmlspecialchars($micotoxinas['brand'], ENT_QUOTES, 'UTF-8') ?></h2>
                 <p><?= htmlspecialchars($micotoxinas['description'], ENT_QUOTES, 'UTF-8') ?></p>
             </header>
 
+            <!-- 2. Familias de Pruebas -->
             <?php foreach ($micotoxinas['families'] as $family): ?>
         <section class="micotoxin-family" id="<?= htmlspecialchars($family['id'], ENT_QUOTES, 'UTF-8') ?>" aria-labelledby="<?= htmlspecialchars($family['id'], ENT_QUOTES, 'UTF-8') ?>-title">
             <div class="micotoxin-family-heading">
@@ -87,6 +89,7 @@ introduccionPagina(
         </section>
             <?php endforeach; ?>
 
+            <!-- 3. Aprobación Oficial USDA-GIPSA -->
             <section class="micotoxin-approval" aria-labelledby="micotoxin-approval-title">
                 <h2 id="micotoxin-approval-title"><?= htmlspecialchars($micotoxinas['approval']['title'], ENT_QUOTES, 'UTF-8') ?></h2>
                 <div class="micotoxin-approval-mark">

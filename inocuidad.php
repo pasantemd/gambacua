@@ -41,8 +41,7 @@ $inocuidadLines = [
                 'url' => 'medios-cultivo.php#medios-dosificados',
                 'icon' => 'box'
             ]
-        ],
-        'variant' => 'is-featured'
+        ]
     ],
     [
         'id' => 'filtracion-membrana',
@@ -64,8 +63,7 @@ $inocuidadLines = [
                 'url' => 'filtracion-membrana.php#dispensadores',
                 'icon' => 'cpu'
             ]
-        ],
-        'variant' => 'is-featured'
+        ]
     ],
     [
         'id' => 'materiales-insumos',
@@ -99,8 +97,7 @@ $inocuidadLines = [
                 'url' => 'materiales-insumos.php#tubos-centrifuga',
                 'icon' => 'tube'
             ]
-        ],
-        'variant' => 'is-featured'
+        ]
     ],
     [
         'id' => 'compact-dry',
@@ -128,8 +125,7 @@ $inocuidadLines = [
                 'url' => 'compact-dry.php#ec-blue',
                 'icon' => 'droplet'
             ]
-        ],
-        'variant' => 'is-featured'
+        ]
     ],
     [
         'id' => 'micotoxinas',
@@ -151,8 +147,7 @@ $inocuidadLines = [
                 'url' => 'micotoxinas.php#symmetric-quantum-green',
                 'icon' => 'flask'
             ]
-        ],
-        'variant' => 'is-featured'
+        ]
     ],
     [
         'id' => 'histamina',
@@ -160,95 +155,74 @@ $inocuidadLines = [
         'icon' => 'gauge',
         'description' => 'Prueba para la determinación cuantitativa de histamina en pescado fresco, enlatado, congelado y harina de pescado.',
         'url' => 'histamina.php',
-        'cta' => 'Bio-Shield Histamine',
-        'variant' => 'is-featured'
+        'cta' => 'Bio-Shield Histamine'
     ],
 ];
 
 $renderInocuidadLine = static function (array $line): void {
-    $isFeatured = str_contains($line['variant'], 'is-featured');
     ?>
-    <li id="<?= $line['id'] ?>" class="<?= $line['variant'] ?>">
+    <li id="<?= $line['id'] ?>" class="is-featured">
         <div class="inocuidad-line-card">
-            <?php if ($isFeatured): ?>
-                <div class="inocuidad-featured-body">
-                    <div class="inocuidad-featured-content">
-                        <h3><?= $line['name'] ?></h3>
-                        <p><?= $line['description'] ?></p>
-                    </div>
+            <div class="inocuidad-featured-body">
+                <div class="inocuidad-featured-content">
+                    <h3><?= $line['name'] ?></h3>
+                    <p><?= $line['description'] ?></p>
+                </div>
 
-                    <?php if (!empty($line['meta'])): ?>
-                        <div class="inocuidad-subnav-panel">
-                            <ul class="inocuidad-subnav-list">
-                                <?php foreach ($line['meta'] as $sub): ?>
-                                    <li>
-                                        <a href="<?= htmlspecialchars($sub['url']) ?>" class="inocuidad-subnav-card">
-                                            <?php if (!empty($sub['icon'])): ?>
-                                                <span class="inocuidad-subnav-icon" aria-hidden="true">
-                                                    <?= icon($sub['icon']) ?>
-                                                </span>
-                                            <?php endif; ?>
-                                            <div class="inocuidad-subnav-info">
-                                                <strong><?= htmlspecialchars($sub['label']) ?></strong>
-                                                <?php if (!empty($sub['desc'])): ?>
-                                                    <span><?= htmlspecialchars($sub['desc']) ?></span>
-                                                <?php endif; ?>
-                                            </div>
-                                            <span class="inocuidad-subnav-arrow" aria-hidden="true">
-                                                <?= icon('diagonal') ?>
-                                            </span>
-                                        </a>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
-                    <?php elseif (!empty($line['cta']) && !empty($line['url'])): ?>
-                        <div class="inocuidad-subnav-panel">
-                            <ul class="inocuidad-subnav-list">
+                <?php if (!empty($line['meta'])): ?>
+                    <div class="inocuidad-subnav-panel">
+                        <ul class="inocuidad-subnav-list">
+                            <?php foreach ($line['meta'] as $sub): ?>
                                 <li>
-                                    <a href="<?= htmlspecialchars($line['url'], ENT_QUOTES, 'UTF-8') ?>" class="inocuidad-subnav-card" aria-label="<?= htmlspecialchars($line['cta'].': '.$line['name'], ENT_QUOTES, 'UTF-8') ?>">
-                                        <?php if (!empty($line['icon'])): ?>
+                                    <a href="<?= htmlspecialchars($sub['url']) ?>" class="inocuidad-subnav-card">
+                                        <?php if (!empty($sub['icon'])): ?>
                                             <span class="inocuidad-subnav-icon" aria-hidden="true">
-                                                <?= icon($line['icon']) ?>
+                                                <?= icon($sub['icon']) ?>
                                             </span>
                                         <?php endif; ?>
                                         <div class="inocuidad-subnav-info">
-                                            <strong><?= htmlspecialchars($line['cta'], ENT_QUOTES, 'UTF-8') ?></strong>
+                                            <strong><?= htmlspecialchars($sub['label']) ?></strong>
+                                            <?php if (!empty($sub['desc'])): ?>
+                                                <span><?= htmlspecialchars($sub['desc']) ?></span>
+                                            <?php endif; ?>
                                         </div>
                                         <span class="inocuidad-subnav-arrow" aria-hidden="true">
                                             <?= icon('diagonal') ?>
                                         </span>
                                     </a>
                                 </li>
-                            </ul>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            <?php else: ?>
-                <div class="inocuidad-card-top">
-                    <?php if (!empty($line['icon'])): ?>
-                        <div class="inocuidad-card-icon" aria-hidden="true">
-                            <?= icon($line['icon']) ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
-                <div class="inocuidad-card-copy">
-                    <h3><?= $line['name'] ?></h3>
-                    <p><?= $line['description'] ?></p>
-                </div>
-                <?php if (!empty($line['cta'])): ?>
-                    <a class="button inocuidad-card-btn" href="<?= $line['url'] ?>" aria-label="<?= $line['cta'] ?>: <?= $line['name'] ?>">
-                        <span><?= $line['cta'] ?></span>
-                        <?= icon('diagonal') ?>
-                    </a>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php elseif (!empty($line['cta']) && !empty($line['url'])): ?>
+                    <div class="inocuidad-subnav-panel">
+                        <ul class="inocuidad-subnav-list">
+                            <li>
+                                <a href="<?= htmlspecialchars($line['url'], ENT_QUOTES, 'UTF-8') ?>" class="inocuidad-subnav-card" aria-label="<?= htmlspecialchars($line['cta'].': '.$line['name'], ENT_QUOTES, 'UTF-8') ?>">
+                                    <?php if (!empty($line['icon'])): ?>
+                                        <span class="inocuidad-subnav-icon" aria-hidden="true">
+                                            <?= icon($line['icon']) ?>
+                                        </span>
+                                    <?php endif; ?>
+                                    <div class="inocuidad-subnav-info">
+                                        <strong><?= htmlspecialchars($line['cta'], ENT_QUOTES, 'UTF-8') ?></strong>
+                                    </div>
+                                    <span class="inocuidad-subnav-arrow" aria-hidden="true">
+                                        <?= icon('diagonal') ?>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 <?php endif; ?>
-            <?php endif; ?>
+            </div>
         </div>
     </li>
     <?php
 };
 ?>
 
+<!-- 1. Líneas de Inocuidad Alimentaria -->
 <section class="wrap inocuidad-lines" aria-labelledby="inocuidad-lines-title">
     <div class="section-heading">
         <h2 id="inocuidad-lines-title">Categorías de inocuidad alimentaria</h2>
@@ -258,6 +232,7 @@ $renderInocuidadLine = static function (array $line): void {
     </ul>
 </section>
 
+<!-- 2. Cintillo de Contacto -->
 <section class="wrap contact-strip">
     <div><h2>Solicita información técnica</h2><p>Nuestro equipo puede orientarte sobre la solución adecuada para tu proceso.</p></div>
     <a class="button button-light" href="contacto.php">Hablar con un asesor <?= icon('diagonal') ?></a>

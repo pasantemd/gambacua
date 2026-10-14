@@ -14,11 +14,11 @@
     <link rel="apple-touch-icon" href="assets/images/favicon.webp">
 
     <!-- Estilos modulares principales -->
-    <link rel="stylesheet" href="assets/css/sitio.css?v=127">
+    <link rel="stylesheet" href="assets/css/sitio.css?v=129">
 
     <!-- Scripts modulares -->
     <script src="assets/js/encabezado.js?v=9" defer></script>
-    <script src="assets/js/sitio.js?v=7" defer></script>
+    <script src="assets/js/sitio.js?v=8" defer></script>
     <script src="assets/js/movimiento-sitio.js?v=6" defer></script>
     <?php if ($paginaActual === 'historia'): ?>
         <script src="assets/js/historia.js?v=2" defer></script>
@@ -26,42 +26,34 @@
         <script src="assets/js/contacto.js?v=3" defer></script>
     <?php endif; ?>
 
-    <!-- Critical CSS para Skeleton Loader y Revelado Fluido (evita pantalla en blanco y salto brusco) -->
-    <style id="skeleton-critical-css">
+    <?php if ($paginaActual === 'index'): ?>
+    <!-- Estilos críticos del preloader de Inicio -->
+    <style id="preloader-critical-css">
         #site-progress-bar{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#3097b2 0%,#78cad7 50%,#004766 100%);box-shadow:0 1px 8px rgba(48,151,178,0.55);z-index:100000;pointer-events:none;opacity:0;transition:width 220ms ease,opacity 180ms ease}
         #site-progress-bar.is-active{opacity:1}
         html.js body:not(.is-page-ready) #contenido,html.js body:not(.is-page-ready) .site-header{opacity:0;transform:translateY(6px)}
-        html.js body.is-page-ready #contenido,html.js body.is-page-ready .site-header{opacity:1;transform:translateY(0);transition:opacity 280ms cubic-bezier(0.16,1,0.3,1),transform 280ms cubic-bezier(0.16,1,0.3,1)}
+        html.js body.is-page-ready #contenido,html.js body.is-page-ready .site-header{opacity:1;transform:translateY(0);transition:opacity 320ms cubic-bezier(0.16,1,0.3,1),transform 320ms cubic-bezier(0.16,1,0.3,1)}
         body.is-page-exiting #contenido,body.is-page-exiting .site-header{opacity:0.65;transition:opacity 160ms cubic-bezier(0.16,1,0.3,1)}
-        .page-skeleton{position:fixed;inset:0;z-index:99999;background:#fff;pointer-events:none;overflow:hidden;opacity:1;visibility:visible;transition:opacity 280ms cubic-bezier(0.16,1,0.3,1),visibility 280ms cubic-bezier(0.16,1,0.3,1)}
-        .page-skeleton.is-loaded{opacity:0;visibility:hidden}
-        .skeleton-shimmer-box{background:linear-gradient(90deg,#edf4f6 0%,#f7fafb 45%,#edf4f6 80%);background-size:200% 100%;animation:skeleton-shimmer 1.6s ease-in-out infinite;border-radius:6px}
-        @keyframes skeleton-shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
-        .skeleton-header{height:85px;border-bottom:1px solid #d5e2e5;display:flex;align-items:center;background:#fff}
-        .skeleton-header-inner{display:flex;align-items:center;justify-content:space-between;width:100%;gap:32px}
-        .skeleton-logo{width:190px;height:34px}
-        .skeleton-nav{display:flex;align-items:center;gap:28px}
-        .skeleton-nav-item{width:76px;height:14px}
-        .skeleton-nav-btn{width:110px;height:40px}
-        .skeleton-hero{padding:clamp(48px,6vw,76px) 0 clamp(40px,5vw,64px);background:linear-gradient(180deg,#f7fafb 0%,#fff 100%);border-bottom:none}
-        .skeleton-hero-inner{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,0.85fr);gap:clamp(32px,5vw,64px);align-items:center}
-        .skeleton-copy{display:flex;flex-direction:column;gap:16px}
-        .skeleton-tag{width:130px;height:14px}
-        .skeleton-title-1{width:88%;height:clamp(32px,3.4vw,44px)}
-        .skeleton-title-2{width:65%;height:clamp(32px,3.4vw,44px)}
-        .skeleton-lead-1{width:95%;height:16px;margin-top:8px}
-        .skeleton-lead-2{width:78%;height:16px}
-        .skeleton-btn-row{display:flex;gap:16px;margin-top:14px}
-        .skeleton-btn-main{width:180px;height:48px}
-        .skeleton-btn-sec{width:150px;height:48px}
-        .skeleton-media-box{width:100%;height:clamp(260px,28vw,380px);border-radius:18px}
-        .skeleton-cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:40px}
-        .skeleton-card{height:180px;border-radius:16px}
-        @media (max-width:900px){.skeleton-hero-inner{grid-template-columns:1fr;gap:32px}.skeleton-cards-row{grid-template-columns:1fr 1fr}}
-        @media (max-width:768px){.skeleton-nav-item,.skeleton-nav-btn{display:none}.skeleton-header-inner::after{content:'';display:block;width:38px;height:38px;border-radius:8px;background:#edf4f6}.skeleton-btn-row{flex-direction:column;width:100%}.skeleton-btn-main,.skeleton-btn-sec{width:100%}.skeleton-cards-row{grid-template-columns:1fr}}
-        @media (prefers-reduced-motion:reduce){.skeleton-shimmer-box{animation:none!important;background:#edf4f6!important}.page-skeleton,#site-progress-bar,html.js body:not(.is-page-ready) #contenido,html.js body:not(.is-page-ready) .site-header,html.js body.is-page-ready #contenido,html.js body.is-page-ready .site-header,body.is-page-exiting #contenido,body.is-page-exiting .site-header{transition:none!important;transform:none!important;opacity:1!important}}
+        .site-preloader{position:fixed;inset:0;z-index:999999;background:#fff;display:flex;align-items:center;justify-content:center;pointer-events:none;overflow:hidden;opacity:1;visibility:visible;transition:opacity 360ms cubic-bezier(0.16,1,0.3,1),visibility 360ms cubic-bezier(0.16,1,0.3,1),transform 360ms cubic-bezier(0.16,1,0.3,1);will-change:opacity,transform}
+        .site-preloader.is-loaded{opacity:0;visibility:hidden;transform:scale(1.02)}
+        .preloader-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;user-select:none}
+        .preloader-symbol{width:clamp(92px,12vw,115px);height:auto;overflow:visible;filter:drop-shadow(0 14px 28px rgba(0,71,102,0.12))}
+        .liquid-container{animation:liquid-fill-up 1.3s cubic-bezier(0.35,0.1,0.25,1) forwards}
+        @keyframes liquid-fill-up{0%{transform:translateY(48px)}100%{transform:translateY(-4px)}}
+        .wave-back{fill:#3097b2;opacity:0.52;animation:wave-h-back 1.6s linear infinite}
+        .wave-front{fill:url(#preloader-liquid-grad);opacity:0.95;animation:wave-h-front 1.2s linear infinite}
+        .wave-shine{stroke:rgba(255,255,255,0.7);stroke-width:0.75;fill:none;animation:wave-h-front 1.2s linear infinite}
+        @keyframes wave-h-back{0%{transform:translateX(0)}100%{transform:translateX(-40px)}}
+        @keyframes wave-h-front{0%{transform:translateX(-40px)}100%{transform:translateX(0)}}
+        .preloader-bubble{fill:rgba(255,255,255,0.7);animation:bubble-rise 1.5s ease-in-out infinite}
+        .pb-1{animation-delay:0.15s}.pb-2{animation-delay:0.65s}.pb-3{animation-delay:1.05s}
+        @keyframes bubble-rise{0%{transform:translateY(0);opacity:0}30%{opacity:0.85}80%{opacity:0.85}100%{transform:translateY(-22px);opacity:0}}
+        .preloader-brand{font-family:'Montserrat',system-ui,sans-serif;font-size:15px;font-weight:700;letter-spacing:0.08em;color:#004766;text-transform:uppercase;opacity:0.92;animation:preloader-fade-in 800ms ease-out forwards}
+        @keyframes preloader-fade-in{from{opacity:0;transform:translateY(4px)}to{opacity:0.95;transform:translateY(0)}}
+        @media (prefers-reduced-motion:reduce){.site-preloader,#site-progress-bar,html.js body:not(.is-page-ready) #contenido,html.js body:not(.is-page-ready) .site-header,html.js body.is-page-ready #contenido,html.js body.is-page-ready .site-header,body.is-page-exiting #contenido,body.is-page-exiting .site-header{transition:none!important;transform:none!important;opacity:1!important}.site-preloader{display:none!important}.liquid-container,.wave-back,.wave-front,.wave-shine,.preloader-bubble,.preloader-brand{animation:none!important}}
     </style>
-    <noscript><style>#page-skeleton{display:none!important}#contenido,.site-header{opacity:1!important;transform:none!important}</style></noscript>
+    <noscript><style>#site-preloader{display:none!important}#contenido,.site-header{opacity:1!important;transform:none!important}</style></noscript>
+    <?php endif; ?>
 </head>
 <body class="page-<?= htmlspecialchars($paginaActual, ENT_QUOTES, 'UTF-8') ?>">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -69,44 +61,48 @@
     <!-- Barra de progreso para navegación en conexiones lentas -->
     <div id="site-progress-bar" aria-hidden="true"></div>
 
-    <!-- Skeleton Loader inicial para evitar pantalla en blanco -->
-    <div id="page-skeleton" class="page-skeleton" aria-hidden="true">
-        <div class="skeleton-header">
-            <div class="wrap skeleton-header-inner">
-                <div class="skeleton-shimmer-box skeleton-logo"></div>
-                <div class="skeleton-nav">
-                    <div class="skeleton-shimmer-box skeleton-nav-item"></div>
-                    <div class="skeleton-shimmer-box skeleton-nav-item"></div>
-                    <div class="skeleton-shimmer-box skeleton-nav-item"></div>
-                    <div class="skeleton-shimmer-box skeleton-nav-item"></div>
-                    <div class="skeleton-shimmer-box skeleton-nav-btn"></div>
-                </div>
-            </div>
-        </div>
-        <div class="skeleton-hero">
-            <div class="wrap skeleton-hero-inner">
-                <div class="skeleton-copy">
-                    <div class="skeleton-shimmer-box skeleton-tag"></div>
-                    <div class="skeleton-shimmer-box skeleton-title-1"></div>
-                    <div class="skeleton-shimmer-box skeleton-title-2"></div>
-                    <div class="skeleton-shimmer-box skeleton-lead-1"></div>
-                    <div class="skeleton-shimmer-box skeleton-lead-2"></div>
-                    <div class="skeleton-btn-row">
-                        <div class="skeleton-shimmer-box skeleton-btn-main"></div>
-                        <div class="skeleton-shimmer-box skeleton-btn-sec"></div>
-                    </div>
-                </div>
-                <div class="skeleton-media">
-                    <div class="skeleton-shimmer-box skeleton-media-box"></div>
-                </div>
-            </div>
-        </div>
-        <div class="wrap skeleton-cards-row">
-            <div class="skeleton-shimmer-box skeleton-card"></div>
-            <div class="skeleton-shimmer-box skeleton-card"></div>
-            <div class="skeleton-shimmer-box skeleton-card"></div>
+    <?php if ($paginaActual === 'index'): ?>
+    <!-- Preloader de Inicio: la "A" llenándose de agua -->
+    <div id="site-preloader" class="site-preloader" aria-hidden="true">
+        <div class="preloader-inner">
+            <svg class="preloader-symbol" viewBox="97 0 52 45" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gambacua cargando">
+                <defs>
+                    <linearGradient id="preloader-liquid-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#3097b2" />
+                        <stop offset="45%" stop-color="#197a97" />
+                        <stop offset="100%" stop-color="#004766" />
+                    </linearGradient>
+
+                    <clipPath id="preloader-a-mask">
+                        <path d="M114.73,25.2c.25-.02.49-.04.74-.06.44-.03.83-.31,1-.71l5-11.5,2.04-4.69h.06l6.62,15.75c.18.43.59.71,1.06.72,2.1.06,4.19.18,6.27.35.91.07,1.56-.84,1.19-1.67L128.56.71c-.19-.43-.62-.71-1.09-.71h-8.17c-.47,0-.89.27-1.09.7l-10.67,23.47c-.39.85.31,1.79,1.24,1.68,1.97-.25,3.95-.47,5.94-.65Z"/>
+                        <path d="M143.58,35.68c-2.37-.33-4.74-.59-7.11-.79-.9-.07-1.55.85-1.18,1.68l2.91,6.56c.19.43.62.71,1.09.71h6.73c.87,0,1.44-.89,1.09-1.68l-2.59-5.78-.94-.71Z"/>
+                        <path d="M102.54,36.44c-.39.07-.72.33-.89.69l-2.28,5.03h0c-.36.79.22,1.69,1.09,1.69h6.18c.46,0,.88-.27,1.08-.68l2.86-6.03c.4-.85-.29-1.82-1.22-1.7-2.28.28-4.55.62-6.82,1.01Z"/>
+                    </clipPath>
+                </defs>
+
+                <!-- Silueta base de cristal (recipiente de la A) -->
+                <g fill="rgba(48, 151, 178, 0.05)" stroke="rgba(0, 71, 102, 0.16)" stroke-width="0.75">
+                    <path d="M114.73,25.2c.25-.02.49-.04.74-.06.44-.03.83-.31,1-.71l5-11.5,2.04-4.69h.06l6.62,15.75c.18.43.59.71,1.06.72,2.1.06,4.19.18,6.27.35.91.07,1.56-.84,1.19-1.67L128.56.71c-.19-.43-.62-.71-1.09-.71h-8.17c-.47,0-.89.27-1.09.7l-10.67,23.47c-.39.85.31,1.79,1.24,1.68,1.97-.25,3.95-.47,5.94-.65Z"/>
+                    <path d="M143.58,35.68c-2.37-.33-4.74-.59-7.11-.79-.9-.07-1.55.85-1.18,1.68l2.91,6.56c.19.43.62.71,1.09.71h6.73c.87,0,1.44-.89,1.09-1.68l-2.59-5.78-.94-.71Z"/>
+                    <path d="M102.54,36.44c-.39.07-.72.33-.89.69l-2.28,5.03h0c-.36.79.22,1.69,1.09,1.69h6.18c.46,0,.88-.27,1.08-.68l2.86-6.03c.4-.85-.29-1.82-1.22-1.7-2.28.28-4.55.62-6.82,1.01Z"/>
+                </g>
+
+                <!-- Agua en movimiento dentro de la forma de la A -->
+                <g clip-path="url(#preloader-a-mask)">
+                    <g class="liquid-container">
+                        <path class="wave-back" d="M 60 0 Q 75 -3.5, 90 0 T 120 0 T 150 0 T 180 0 T 210 0 V 60 H 60 Z"/>
+                        <path class="wave-front" d="M 60 0 Q 75 -2.6, 90 0 T 120 0 T 150 0 T 180 0 T 210 0 V 60 H 60 Z"/>
+                        <path class="wave-shine" d="M 60 0 Q 75 -2.6, 90 0 T 120 0 T 150 0 T 180 0 T 210 0"/>
+                        <circle cx="118" cy="36" r="0.8" class="preloader-bubble pb-1"/>
+                        <circle cx="127" cy="40" r="0.6" class="preloader-bubble pb-2"/>
+                        <circle cx="136" cy="38" r="0.7" class="preloader-bubble pb-3"/>
+                    </g>
+                </g>
+            </svg>
+            <span class="preloader-brand">Gambacua</span>
         </div>
     </div>
+    <?php endif; ?>
 
     <!-- Encabezado principal del sitio -->
     <header class="site-header">

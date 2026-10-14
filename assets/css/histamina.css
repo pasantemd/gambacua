@@ -1,3 +1,11 @@
+/* ==========================================================
+   Gambacua - Detección de Histamina (histamina.php)
+   Bio-Shield Histamine: prueba cuantitativa para productos marinos
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   1. Base de Página
+   ---------------------------------------------------------- */
 .histamine-page {
   padding-top: 10px;
   padding-bottom: clamp(48px, 6vw, 84px);
@@ -7,6 +15,9 @@
   display: none;
 }
 
+/* ----------------------------------------------------------
+   2. Ficha de Producto (.histamine-product)
+   ---------------------------------------------------------- */
 .histamine-product {
   position: relative;
   isolation: isolate;
@@ -71,6 +82,9 @@
   line-height: 1.72;
 }
 
+/* ----------------------------------------------------------
+   3. Especificaciones y Detalles (.histamine-product-details)
+   ---------------------------------------------------------- */
 .histamine-product-details {
   display: grid;
   gap: 12px;
@@ -136,6 +150,9 @@
   transition: color 200ms ease;
 }
 
+/* ----------------------------------------------------------
+   4. Visual del Producto (.histamine-product-visual)
+   ---------------------------------------------------------- */
 .histamine-product-visual {
   min-width: 0;
   margin: 0;
@@ -192,6 +209,9 @@
   }
 }
 
+/* ----------------------------------------------------------
+   5. Media Queries Histamina
+   ---------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   .histamine-product-copy,
   .histamine-product-visual,

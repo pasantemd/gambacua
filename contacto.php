@@ -5,6 +5,7 @@ require_once __DIR__ . '/includes/encabezado.php';
 introduccionPagina('Cuéntanos qué necesita tu operación', 'Hablemos de tus retos y de cómo podemos acompañarte.'); 
 ?>
 
+<!-- 1. Formulario de Contacto y Mapa de Ubicación -->
 <section class="wrap contact-form-section" id="formulario">
     <form class="contact-form" action="contacto.php#formulario" method="post" novalidate>
         <p class="form-hint">Los campos con * son obligatorios.</p>
@@ -84,7 +85,25 @@ introduccionPagina('Cuéntanos qué necesita tu operación', 'Hablemos de tus re
         </div>
 
         <div class="form-submit">
-            <p>Usaremos tus datos para atender esta consulta conforme a nuestras políticas de privacidad.</p>
+            <div class="form-consent">
+                <label class="form-checkbox-label" for="privacidad">
+                    <input 
+                        type="checkbox" 
+                        id="privacidad" 
+                        name="privacidad" 
+                        value="1" 
+                        required 
+                        <?= !empty($campos['privacidad']) ? 'checked' : '' ?>
+                        <?= isset($errores['privacidad']) ? 'aria-invalid="true" aria-describedby="error-privacidad"' : '' ?>
+                    >
+                    <span class="form-checkbox-text">
+                        Acepto los <a href="legal.php?tipo=terminos" target="_blank" rel="noopener noreferrer">términos</a> y el uso de mis datos conforme a las <a href="legal.php?tipo=privacidad" target="_blank" rel="noopener noreferrer">políticas de privacidad</a>. *
+                    </span>
+                </label>
+                <?php if (isset($errores['privacidad'])): ?>
+                    <small class="field-error" id="error-privacidad"><?= $errores['privacidad'] ?></small>
+                <?php endif; ?>
+            </div>
             <button class="button" type="submit">
                 Enviar consulta <?= icono('diagonal') ?>
             </button>
@@ -113,6 +132,7 @@ introduccionPagina('Cuéntanos qué necesita tu operación', 'Hablemos de tus re
     </div>
 </section>
 
+<!-- 2. Información Directa de Atención -->
 <section class="wrap contact-info-section" aria-label="Información directa de atención">
     <div class="contact-info-grid">
         <!-- Horario de atención -->
@@ -133,10 +153,19 @@ introduccionPagina('Cuéntanos qué necesita tu operación', 'Hablemos de tus re
                 <?= icono('mail') ?>
             </div>
             <div class="contact-info-content">
-                <span class="contact-info-label">Correo de ventas</span>
-                <a class="contact-info-link" href="mailto:ventas@gambacua.com">
-                    ventas@gambacua.com
-                </a>
+                <span class="contact-info-label">Correos de atención</span>
+                <div class="contact-email-item">
+                    <span class="contact-email-role">Ventas generales e inocuidad</span>
+                    <a class="contact-info-link" href="mailto:ventas@gambacua.com">
+                        ventas@gambacua.com
+                    </a>
+                </div>
+                <div class="contact-email-item">
+                    <span class="contact-email-role">Línea de ingredientes</span>
+                    <a class="contact-info-link" href="mailto:ventasingredientes@gambacua.com">
+                        ventasingredientes@gambacua.com
+                    </a>
+                </div>
                 <p class="contact-info-note">Atención comercial directa y cotizaciones</p>
             </div>
         </article>

@@ -1,3 +1,11 @@
+/* ==========================================================
+   Gambacua - Detección de Micotoxinas (micotoxinas.php)
+   Kits de diagnóstico Bio-Shield y Symmetric Green
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   1. Base de Página y Layout
+   ---------------------------------------------------------- */
 .micotoxins-page {
   padding-block: clamp(54px, 7vw, 96px);
 }
@@ -14,6 +22,27 @@
   display: none;
 }
 
+.micotoxins-jump a {
+  transition: transform 180ms var(--ease-brand), background-color 180ms ease, color 180ms ease;
+}
+
+.micotoxins-jump a svg {
+  transition: transform 180ms var(--ease-brand);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .micotoxins-jump a:hover svg {
+    transform: translateX(4px);
+  }
+}
+
+.micotoxins-jump a:active {
+  transform: scale(0.98);
+}
+
+/* ----------------------------------------------------------
+   2. Marca y Encabezado General (.micotoxins-brand)
+   ---------------------------------------------------------- */
 .micotoxins-brand {
   margin-bottom: clamp(40px, 6vw, 72px);
   padding-inline: clamp(0px, 1.2vw, 18px);
@@ -35,24 +64,9 @@
   line-height: 1.7;
 }
 
-.micotoxins-jump a {
-  transition: transform 180ms var(--ease-brand), background-color 180ms ease, color 180ms ease;
-}
-
-.micotoxins-jump a svg {
-  transition: transform 180ms var(--ease-brand);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .micotoxins-jump a:hover svg {
-    transform: translateX(4px);
-  }
-}
-
-.micotoxins-jump a:active {
-  transform: scale(0.98);
-}
-
+/* ----------------------------------------------------------
+   3. Familias de Pruebas (.micotoxin-family)
+   ---------------------------------------------------------- */
 .micotoxin-family {
   padding: clamp(34px, 5vw, 64px) clamp(0px, 1.2vw, 18px);
   scroll-margin-top: 110px;
@@ -227,10 +241,9 @@
   }
 }
 
-.section-separator {
-  display: none;
-}
-
+/* ----------------------------------------------------------
+   4. Aprobación Oficial USDA-GIPSA (.micotoxin-approval)
+   ---------------------------------------------------------- */
 .micotoxin-approval {
   display: grid;
   justify-items: center;
@@ -281,6 +294,9 @@
   }
 }
 
+/* ----------------------------------------------------------
+   5. Media Queries Micotoxinas
+   ---------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   .micotoxins-brand,
   .micotoxin-family,
@@ -313,7 +329,6 @@
     max-width: 520px;
     justify-self: center;
   }
-
 }
 
 @media (max-width: 800px) {

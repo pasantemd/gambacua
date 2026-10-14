@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let tieneError = false;
 
     obligatorios.forEach(campo => {
-      const vacio = !campo.value.trim();
-      if (vacio) campo.setAttribute('aria-invalid', 'true');
+      const invalido = campo.type === 'checkbox' ? !campo.checked : !campo.value.trim();
+      if (invalido) campo.setAttribute('aria-invalid', 'true');
       else campo.removeAttribute('aria-invalid');
-      if (vacio) tieneError = true;
+      if (invalido) tieneError = true;
     });
 
     if (tieneError) {
@@ -21,8 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   formulario.querySelectorAll('input, textarea').forEach(campo => {
-    campo.addEventListener('input', () => {
-      if (campo.value.trim()) campo.removeAttribute('aria-invalid');
-    });
+    const limpiar = () => {
+      const valido = campo.type === 'checkbox' ? campo.checked : Boolean(campo.value.trim());
+      if (valido) campo.removeAttribute('aria-invalid');
+    };
+    campo.addEventListener('input', limpiar);
+    campo.addEventListener('change', limpiar);
   });
 });

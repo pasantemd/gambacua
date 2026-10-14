@@ -112,7 +112,7 @@ introduccionPagina(
                         autocomplete="off"
                     >
                     <button class="cd-search-clear" id="cd-search-clear" type="button" aria-label="Limpiar búsqueda" hidden>
-                        <?= icon('close') ?>
+                        <?= icon('x') ?>
                     </button>
                 </label>
             </div>

@@ -8,6 +8,7 @@ introduccionPagina(
 );
 ?>
 
+<!-- 1. Carrusel de Categorías de Producto -->
 <section class="wrap product-categories-section" aria-labelledby="categorias-title">
     <div class="product-categories-heading">
         <div>
@@ -65,7 +66,7 @@ introduccionPagina(
     <div class="categories-carousel-dots" id="categories-carousel-dots" aria-hidden="true"></div>
 </section>
 
-<!-- Franja de Contacto -->
+<!-- 2. Cintillo de Contacto -->
 <section class="wrap contact-strip">
     <div>
         <h2>¿Requieres asesoría sobre alguna de nuestras líneas o productos?</h2>
@@ -77,5 +78,3 @@ introduccionPagina(
 <script src="assets/js/carrusel-categorias.js?v=3" defer></script>
 
 <?php require __DIR__.'/includes/pie.php'; ?>
-
-

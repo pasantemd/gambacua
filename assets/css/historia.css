@@ -1,67 +1,11 @@
 /* ==========================================================
    Gambacua - Nuestra Historia (historia.php)
-   Relato institucional y Línea de Tiempo Horizontal (2022 - 2024 - Presente)
+   Relato institucional, Línea de Tiempo y Equipo
    ========================================================== */
 
 /* ----------------------------------------------------------
-   Sección Relato e Introducción
+   1. Relato y Visión Institucional (.history-layout)
    ---------------------------------------------------------- */
-.story-section {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  column-gap: 75px;
-  align-items: center;
-  padding-block: 88px;
-}
-
-.story-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.story-heading h2 {
-  font-size: clamp(34px, 3.4vw, 48px);
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.story-heading h2 em {
-  color: #167b91;
-}
-
-.story-copy .lead {
-  font-size: 18px;
-  line-height: 1.75;
-  margin-bottom: 14px;
-  color: var(--ink);
-}
-
-.story-copy p:not(.lead) {
-  font-size: 14px;
-  color: var(--muted);
-  line-height: 1.75;
-  margin-bottom: 22px;
-}
-
-.story-copy .text-link {
-  margin-top: 4px;
-}
-
-.story-copy .button {
-  margin-top: 10px;
-  width: fit-content;
-}
-
-.story-media {
-  min-height: 380px;
-  height: 100%;
-  border-radius: 0;
-  overflow: hidden;
-  border: 1px solid #d0e2e6;
-  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%);
-}
-
 .history-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -83,94 +27,8 @@
   min-height: 465px;
 }
 
-/* Equipo: bloque editorial con ritmo y lenguaje de marca */
-.team-section {
-  display: grid;
-  grid-template-columns: minmax(280px, .78fr) minmax(0, 1.22fr);
-  gap: clamp(48px, 7vw, 104px);
-  align-items: start;
-  margin-block: 0 clamp(50px, 6vw, 76px);
-  padding-block: clamp(44px, 5vw, 64px);
-  position: relative;
-}
-
-.team-section::before {
-  content: '';
-  position: absolute;
-  inset: 0 calc(50% - 50vw);
-  z-index: -1;
-  background: linear-gradient(115deg, transparent 0 66%, rgba(46, 151, 174, .06) 66% 68%, transparent 68%), #f2f7f8;
-}
-
-.team-heading {
-  position: sticky;
-  top: 118px;
-  padding-top: 22px;
-}
-
-.team-heading::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 48px;
-  height: 5px;
-  background: linear-gradient(180deg, var(--teal), #70cfdb);
-  transform: skewX(-28deg);
-}
-
-.team-heading h2 {
-  color: var(--navy);
-  font-size: clamp(38px, 4vw, 56px);
-  line-height: 1;
-  margin-bottom: 18px;
-}
-
-.team-lead {
-  max-width: 330px;
-  margin: 0;
-  color: #365d6c;
-  font-size: clamp(16px, 1.5vw, 20px);
-  line-height: 1.55;
-}
-
-.team-content {
-  min-width: 0;
-  height: 100%;
-}
-
-.team-copy {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-  margin-top: 32px;
-}
-
-.team-copy p {
-  margin: 0;
-  color: #456773;
-  font-size: 14px;
-  line-height: 1.82;
-}
-
-.team-copy p:first-child {
-  color: var(--ink);
-  font-size: 15px;
-}
-
-.team-visual {
-  min-height: 430px;
-  height: 100%;
-  background: #dfecef;
-  clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
-}
-
-.team-visual .media-label {
-  max-width: 230px;
-}
-
 /* ----------------------------------------------------------
-   Línea de Tiempo Horizontal
+   2. Línea de Tiempo Horizontal (.history-timeline-section)
    ---------------------------------------------------------- */
 .history-timeline-section {
   padding-block: clamp(48px, 5vw, 64px) clamp(24px, 3vw, 38px);
@@ -387,146 +245,97 @@
 }
 
 /* ----------------------------------------------------------
-   Sección Nuestro Compromiso y Tres Pilares
+   3. Nuestro Equipo (.team-section)
    ---------------------------------------------------------- */
-.commitment-section {
-  padding-block: clamp(54px, 7vw, 92px);
-  border-top: none;
+.team-section {
+  display: grid;
+  grid-template-columns: minmax(280px, .78fr) minmax(0, 1.22fr);
+  gap: clamp(48px, 7vw, 104px);
+  align-items: start;
+  margin-block: 0 clamp(50px, 6vw, 76px);
+  padding-block: clamp(44px, 5vw, 64px);
+  position: relative;
 }
 
-.commitment-header {
-  max-width: 820px;
-  margin: 0 auto clamp(36px, 5vw, 56px);
-  text-align: center;
+.team-section::before {
+  content: '';
+  position: absolute;
+  inset: 0 calc(50% - 50vw);
+  z-index: -1;
+  background: linear-gradient(115deg, transparent 0 66%, rgba(46, 151, 174, .06) 66% 68%, transparent 68%), #f2f7f8;
 }
 
-.commitment-header h2 {
+.team-heading {
+  position: sticky;
+  top: 118px;
+  padding-top: 22px;
+}
+
+.team-heading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 5px;
+  background: linear-gradient(180deg, var(--teal), #70cfdb);
+  transform: skewX(-28deg);
+}
+
+.team-heading h2 {
   color: var(--navy);
-  font-size: clamp(32px, 3.6vw, 48px);
+  font-size: clamp(38px, 4vw, 56px);
+  line-height: 1;
   margin-bottom: 18px;
 }
 
-.commitment-header .lead {
-  color: var(--ink);
-  font-size: clamp(16px, 1.4vw, 19px);
-  line-height: 1.7;
-  margin: 0 0 16px;
-}
-
-.commitment-subtitle {
-  color: var(--teal);
-  font-size: clamp(14px, 1.2vw, 16px);
-  font-weight: 700;
-  letter-spacing: .02em;
-  text-transform: uppercase;
+.team-lead {
+  max-width: 330px;
   margin: 0;
+  color: #365d6c;
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 1.55;
 }
 
-.commitment-pillars {
+.team-content {
+  min-width: 0;
+  height: 100%;
+}
+
+.team-copy {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(18px, 2.5vw, 28px);
-  align-items: stretch;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 32px;
 }
 
-.pillar-card {
-  position: relative;
-  min-height: 250px;
-  padding: 32px 28px 30px;
-  background: var(--surface);
-  border: 1px solid #d8e7eb;
-  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  transition: transform 220ms var(--ease-brand), box-shadow 220ms ease, border-color 180ms ease;
-}
-
-.pillar-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--teal);
-  box-shadow: 0 12px 28px -6px rgba(0, 71, 102, .12);
-}
-
-.pillar-card.is-featured {
-  background: var(--navy);
-  color: #fff;
-  border-color: var(--navy);
-}
-
-.pillar-card.is-featured h3 {
-  color: #fff;
-}
-
-.pillar-card.is-featured p {
-  color: #dbeaf0;
-}
-
-.pillar-card.is-featured .pillar-mark {
-  color: #8fe3ee;
-}
-
-.pillar-card.is-featured .pillar-word {
-  color: rgba(255, 255, 255, .15);
-}
-
-.pillar-mark {
-  width: 44px;
-  height: 44px;
-  color: var(--teal);
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.pillar-mark svg {
-  width: 38px;
-  height: 38px;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.pillar-card h3 {
-  color: var(--navy);
-  font-size: clamp(20px, 2vw, 24px);
-  margin: 0 0 12px;
-  font-weight: 700;
-}
-
-.pillar-card p {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.7;
+.team-copy p {
   margin: 0;
-  flex: 1;
+  color: #456773;
+  font-size: 14px;
+  line-height: 1.82;
 }
 
-.pillar-word {
-  display: block;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: #9cb5c2;
-  margin-top: 24px;
+.team-copy p:first-child {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.team-visual {
+  min-height: 430px;
+  height: 100%;
+  background: #dfecef;
+  clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
+}
+
+.team-visual .media-label {
+  max-width: 230px;
 }
 
 /* ----------------------------------------------------------
-   Media Queries Historia
+   4. Media Queries Historia
    ---------------------------------------------------------- */
-@media (max-width: 1100px) {
-  .story-section {
-    column-gap: 45px;
-  }
-}
-
 @media (max-width: 960px) {
-  .commitment-pillars {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
   .team-section {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -572,17 +381,6 @@
 }
 
 @media (max-width: 800px) {
-  .story-section {
-    grid-template-columns: 1fr;
-    gap: 38px;
-    padding-block: 58px;
-  }
-  .story-heading h2 {
-    font-size: 32px;
-  }
-  .story-media {
-    min-height: 290px;
-  }
   .history-layout {
     grid-template-columns: 1fr;
     gap: 38px;
@@ -604,11 +402,5 @@
   }
   .team-visual {
     min-height: 230px;
-  }
-  .story-copy {
-    text-align: left;
-  }
-  .story-heading h2 {
-    font-size: 30px;
   }
 }

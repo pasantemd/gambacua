@@ -3,6 +3,7 @@ require __DIR__.'/includes/encabezado.php';
 introduccionPagina('Nuestra historia', 'Innovación, calidad y acompañamiento técnico para la industria mexicana.'); 
 ?>
 
+<!-- 1. Visión Inicial -->
 <section class="wrap history-layout">
   <div>
     <h2>Una visión que comenzó en México</h2>
@@ -12,6 +13,7 @@ introduccionPagina('Nuestra historia', 'Innovación, calidad y acompañamiento t
   <?php espacioMultimedia('historia/laboratorio-operacion.webp', 'Instalaciones de laboratorio y diagnóstico Gambacua'); ?>
 </section>
 
+<!-- 2. Línea de Tiempo Horizontal (2022 - 2024 - Presente) -->
 <section class="wrap history-timeline-section" aria-label="Línea de tiempo de nuestra historia">
   <div class="timeline-header">
     <h2>Nuestra trayectoria</h2>
@@ -80,6 +82,7 @@ introduccionPagina('Nuestra historia', 'Innovación, calidad y acompañamiento t
   </div>
 </section>
 
+<!-- 3. Nuestro Equipo -->
 <section class="wrap team-section" aria-labelledby="team-title">
   <div class="team-heading">
     <h2 id="team-title">Nuestro equipo</h2>
@@ -95,7 +98,7 @@ introduccionPagina('Nuestra historia', 'Innovación, calidad y acompañamiento t
   </div>
 </section>
 
-
+<!-- 4. Cintillo de Contacto -->
 <section class="wrap contact-strip">
   <div>
     <h2>Hablemos de lo que tu operación necesita</h2>
@@ -105,6 +108,3 @@ introduccionPagina('Nuestra historia', 'Innovación, calidad y acompañamiento t
 </section>
 
 <?php require __DIR__.'/includes/pie.php'; ?>
-
-
-

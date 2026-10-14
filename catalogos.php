@@ -14,6 +14,7 @@ introduccionPagina(
 ?>
 
 <section class="catalog-book wrap" aria-labelledby="catalog-book-title">
+    <!-- 1. Encabezado y Acciones del Visor -->
     <header class="catalog-book__header">
         <div>
             <h2 id="catalog-book-title">Catálogo de inocuidad Gambacua</h2>
@@ -33,6 +34,7 @@ introduccionPagina(
 
     <p id="catalogBookStatus" class="catalog-book__status" role="status" aria-live="polite">Cargando catálogo…</p>
 
+    <!-- 2. Marco del Libro y Navegación de Páginas -->
     <div id="catalogBookFrame" class="catalog-book__frame">
         <button id="catalogBookPrevious" class="catalog-book__page-arrow catalog-book__page-arrow--previous" type="button" aria-label="Página anterior" disabled>
             <span aria-hidden="true">←</span>
@@ -43,6 +45,7 @@ introduccionPagina(
         </button>
     </div>
 
+    <!-- 3. Controles e Indicador de Lectura -->
     <div class="catalog-book__controls" aria-label="Controles del catálogo">
         <span id="catalogBookIndicator" class="catalog-book__indicator" aria-live="polite">Página 1 de …</span>
     </div>

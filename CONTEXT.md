@@ -32,13 +32,18 @@ Sitio institucional de Gambacua para presentar la empresa, sus categorías de pr
 - `includes/formulario-contacto.php`: estado, validación, CSRF y envío del formulario.
 - `includes/datos-compact-dry.php`: catálogo estructurado de placas Compact Dry.
 - `includes/datos-histamina.php`: información confirmada del kit Bio-Shield Histamine.
-- `assets/css/sitio.css`: importador de estilos globales y por página.
-- `assets/css/*.css`: estilos separados por componente o página.
+- `assets/css/sitio.css`: importador maestro de estilos globales y por página.
+- `assets/css/*.css`: estilos modulares independientes organizados en secciones numeradas por página (`inicio.css`, `historia.css`, `productos.css`, `ingredientes.css`, `inocuidad.css`, `medios-cultivo.css`, `filtracion-membrana.css`, `materiales-insumos.css`, `compact-dry.css`, `micotoxinas.css`, `histamina.css`, `catalogos.css`, `contacto.css`, `legal.css`).
 - `assets/js/encabezado.js`: menú principal y desplegables.
 - `assets/js/movimiento-sitio.js`: revelado editorial compartido de secciones, grupos y tarjetas; usa opacidad y desplazamiento breve, escalonado limitado y respeta `prefers-reduced-motion`.
-- `assets/js/carrusel-categorias.js`: carrusel de categorías de Productos.
-- `assets/js/compact-dry.js`: búsqueda, catálogo, modal y comportamiento de Compact Dry.
-- `assets/css/carga.css`: sistema de pantalla de carga inicial, transición suave de página, barra de progreso para navegación y carga progresiva de imágenes.
+- `assets/js/carrusel-categorias.js`: carrusel de categorías de Productos (`productos.php`).
+- `assets/js/compact-dry.js`: búsqueda, catálogo, modal y comportamiento de Compact Dry (`compact-dry.php`).
+- `assets/js/filtracion-membrana.js`: selector y pestañas accesibles de dispensadores (`filtracion-membrana.php`).
+- `assets/js/contacto.js`: validación accesible de formulario de contacto (`contacto.php`).
+- `assets/js/historia.js`: soporte interactivo para la línea de tiempo (`historia.php`).
+- `assets/js/visor-catalogo.js`: visor interactivo tipo libro con PageFlip (`catalogos.php`).
+- `assets/js/navegador-secciones.js`: seguimiento y navegación en páginas con riel lateral (`medios-cultivo.php`, `filtracion-membrana.php`, `materiales-insumos.php`, `micotoxinas.php`, `compact-dry.php`).
+- `assets/css/carga.css`: preloader con animación de agua exclusivo de Inicio, barra de progreso compartida para navegación y skeleton local en imágenes para reservar espacio durante cargas lentas.
 - `tools/`: verificaciones y utilidades locales. Las capturas en `tools/screenshots/` son evidencia de QA, no contenido público.
 - Los recursos raster publicados en `assets/images/` usan WebP; los logotipos oficiales se conservan en SVG.
 - `tools/verificar-movimiento-sitio.cjs`: valida cobertura de movimiento, aparición al recorrer la página, consola, desbordamiento y movimiento reducido en las 14 páginas públicas.
@@ -89,12 +94,12 @@ Sitio institucional de Gambacua para presentar la empresa, sus categorías de pr
 
 ## Contacto
 
-- Correo de ventas: `ventas@gambacua.com`.
+- Correos de atención: `ventas@gambacua.com` (ventas generales e inocuidad) y `ventasingredientes@gambacua.com` (línea de ingredientes).
 - Horario de atención: Lunes a viernes, 8:00 am – 5:00 pm.
 - Teléfono: `+52 662 110 1511`.
 - Dirección: Blvd. García Morales 1279 M, Col. La Manga, Hermosillo, CP 83220, Sonora, México.
 - También se menciona CDMX, México, sin dirección específica.
-- Formulario: nombres, apellidos, correo, asunto y mensaje obligatorios; teléfono y empresa opcionales.
+- Formulario: nombres, apellidos, correo, asunto, mensaje y consentimiento obligatorio de términos y privacidad (`privacidad`); teléfono y empresa opcionales.
 - Variables de entorno: `GAMBACUA_CONTACT_TO` y `GAMBACUA_MAIL_FROM`.
 - El sistema no debe fingir un envío exitoso cuando el correo no está configurado.
 

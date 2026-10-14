@@ -13,7 +13,7 @@ for (const dir of ['.', 'includes']) {
   const browser = await chromium.launch({ headless: true });
   const errors = [];
   const page = await browser.newPage();
-  const routes = ['index', 'historia', 'productos', 'ingredientes', 'inocuidad', 'micotoxinas', 'compact-dry', 'catalogos', 'contacto', 'legal'];
+  const routes = ['index', 'historia', 'productos', 'ingredientes', 'inocuidad', 'micotoxinas', 'histamina', 'medios-cultivo', 'filtracion-membrana', 'materiales-insumos', 'compact-dry', 'catalogos', 'contacto', 'legal'];
 
   page.on('pageerror', error => errors.push(error.message));
   fs.mkdirSync('tools/screenshots', { recursive: true });

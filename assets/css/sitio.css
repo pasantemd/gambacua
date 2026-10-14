@@ -9,7 +9,7 @@
 @import url('pie.css?v=3');
 @import url('introduccion-pagina.css?v=9');
 @import url('navegador-secciones.css?v=7');
-@import url('carga.css?v=4');
+@import url('carga.css?v=6');
 
 /* 2. Hojas de Estilo por Página */
 @import url('inicio.css?v=4');
@@ -19,7 +19,9 @@
 @import url('inocuidad.css?v=27');
 @import url('micotoxinas.css?v=11');
 @import url('histamina.css?v=8');
-@import url('medios-cultivo.css?v=44');
+@import url('medios-cultivo.css?v=45');
+@import url('filtracion-membrana.css?v=1');
+@import url('materiales-insumos.css?v=1');
 @import url('compact-dry.css?v=24');
 @import url('catalogos.css?v=8');
 @import url('contacto.css?v=2');

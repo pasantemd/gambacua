@@ -158,6 +158,12 @@
    ---------------------------------------------------------- */
 .cat-card-ingredientes {
   background-color: #e8f2f5;
+  background-image:
+    var(--brand-ribbon-light),
+    linear-gradient(135deg, #f2f8fa 0%, #e8f2f5 64%, #dbe8ed 100%);
+  background-repeat: no-repeat;
+  background-position: right top, center;
+  background-size: auto 100%, 100% 100%;
   border: 1px solid #d0e2e8;
   box-shadow: 0 14px 34px -8px rgba(13, 73, 100, 0.12);
 }
@@ -176,6 +182,9 @@
 
 .cat-card-ingredientes:hover {
   background-color: #deedf1;
+  background-image:
+    var(--brand-ribbon-light),
+    linear-gradient(135deg, #f2f8fa 0%, #e8f2f5 64%, #dbe8ed 100%);
   border-color: #b7d6df;
   box-shadow: 0 24px 48px -10px rgba(13, 73, 100, 0.22);
   transform: translateY(-6px);
@@ -256,6 +265,12 @@
    ---------------------------------------------------------- */
 .cat-card-inocuidad {
   background-color: var(--navy);
+  background-image:
+    var(--brand-ribbon-dark),
+    linear-gradient(135deg, #00364d 0%, var(--navy) 62%, #17617d 100%);
+  background-repeat: no-repeat;
+  background-position: right top, center;
+  background-size: auto 100%, 100% 100%;
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 16px 38px -8px rgba(13, 73, 100, 0.4);
 }
@@ -274,6 +289,9 @@
 
 .cat-card-inocuidad:hover {
   background-color: #093c52;
+  background-image:
+    var(--brand-ribbon-dark),
+    linear-gradient(135deg, #00364d 0%, var(--navy) 62%, #17617d 100%);
   border-color: rgba(95, 194, 209, 0.4);
   box-shadow: 0 26px 54px -10px rgba(13, 73, 100, 0.6);
   transform: translateY(-6px);

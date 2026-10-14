@@ -1,6 +1,6 @@
 const { chromium } = require('C:/xampp/htdocs/compact-dry/node_modules/playwright');
 
-const routes = ['index', 'historia', 'productos', 'ingredientes', 'inocuidad', 'micotoxinas', 'medios-cultivo', 'filtracion-membrana', 'materiales-insumos', 'compact-dry', 'catalogos', 'contacto', 'legal'];
+const routes = ['index', 'historia', 'productos', 'ingredientes', 'inocuidad', 'micotoxinas', 'histamina', 'medios-cultivo', 'filtracion-membrana', 'materiales-insumos', 'compact-dry', 'catalogos', 'contacto', 'legal'];
 const viewports = [
   { width: 1440, height: 900 },
   { width: 1024, height: 768 },

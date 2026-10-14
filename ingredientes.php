@@ -13,6 +13,7 @@ introduccionPagina(
 );
 ?>
 
+<!-- 1. Introducción y Enfoque Industrial -->
 <section class="wrap ingredients-intro-section">
     <div class="history-layout">
         <div>
@@ -27,6 +28,7 @@ introduccionPagina(
     </div>
 </section>
 
+<!-- 2. Catálogo de Ovoproductos -->
 <section class="wrap ingredients-catalog-section">
     <div class="section-heading">
         <div>
@@ -62,6 +64,7 @@ introduccionPagina(
     </div>
 </section>
 
+<!-- 3. Planta de Producción y Flujo Controlado -->
 <section class="wrap">
     <div class="plant-production-banner">
         <div class="plant-production-content">
@@ -76,6 +79,7 @@ introduccionPagina(
     </div>
 </section>
 
+<!-- 4. Certificaciones y Estándares de Calidad -->
 <section class="wrap">
     <div class="certs-strip">
         <div class="certs-info">
@@ -88,6 +92,7 @@ introduccionPagina(
     </div>
 </section>
 
+<!-- 5. Cintillo de Contacto -->
 <section class="wrap contact-strip" style="margin-top: 40px;">
     <div>
         <h2>¿Requieres fichas técnicas, muestras o cotización?</h2>

@@ -1,6 +1,6 @@
 /** Interacción de hitos y aparición de la línea de tiempo. */
 document.addEventListener('DOMContentLoaded', () => {
-  const tarjetas = document.querySelectorAll('.milestone-card, .timeline-card');
+const tarjetas = document.querySelectorAll('.timeline-card');
   tarjetas.forEach(tarjeta => {
     tarjeta.addEventListener('click', () => {
       tarjetas.forEach(elemento => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const lineaTiempo = document.querySelector('.milestones, .history-timeline-section');
+const lineaTiempo = document.querySelector('.history-timeline-section');
   if (!lineaTiempo) return;
   if (!('IntersectionObserver' in window)) {
     lineaTiempo.classList.add('is-visible');

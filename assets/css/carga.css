@@ -37,14 +37,14 @@
 /* ----------------------------------------------------------
    2. Transición armónica de entrada de página (Evita salto brusco)
    ---------------------------------------------------------- */
-html.js body:not(.is-page-ready) #contenido,
-html.js body:not(.is-page-ready) .site-header {
+html.js body.page-index:not(.is-page-ready) #contenido,
+html.js body.page-index:not(.is-page-ready) .site-header {
   opacity: 0;
   transform: translateY(6px);
 }
 
-html.js body.is-page-ready #contenido,
-html.js body.is-page-ready .site-header {
+html.js body.page-index.is-page-ready #contenido,
+html.js body.page-index.is-page-ready .site-header {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 280ms cubic-bezier(0.16, 1, 0.3, 1), transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
@@ -58,161 +58,149 @@ body.is-page-exiting .site-header {
 }
 
 /* ----------------------------------------------------------
-   3. Pantalla Skeleton inicial (Previene pantalla en blanco)
+   3. Preloader oficial con animación de agua en la "A" de Gambacua
    ---------------------------------------------------------- */
-.page-skeleton {
+.site-preloader {
   position: fixed;
   inset: 0;
-  z-index: 99999;
+  z-index: 999999;
   background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
-  overflow-y: hidden;
+  overflow: hidden;
   opacity: 1;
   visibility: visible;
-  transition: opacity 280ms cubic-bezier(0.16, 1, 0.3, 1), visibility 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 360ms cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 360ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
-.page-skeleton.is-loaded {
+.site-preloader.is-loaded {
   opacity: 0;
   visibility: hidden;
+  transform: scale(1.02);
 }
 
-/* Elementos base shimmer */
-.skeleton-shimmer-box {
-  background: linear-gradient(90deg, #edf4f6 0%, #f7fafb 45%, #edf4f6 80%);
-  background-size: 200% 100%;
-  animation: skeleton-shimmer 1.6s ease-in-out infinite;
-  border-radius: 6px;
-}
-
-/* Cabecera del skeleton */
-.skeleton-header {
-  height: 85px;
-  border-bottom: 1px solid var(--line, #d5e2e5);
-  display: flex;
-  align-items: center;
-  background: #ffffff;
-}
-
-.skeleton-header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  gap: 32px;
-}
-
-.skeleton-logo {
-  width: 190px;
-  height: 34px;
-  border-radius: 6px;
-}
-
-.skeleton-nav {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.skeleton-nav-item {
-  width: 76px;
-  height: 14px;
-  border-radius: 4px;
-}
-
-.skeleton-nav-btn {
-  width: 110px;
-  height: 40px;
-  border-radius: 4px;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
-}
-
-/* Hero del skeleton */
-.skeleton-hero {
-  padding: clamp(48px, 6vw, 76px) 0 clamp(40px, 5vw, 64px);
-  background: linear-gradient(180deg, #f7fafb 0%, #ffffff 100%);
-  border-bottom: none;
-}
-
-.skeleton-hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-  gap: clamp(32px, 5vw, 64px);
-  align-items: center;
-}
-
-.skeleton-copy {
+.preloader-inner {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 16px;
+  text-align: center;
+  user-select: none;
 }
 
-.skeleton-tag {
-  width: 130px;
-  height: 14px;
-  border-radius: 4px;
+.preloader-symbol {
+  width: clamp(92px, 12vw, 115px);
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 14px 28px rgba(0, 71, 102, 0.12));
 }
 
-.skeleton-title-1 {
-  width: 88%;
-  height: clamp(32px, 3.4vw, 44px);
-  border-radius: 6px;
+/* Animación del nivel de agua que sube llenando la A */
+.liquid-container {
+  animation: liquid-fill-up 1.3s cubic-bezier(0.35, 0.1, 0.25, 1) forwards;
 }
 
-.skeleton-title-2 {
-  width: 65%;
-  height: clamp(32px, 3.4vw, 44px);
-  border-radius: 6px;
+@keyframes liquid-fill-up {
+  0% {
+    transform: translateY(48px);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
 }
 
-.skeleton-lead-1 {
-  width: 95%;
-  height: 16px;
-  margin-top: 8px;
-  border-radius: 4px;
+/* Olas horizontales continua */
+.wave-back {
+  fill: var(--teal, #3097b2);
+  opacity: 0.52;
+  animation: wave-h-back 1.6s linear infinite;
 }
 
-.skeleton-lead-2 {
-  width: 78%;
-  height: 16px;
-  border-radius: 4px;
+.wave-front {
+  fill: url(#preloader-liquid-grad);
+  opacity: 0.95;
+  animation: wave-h-front 1.2s linear infinite;
 }
 
-.skeleton-btn-row {
-  display: flex;
-  gap: 16px;
-  margin-top: 14px;
+.wave-shine {
+  stroke: rgba(255, 255, 255, 0.7);
+  stroke-width: 0.75;
+  fill: none;
+  animation: wave-h-front 1.2s linear infinite;
 }
 
-.skeleton-btn-main {
-  width: 180px;
-  height: 48px;
-  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+@keyframes wave-h-back {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-40px);
+  }
 }
 
-.skeleton-btn-sec {
-  width: 150px;
-  height: 48px;
-  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+@keyframes wave-h-front {
+  0% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-.skeleton-media-box {
-  width: 100%;
-  height: clamp(260px, 28vw, 380px);
-  border-radius: 18px;
+/* Burbujas acuáticas ascendentes */
+.preloader-bubble {
+  fill: rgba(255, 255, 255, 0.7);
+  animation: bubble-rise 1.5s ease-in-out infinite;
 }
 
-/* Fila de tarjetas inferiores */
-.skeleton-cards-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  padding-top: 40px;
+.pb-1 { animation-delay: 0.15s; }
+.pb-2 { animation-delay: 0.65s; }
+.pb-3 { animation-delay: 1.05s; }
+
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-22px);
+    opacity: 0;
+  }
 }
 
-.skeleton-card {
-  height: 180px;
-  border-radius: 16px;
+/* Tipografía de marca en el preloader */
+.preloader-brand {
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--navy, #004766);
+  text-transform: uppercase;
+  opacity: 0.92;
+  animation: preloader-fade-in 800ms ease-out forwards;
+}
+
+@keyframes preloader-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 0.95;
+    transform: translateY(0);
+  }
 }
 
 /* ----------------------------------------------------------
@@ -231,8 +219,7 @@ body.is-page-exiting .site-header {
 }
 
 .media-slot.has-image.is-loaded img,
-.media-slot.has-image img.is-loaded,
-.no-js .media-slot.has-image img {
+.media-slot.has-image img.is-loaded {
   opacity: 1;
 }
 
@@ -242,59 +229,27 @@ body.is-page-exiting .site-header {
 }
 
 /* ----------------------------------------------------------
-   4. Adaptación móvil para el Skeleton
-   ---------------------------------------------------------- */
-@media (max-width: 900px) {
-  .skeleton-hero-inner {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .skeleton-cards-row {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .skeleton-nav-item,
-  .skeleton-nav-btn {
-    display: none;
-  }
-  .skeleton-header-inner::after {
-    content: '';
-    display: block;
-    width: 38px;
-    height: 38px;
-    border-radius: 8px;
-    background: #edf4f6;
-  }
-  .skeleton-btn-row {
-    flex-direction: column;
-    width: 100%;
-  }
-  .skeleton-btn-main,
-  .skeleton-btn-sec {
-    width: 100%;
-  }
-  .skeleton-cards-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ----------------------------------------------------------
-   5. Accesibilidad: prefers-reduced-motion
+   4. Accesibilidad: prefers-reduced-motion
    ---------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
-  .skeleton-shimmer-box,
+  .site-preloader {
+    display: none !important;
+  }
+  .liquid-container,
+  .wave-back,
+  .wave-front,
+  .wave-shine,
+  .preloader-bubble,
+  .preloader-brand,
   .media-slot {
     animation: none !important;
     background: #edf4f6 !important;
   }
-  .page-skeleton,
   #site-progress-bar,
-  html.js body:not(.is-page-ready) #contenido,
-  html.js body:not(.is-page-ready) .site-header,
-  html.js body.is-page-ready #contenido,
-  html.js body.is-page-ready .site-header,
+  html.js body.page-index:not(.is-page-ready) #contenido,
+  html.js body.page-index:not(.is-page-ready) .site-header,
+  html.js body.page-index.is-page-ready #contenido,
+  html.js body.page-index.is-page-ready .site-header,
   body.is-page-exiting #contenido,
   body.is-page-exiting .site-header {
     transition: none !important;
@@ -306,3 +261,4 @@ body.is-page-exiting .site-header {
     opacity: 1 !important;
   }
 }
+
