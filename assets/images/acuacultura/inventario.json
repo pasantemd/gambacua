@@ -1,0 +1,1522 @@
+[
+  {
+    "origen": "ACOPIO/tolva version 2.png",
+    "archivo": "koi/silo-fijo.webp",
+    "paginas_catalogo": "5-7",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      3456,
+      5184
+    ],
+    "dimensiones_web": [
+      2133,
+      3200
+    ]
+  },
+  {
+    "origen": "ACOPIO/silo movil.png",
+    "archivo": "koi/silo-movil.webp",
+    "paginas_catalogo": "5-7",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      6033,
+      4525
+    ],
+    "dimensiones_web": [
+      3200,
+      2400
+    ]
+  },
+  {
+    "origen": "ACOPIO/funcionamiento.png",
+    "archivo": "koi/diagrama-cabezal-ciclonico.webp",
+    "paginas_catalogo": "5-7",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      4713,
+      5225
+    ],
+    "dimensiones_web": [
+      2886,
+      3200
+    ]
+  },
+  {
+    "origen": "ACOPIO/23588143_1.webp",
+    "archivo": "koi/silo-con-monitoreo-01.webp",
+    "paginas_catalogo": "8",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      427,
+      826
+    ],
+    "dimensiones_web": [
+      427,
+      826
+    ]
+  },
+  {
+    "origen": "ACOPIO/bintack escala.png",
+    "archivo": "koi/silo-con-monitoreo-02.webp",
+    "paginas_catalogo": "8",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1779,
+      3442
+    ],
+    "dimensiones_web": [
+      1654,
+      3200
+    ]
+  },
+  {
+    "origen": "ACOPIO/bintrack.jpg",
+    "archivo": "koi/controlador-configuracion.webp",
+    "paginas_catalogo": "8",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1280,
+      720
+    ],
+    "dimensiones_web": [
+      1280,
+      720
+    ]
+  },
+  {
+    "origen": "ACOPIO/bintrack.png",
+    "archivo": "koi/controlador.webp",
+    "paginas_catalogo": "8",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      2402,
+      2271
+    ],
+    "dimensiones_web": [
+      2402,
+      2271
+    ]
+  },
+  {
+    "origen": "ACOPIO/bintrack2.jpg",
+    "archivo": "koi/celda-carga-01.webp",
+    "paginas_catalogo": "8",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1280,
+      1280
+    ],
+    "dimensiones_web": [
+      1280,
+      1280
+    ]
+  },
+  {
+    "origen": "ACOPIO/bintrack2.png",
+    "archivo": "koi/celda-carga-02.webp",
+    "paginas_catalogo": "8",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      5333,
+      5333
+    ],
+    "dimensiones_web": [
+      3200,
+      3200
+    ]
+  },
+  {
+    "origen": "ACOPIO/acopio 3.png",
+    "archivo": "acopio/silo-movil-en-operacion.webp",
+    "paginas_catalogo": "9-12",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      6400,
+      4266
+    ],
+    "dimensiones_web": [
+      3200,
+      2133
+    ]
+  },
+  {
+    "origen": "ACOPIO/acopio proceso.png",
+    "archivo": "acopio/diagrama-proceso-acopio.webp",
+    "paginas_catalogo": "9-12",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      5876,
+      3843
+    ],
+    "dimensiones_web": [
+      3200,
+      2093
+    ]
+  },
+  {
+    "origen": "ACOPIO/detalle llenado.png",
+    "archivo": "acopio/pantalla-detalle-llenado.webp",
+    "paginas_catalogo": "9-12",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      6033,
+      4525
+    ],
+    "dimensiones_web": [
+      3200,
+      2400
+    ]
+  },
+  {
+    "origen": "ACOPIO/historial de rutas.png",
+    "archivo": "acopio/pantalla-historial-rutas.webp",
+    "paginas_catalogo": "9-12",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      6966,
+      3921
+    ],
+    "dimensiones_web": [
+      3200,
+      1801
+    ]
+  },
+  {
+    "origen": "ACOPIO/mnitoreo live.png",
+    "archivo": "acopio/pantalla-monitoreo-silo-madre.webp",
+    "paginas_catalogo": "9-12",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      6966,
+      3921
+    ],
+    "dimensiones_web": [
+      3200,
+      1801
+    ]
+  },
+  {
+    "origen": "ACOPIO/variomac.jpg",
+    "archivo": "variomac/variomac-01.webp",
+    "paginas_catalogo": "22",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1571,
+      953
+    ],
+    "dimensiones_web": [
+      1571,
+      953
+    ]
+  },
+  {
+    "origen": "ACOPIO/variomac.png",
+    "archivo": "variomac/variomac-02.webp",
+    "paginas_catalogo": "22",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1571,
+      953
+    ],
+    "dimensiones_web": [
+      1571,
+      953
+    ]
+  },
+  {
+    "origen": "ACOPIO/ChatGPT Image 25 jun 2025, 16_50_57.png",
+    "archivo": "adicionales/soplador-refilky.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      4267,
+      4267
+    ],
+    "dimensiones_web": [
+      3200,
+      3200
+    ]
+  },
+  {
+    "origen": "ACOPIO/ChatGPT Image 26 jun 2025, 10_12_50.png",
+    "archivo": "adicionales/valvula-motor-tolva.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      3000,
+      3000
+    ],
+    "dimensiones_web": [
+      3000,
+      3000
+    ]
+  },
+  {
+    "origen": "ACOPIO/ChatGPT Image 26 jun 2025, 10_12_54.png",
+    "archivo": "adicionales/tolva-con-soplador.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      6400,
+      4267
+    ],
+    "dimensiones_web": [
+      3200,
+      2134
+    ]
+  },
+  {
+    "origen": "ACOPIO/ChatGPT Image 30 jun 2025, 12_08_27.png",
+    "archivo": "adicionales/alimentador-flotante-solar.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      4267,
+      4267
+    ],
+    "dimensiones_web": [
+      3200,
+      3200
+    ]
+  },
+  {
+    "origen": "ACOPIO/equipo completo.png",
+    "archivo": "adicionales/conjunto-alimentador-tolva.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      6400,
+      4267
+    ],
+    "dimensiones_web": [
+      3200,
+      2134
+    ]
+  },
+  {
+    "origen": "ACOPIO/nuevo equipo.jpg",
+    "archivo": "adicionales/tolva-soplador-vista-alternativa.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      6400,
+      4267
+    ],
+    "dimensiones_web": [
+      3200,
+      2134
+    ]
+  },
+  {
+    "origen": "AQ1/EMA final.png",
+    "archivo": "ema/estacion-medioambiental-autolimpiante.webp",
+    "paginas_catalogo": "23-24",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      5472,
+      4160
+    ],
+    "dimensiones_web": [
+      3200,
+      2433
+    ]
+  },
+  {
+    "origen": "AQ1/Alimentador 2024.png",
+    "archivo": "aq1/alimentador-solar.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      3704,
+      4160
+    ],
+    "dimensiones_web": [
+      2849,
+      3200
+    ]
+  },
+  {
+    "origen": "AQ1/FD100  motor.png",
+    "archivo": "aq1/motor-fd100.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      2735,
+      2148
+    ],
+    "dimensiones_web": [
+      2735,
+      2148
+    ]
+  },
+  {
+    "origen": "AQ1/SD 100 2.png",
+    "archivo": "aq1/dosificador-sd100-01.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      6240,
+      4160
+    ],
+    "dimensiones_web": [
+      3200,
+      2133
+    ]
+  },
+  {
+    "origen": "AQ1/SD 100 PLANO.png",
+    "archivo": "aq1/dosificador-sd100-plano.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      1880,
+      1152
+    ],
+    "dimensiones_web": [
+      1880,
+      1152
+    ]
+  },
+  {
+    "origen": "AQ1/SD 100.png",
+    "archivo": "aq1/dosificador-sd100-lateral.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      5184,
+      3456
+    ],
+    "dimensiones_web": [
+      3200,
+      2133
+    ]
+  },
+  {
+    "origen": "AQ1/SD100.png",
+    "archivo": "aq1/dosificador-sd100-posterior.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      5184,
+      3456
+    ],
+    "dimensiones_web": [
+      3200,
+      2133
+    ]
+  },
+  {
+    "origen": "AQ1/caja analitica.jpg",
+    "archivo": "aq1/caja-analitica-01.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      5725,
+      6949
+    ],
+    "dimensiones_web": [
+      2636,
+      3200
+    ]
+  },
+  {
+    "origen": "AQ1/caja de analítica.png",
+    "archivo": "aq1/caja-analitica-02.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      7653,
+      6240
+    ],
+    "dimensiones_web": [
+      3200,
+      2609
+    ]
+  },
+  {
+    "origen": "AQ1/EMA 1.png",
+    "archivo": "aq1/estacion-ema-frontal.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      1800,
+      1200
+    ],
+    "dimensiones_web": [
+      1800,
+      1200
+    ]
+  },
+  {
+    "origen": "AQ1/EMA 2.jpg",
+    "archivo": "aq1/estacion-ema-lateral-01.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      3240,
+      2160
+    ],
+    "dimensiones_web": [
+      3200,
+      2133
+    ]
+  },
+  {
+    "origen": "AQ1/EMA 2.png",
+    "archivo": "aq1/estacion-ema-lateral-02.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      1933,
+      2167
+    ],
+    "dimensiones_web": [
+      1933,
+      2167
+    ]
+  },
+  {
+    "origen": "AQ1/EMA 3.png",
+    "archivo": "aq1/estacion-ema-perspectiva.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      1800,
+      1200
+    ],
+    "dimensiones_web": [
+      1800,
+      1200
+    ]
+  },
+  {
+    "origen": "AQ1/hidrofono 01.png",
+    "archivo": "aq1/hidrofono-con-cable.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      5184,
+      3456
+    ],
+    "dimensiones_web": [
+      3200,
+      2133
+    ]
+  },
+  {
+    "origen": "AQ1/hidrofono 02.png",
+    "archivo": "aq1/hidrofono-detalle.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      5184,
+      3456
+    ],
+    "dimensiones_web": [
+      3200,
+      2133
+    ]
+  },
+  {
+    "origen": "AQ1/Hidrófono inalámbrico - copia.jpeg",
+    "archivo": "aq1/hidrofono-inalambrico-solar-01.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      1200,
+      1775
+    ],
+    "dimensiones_web": [
+      1200,
+      1775
+    ]
+  },
+  {
+    "origen": "AQ1/Hidrófono inalámbrico3.png",
+    "archivo": "aq1/hidrofono-inalambrico-solar-02.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      1200,
+      2925
+    ],
+    "dimensiones_web": [
+      1200,
+      2925
+    ]
+  },
+  {
+    "origen": "AQ1/Hidrófono inalámbrico4.jpg",
+    "archivo": "aq1/hidrofono-inalambrico-unidad.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      804,
+      788
+    ],
+    "dimensiones_web": [
+      804,
+      788
+    ]
+  },
+  {
+    "origen": "AQ1/Smart+Hydrophones.png",
+    "archivo": "aq1/hidrofono-inteligente.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      1757,
+      1951
+    ],
+    "dimensiones_web": [
+      1757,
+      1951
+    ]
+  },
+  {
+    "origen": "AQ1/sf200 frente.png",
+    "archivo": "aq1/controlador-sf200-abierto.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      6240,
+      4160
+    ],
+    "dimensiones_web": [
+      3200,
+      2133
+    ]
+  },
+  {
+    "origen": "AQ1/SF200.png",
+    "archivo": "aq1/controlador-sf200-cerrado.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      3938,
+      3376
+    ],
+    "dimensiones_web": [
+      3200,
+      2743
+    ]
+  },
+  {
+    "origen": "AQ1/WAC40 - render.png",
+    "archivo": "aq1/controlador-wac40.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      4167,
+      3311
+    ],
+    "dimensiones_web": [
+      3200,
+      2543
+    ]
+  },
+  {
+    "origen": "AQ1/cable y ADAPTADOR INYECTOR POE UBIQUITI.png",
+    "archivo": "ubiquiti/inyector-poe-con-cable.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      5000,
+      3546
+    ],
+    "dimensiones_web": [
+      3200,
+      2269
+    ]
+  },
+  {
+    "origen": "AQ1/UBIQUITI UNIFI AP DUAL BAND MIMO 2X2 GIGABIT.png",
+    "archivo": "ubiquiti/punto-acceso-unifi.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      3559,
+      2051
+    ],
+    "dimensiones_web": [
+      3200,
+      1844
+    ]
+  },
+  {
+    "origen": "AQ1/ups.png",
+    "archivo": "apc/respaldo-energia-ups.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      1074,
+      1660
+    ],
+    "dimensiones_web": [
+      1074,
+      1660
+    ]
+  },
+  {
+    "origen": "AQ1/SISTEMA DE ENERGIA SOLAR.png",
+    "archivo": "adicionales/sistema-energia-solar.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      3396,
+      5001
+    ],
+    "dimensiones_web": [
+      2173,
+      3200
+    ]
+  },
+  {
+    "origen": "AQ1/Soporte de flotadores.png",
+    "archivo": "adicionales/soporte-flotadores.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      5184,
+      731
+    ],
+    "dimensiones_web": [
+      3200,
+      451
+    ]
+  },
+  {
+    "origen": "AQ1/tubo cuadrado 2m.png",
+    "archivo": "adicionales/tubo-cuadrado-2-metros.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      4922,
+      694
+    ],
+    "dimensiones_web": [
+      3200,
+      451
+    ]
+  },
+  {
+    "origen": "AQ1/imagen para ia.png",
+    "archivo": "adicionales/estanque-con-alimentador.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      8858,
+      5906
+    ],
+    "dimensiones_web": [
+      3200,
+      2134
+    ]
+  },
+  {
+    "origen": "AQUA ECO/347435004_768482438309619_7725128431749082874_n.jpg",
+    "archivo": "adicionales/aireacion-estanque.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      4500,
+      7517
+    ],
+    "dimensiones_web": [
+      1916,
+      3200
+    ]
+  },
+  {
+    "origen": "AQUA ECO/abstract-dense-blue-waving-fog.jpg",
+    "archivo": "adicionales/niebla-azul.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      4914,
+      3462
+    ],
+    "dimensiones_web": [
+      3200,
+      2254
+    ]
+  },
+  {
+    "origen": "AQUA ECO/ai-generated-3d-water.jpg",
+    "archivo": "adicionales/agua-ilustracion.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      4096,
+      4096
+    ],
+    "dimensiones_web": [
+      3200,
+      3200
+    ]
+  },
+  {
+    "origen": "AQUA ECO/view-clear-water-with-splash-effect.jpg",
+    "archivo": "adicionales/agua-salpicadura.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      3584,
+      5376
+    ],
+    "dimensiones_web": [
+      2133,
+      3200
+    ]
+  },
+  {
+    "origen": "AQUA ECO/Foto-banda-pag-aeratori-sommergibili.jpg",
+    "archivo": "adicionales/aireadores-sumergibles-en-operacion.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      1920,
+      705
+    ],
+    "dimensiones_web": [
+      1920,
+      705
+    ]
+  },
+  {
+    "origen": "AQUA ECO/foto-banda-pag-Aeratori-superficiali.jpg",
+    "archivo": "adicionales/aireador-superficial-en-operacion.webp",
+    "paginas_catalogo": null,
+    "clasificacion": "adicional no identificado en el catalogo",
+    "dimensiones_originales": [
+      8852,
+      12196
+    ],
+    "dimensiones_web": [
+      2323,
+      3200
+    ]
+  },
+  {
+    "origen": "AQUA ECO/Eco2.jpg",
+    "archivo": "acqua-co/venturi-eco2-01.webp",
+    "paginas_catalogo": "14",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1100,
+      733
+    ],
+    "dimensiones_web": [
+      1100,
+      733
+    ]
+  },
+  {
+    "origen": "AQUA ECO/Venturi-ECO2.jpg",
+    "archivo": "acqua-co/venturi-eco2-02.webp",
+    "paginas_catalogo": "14",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1024,
+      1024
+    ],
+    "dimensiones_web": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "origen": "AQUA ECO/Venturi-ECO2.png",
+    "archivo": "acqua-co/venturi-eco2-03.webp",
+    "paginas_catalogo": "14",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      4266,
+      2447
+    ],
+    "dimensiones_web": [
+      3200,
+      1836
+    ]
+  },
+  {
+    "origen": "AQUA ECO/inlet.png",
+    "archivo": "acqua-co/entrada-venturi.webp",
+    "paginas_catalogo": "14",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      873,
+      1167
+    ],
+    "dimensiones_web": [
+      873,
+      1167
+    ]
+  },
+  {
+    "origen": "AQUA ECO/nozzles.png",
+    "archivo": "acqua-co/boquillas-venturi.webp",
+    "paginas_catalogo": "14",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      2382,
+      891
+    ],
+    "dimensiones_web": [
+      2382,
+      891
+    ]
+  },
+  {
+    "origen": "AQUA ECO/ecomat.jpg",
+    "archivo": "acqua-co/venturi-ecomat-01.webp",
+    "paginas_catalogo": "15",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1100,
+      733
+    ],
+    "dimensiones_web": [
+      1100,
+      733
+    ]
+  },
+  {
+    "origen": "AQUA ECO/ecomat.png",
+    "archivo": "acqua-co/venturi-ecomat-02.webp",
+    "paginas_catalogo": "15",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      4111,
+      2473
+    ],
+    "dimensiones_web": [
+      3200,
+      1925
+    ]
+  },
+  {
+    "origen": "AQUA ECO/venturi eco2 m.png",
+    "archivo": "acqua-co/venturi-ecomat-con-toma-01.webp",
+    "paginas_catalogo": "15",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1783,
+      1844
+    ],
+    "dimensiones_web": [
+      1783,
+      1844
+    ]
+  },
+  {
+    "origen": "AQUA ECO/Venturi Ecomat .png",
+    "archivo": "acqua-co/venturi-ecomat-con-toma-02.webp",
+    "paginas_catalogo": "15",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      2271,
+      2953
+    ],
+    "dimensiones_web": [
+      2271,
+      2953
+    ]
+  },
+  {
+    "origen": "AQUA ECO/FORCE7.jpg",
+    "archivo": "acqua-co/force7-motor-01.webp",
+    "paginas_catalogo": "16",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1100,
+      733
+    ],
+    "dimensiones_web": [
+      1100,
+      733
+    ]
+  },
+  {
+    "origen": "AQUA ECO/FORCE7.png",
+    "archivo": "acqua-co/force7-motor-02.webp",
+    "paginas_catalogo": "16",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      3325,
+      2260
+    ],
+    "dimensiones_web": [
+      3200,
+      2175
+    ]
+  },
+  {
+    "origen": "AQUA ECO/FORCE7-2.jpg",
+    "archivo": "acqua-co/force7-con-flotador.webp",
+    "paginas_catalogo": "16",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1024,
+      1024
+    ],
+    "dimensiones_web": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "origen": "AQUA ECO/CIRCULADOR RIO.jpg",
+    "archivo": "acqua-co/circulador-rio-lateral.webp",
+    "paginas_catalogo": "17",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1100,
+      733
+    ],
+    "dimensiones_web": [
+      1100,
+      733
+    ]
+  },
+  {
+    "origen": "AQUA ECO/CIRCULADOR RIO-2.jpg",
+    "archivo": "acqua-co/circulador-rio-frontal-01.webp",
+    "paginas_catalogo": "17",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1024,
+      1024
+    ],
+    "dimensiones_web": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "origen": "AQUA ECO/CIRCULADOR RIO-2.png",
+    "archivo": "acqua-co/circulador-rio-frontal-02.webp",
+    "paginas_catalogo": "17",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      3512,
+      4054
+    ],
+    "dimensiones_web": [
+      2772,
+      3200
+    ]
+  },
+  {
+    "origen": "AQUA ECO/splash.jpg",
+    "archivo": "acqua-co/splash-lateral-01.webp",
+    "paginas_catalogo": "18",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1100,
+      733
+    ],
+    "dimensiones_web": [
+      1100,
+      733
+    ]
+  },
+  {
+    "origen": "AQUA ECO/splash.png",
+    "archivo": "acqua-co/splash-lateral-02.webp",
+    "paginas_catalogo": "18",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      3672,
+      2514
+    ],
+    "dimensiones_web": [
+      3200,
+      2191
+    ]
+  },
+  {
+    "origen": "AQUA ECO/splash-2.jpg",
+    "archivo": "acqua-co/splash-superior-01.webp",
+    "paginas_catalogo": "18",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1024,
+      1024
+    ],
+    "dimensiones_web": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "origen": "AQUA ECO/splash-2.png",
+    "archivo": "acqua-co/splash-superior-02.webp",
+    "paginas_catalogo": "18",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      2930,
+      2875
+    ],
+    "dimensiones_web": [
+      2930,
+      2875
+    ]
+  },
+  {
+    "origen": "AQUA ECO/combito 2.png",
+    "archivo": "acqua-co/combito-con-soportes-01.webp",
+    "paginas_catalogo": "19",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1533,
+      3125
+    ],
+    "dimensiones_web": [
+      1533,
+      3125
+    ]
+  },
+  {
+    "origen": "AQUA ECO/Combito.jpg",
+    "archivo": "acqua-co/combito-con-soportes-02.webp",
+    "paginas_catalogo": "19",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1100,
+      750
+    ],
+    "dimensiones_web": [
+      1100,
+      750
+    ]
+  },
+  {
+    "origen": "AQUA ECO/Combito_2_feet.jpg",
+    "archivo": "acqua-co/combito-con-soportes-03.webp",
+    "paginas_catalogo": "19",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1100,
+      750
+    ],
+    "dimensiones_web": [
+      1100,
+      750
+    ]
+  },
+  {
+    "origen": "AQUA ECO/combito.png",
+    "archivo": "acqua-co/combito-flotante-01.webp",
+    "paginas_catalogo": "19",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      2055,
+      2835
+    ],
+    "dimensiones_web": [
+      2055,
+      2835
+    ]
+  },
+  {
+    "origen": "AQUA ECO/Combito-3.jpg",
+    "archivo": "acqua-co/combito-flotante-02.webp",
+    "paginas_catalogo": "19",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1024,
+      1024
+    ],
+    "dimensiones_web": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "origen": "AQUA ECO/Combito-3.png",
+    "archivo": "acqua-co/combito-flotante-03.webp",
+    "paginas_catalogo": "19",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      3870,
+      3679
+    ],
+    "dimensiones_web": [
+      3200,
+      3042
+    ]
+  },
+  {
+    "origen": "AQUA ECO/combo.jpg",
+    "archivo": "acqua-co/combo-frontal-01.webp",
+    "paginas_catalogo": "20",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1100,
+      733
+    ],
+    "dimensiones_web": [
+      1100,
+      733
+    ]
+  },
+  {
+    "origen": "AQUA ECO/Combo.png",
+    "archivo": "acqua-co/combo-lateral.webp",
+    "paginas_catalogo": "20",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      715,
+      547
+    ],
+    "dimensiones_web": [
+      715,
+      547
+    ]
+  },
+  {
+    "origen": "AQUA ECO/combo2.png",
+    "archivo": "acqua-co/combo-frontal-02.webp",
+    "paginas_catalogo": "20",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      4178,
+      3054
+    ],
+    "dimensiones_web": [
+      3200,
+      2339
+    ]
+  },
+  {
+    "origen": "AQUA ECO/combo3.png",
+    "archivo": "acqua-co/combo-flotadores-blancos.webp",
+    "paginas_catalogo": "20",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      4178,
+      3054
+    ],
+    "dimensiones_web": [
+      3200,
+      2339
+    ]
+  },
+  {
+    "origen": "AQUA ECO/Combix.png",
+    "archivo": "acqua-co/combix-perspectiva.webp",
+    "paginas_catalogo": "21",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      3095,
+      2480
+    ],
+    "dimensiones_web": [
+      3095,
+      2480
+    ]
+  },
+  {
+    "origen": "AQUA ECO/Combix_Pro.jpg",
+    "archivo": "acqua-co/combix-pro-01.webp",
+    "paginas_catalogo": "21",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      1100,
+      750
+    ],
+    "dimensiones_web": [
+      1100,
+      750
+    ]
+  },
+  {
+    "origen": "AQUA ECO/Combix_Pro.png",
+    "archivo": "acqua-co/combix-pro-02.webp",
+    "paginas_catalogo": "21",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      3490,
+      2832
+    ],
+    "dimensiones_web": [
+      3200,
+      2597
+    ]
+  },
+  {
+    "origen": "MIXER PRO/MIXER PRO.png",
+    "archivo": "mixer-pro/mixer-pro-equipo-completo.webp",
+    "paginas_catalogo": "25-26",
+    "clasificacion": "familia del catalogo; incluye variantes del banco",
+    "dimensiones_originales": [
+      3821,
+      5022
+    ],
+    "dimensiones_web": [
+      2435,
+      3200
+    ]
+  },
+  {
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "archivo": "koi/logo.webp",
+    "paginas_catalogo": "4",
+    "clasificacion": "logotipo extraído del PDF",
+    "dimensiones_web": [
+      606,
+      227
+    ]
+  },
+  {
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "archivo": "acopio/logo.webp",
+    "paginas_catalogo": "9",
+    "clasificacion": "logotipo extraído del PDF",
+    "dimensiones_web": [
+      428,
+      138
+    ]
+  },
+  {
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "archivo": "acqua-co/logo.webp",
+    "paginas_catalogo": "13",
+    "clasificacion": "logotipo extraído del PDF",
+    "dimensiones_web": [
+      892,
+      328
+    ]
+  },
+  {
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "archivo": "variomac/logo.webp",
+    "paginas_catalogo": "22",
+    "clasificacion": "logotipo extraído del PDF",
+    "dimensiones_web": [
+      401,
+      138
+    ]
+  },
+  {
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "archivo": "mixer-pro/logo.webp",
+    "paginas_catalogo": "25",
+    "clasificacion": "logotipo extraído del PDF",
+    "dimensiones_web": [
+      785,
+      378
+    ]
+  },
+  {
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "archivo": "nexwater/logo.webp",
+    "paginas_catalogo": "28",
+    "clasificacion": "logotipo extraído del PDF",
+    "dimensiones_web": [
+      231,
+      164
+    ]
+  },
+  {
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "archivo": "nexwater/electrodo-nexwater.webp",
+    "paginas_catalogo": "29",
+    "clasificacion": "imagen del producto extraída del PDF con máscara original",
+    "dimensiones_web": [
+      925,
+      864
+    ]
+  },
+  {
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "archivo": "koi/silo-fijo-catalogo.webp",
+    "paginas_catalogo": "5",
+    "clasificacion": "recorte fiel de la página; versión no localizada en el banco",
+    "dimensiones_web": [
+      821,
+      1262
+    ]
+  },
+  {
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "archivo": "koi/unidad-movil-catalogo.webp",
+    "paginas_catalogo": "7",
+    "clasificacion": "recorte fiel de la página; versión no localizada en el banco",
+    "dimensiones_web": [
+      1079,
+      593
+    ]
+  },
+  {
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "archivo": "acopio/cadena-custodia-catalogo.webp",
+    "paginas_catalogo": "9",
+    "clasificacion": "recorte fiel de la página; versión no localizada en el banco",
+    "dimensiones_web": [
+      1499,
+      947
+    ]
+  },
+  {
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "archivo": "acopio/propuesta-valor-catalogo.webp",
+    "paginas_catalogo": "10",
+    "clasificacion": "recorte fiel de la página; versión no localizada en el banco",
+    "dimensiones_web": [
+      1320,
+      959
+    ]
+  },
+  {
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "archivo": "acopio/monitoreo-silo-madre-catalogo.webp",
+    "paginas_catalogo": "11",
+    "clasificacion": "recorte fiel de la página; versión no localizada en el banco",
+    "dimensiones_web": [
+      1464,
+      858
+    ]
+  },
+  {
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "archivo": "acqua-co/combix-despiece-catalogo.webp",
+    "paginas_catalogo": "21",
+    "clasificacion": "recorte fiel de la página; versión no localizada en el banco",
+    "dimensiones_web": [
+      1464,
+      1250
+    ]
+  },
+  {
+    "archivo": "koi/monitoreo-bintrac-catalogo.webp",
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "paginas_catalogo": "8",
+    "clasificacion": "complemento visual original del catálogo",
+    "dimensiones_web": [
+      1474,
+      1199
+    ]
+  },
+  {
+    "archivo": "acopio/llenado-silo-movil-catalogo.webp",
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "paginas_catalogo": "11",
+    "clasificacion": "complemento visual original del catálogo",
+    "dimensiones_web": [
+      987,
+      627
+    ]
+  },
+  {
+    "archivo": "acopio/historial-rutas-catalogo.webp",
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "paginas_catalogo": "12",
+    "clasificacion": "complemento visual original del catálogo",
+    "dimensiones_web": [
+      1308,
+      769
+    ]
+  },
+  {
+    "archivo": "acopio/icono-costo.webp",
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "paginas_catalogo": "9",
+    "clasificacion": "complemento visual original del catálogo",
+    "dimensiones_web": [
+      150,
+      150
+    ]
+  },
+  {
+    "archivo": "acopio/icono-visibilidad.webp",
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "paginas_catalogo": "9",
+    "clasificacion": "complemento visual original del catálogo",
+    "dimensiones_web": [
+      150,
+      150
+    ]
+  },
+  {
+    "archivo": "acopio/icono-mermas.webp",
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "paginas_catalogo": "9",
+    "clasificacion": "complemento visual original del catálogo",
+    "dimensiones_web": [
+      150,
+      150
+    ]
+  },
+  {
+    "archivo": "acopio/icono-inventario.webp",
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "paginas_catalogo": "10",
+    "clasificacion": "complemento visual original del catálogo",
+    "dimensiones_web": [
+      110,
+      107
+    ]
+  },
+  {
+    "archivo": "acopio/icono-gps.webp",
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "paginas_catalogo": "10",
+    "clasificacion": "complemento visual original del catálogo",
+    "dimensiones_web": [
+      110,
+      108
+    ]
+  },
+  {
+    "archivo": "acopio/icono-tiempos.webp",
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "paginas_catalogo": "10",
+    "clasificacion": "complemento visual original del catálogo",
+    "dimensiones_web": [
+      110,
+      107
+    ]
+  },
+  {
+    "archivo": "acopio/icono-dosificacion.webp",
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "paginas_catalogo": "10",
+    "clasificacion": "complemento visual original del catálogo",
+    "dimensiones_web": [
+      110,
+      107
+    ]
+  },
+  {
+    "archivo": "acopio/icono-proyecciones.webp",
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "paginas_catalogo": "10",
+    "clasificacion": "complemento visual original del catálogo",
+    "dimensiones_web": [
+      110,
+      108
+    ]
+  },
+  {
+    "archivo": "acopio/icono-eficiencia.webp",
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "paginas_catalogo": "10",
+    "clasificacion": "complemento visual original del catálogo",
+    "dimensiones_web": [
+      110,
+      107
+    ]
+  },
+  {
+    "archivo": "koi/cabeza-ciclonica-indicaciones.webp",
+    "origen": "Catálogo de Acuacultura 2026.pdf",
+    "paginas_catalogo": "7",
+    "clasificacion": "diagrama completo con indicaciones y leyenda originales",
+    "dimensiones_web": [
+      1356,
+      888
+    ]
+  }
+]

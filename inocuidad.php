@@ -9,7 +9,7 @@ introduccionPagina(
         ['label' => 'Productos', 'url' => 'productos.php'],
         ['label' => 'Inocuidad alimentaria', 'url' => null]
     ],
-    'assets/images/banner-inocuidad.webp'
+    'assets/images/inocuidad/banner-inocuidad.webp'
 );
 ?>
 
@@ -234,7 +234,7 @@ $renderInocuidadLine = static function (array $line): void {
 
 <!-- 2. Cintillo de Contacto -->
 <section class="wrap contact-strip">
-    <div><h2>Solicita información técnica</h2><p>Nuestro equipo puede orientarte sobre la solución adecuada para tu proceso.</p></div>
+    <div><h2>Solicita información técnica</h2></div>
     <a class="button button-light" href="contacto.php">Hablar con un asesor <?= icon('diagonal') ?></a>
 </section>
 

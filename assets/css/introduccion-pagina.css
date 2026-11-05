@@ -244,7 +244,7 @@ main > .page-intro {
   font-size: clamp(34px, 4.2vw, 54px);
   font-weight: 800;
   line-height: 1.15;
-  letter-spacing: -0.035em;
+  letter-spacing: -1.4px;
   margin: 0 0 16px 0;
   text-wrap: balance;
 }

@@ -5,7 +5,7 @@ description: Mantener y ampliar el sitio PHP de Gambacua respetando su identidad
 
 # Mantenimiento de Gambacua
 
-Lee primero [CONTEXT.md](CONTEXT.md), `PRODUCT.md` y, para cambios visuales, `DESIGN.md`. Confirma siempre el estado real en los archivos afectados porque el proyecto puede haber cambiado desde la última actualización del contexto.
+Lee primero [CONTEXT.md](CONTEXT.md) y, para cambios visuales, `DESIGN.md`. Confirma siempre el estado real en los archivos afectados porque el proyecto puede haber cambiado desde la última actualización del contexto.
 
 ## Flujo
 

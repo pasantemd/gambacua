@@ -28,10 +28,8 @@
 .cd-hero-banner,
 .cv-grid,
 .ec-blue-hero,
-.culture-layout,
-.compact-dry-banner,
-.cat-card-inocuidad,
-.cat-card-inocuidad:hover,
+.cat-card-oscura,
+.cat-card-oscura:hover,
 .inocuidad-lines-grid > .is-featured .inocuidad-line-card,
 .page-intro:not(.page-intro-has-cover) {
   background-image:
@@ -42,8 +40,8 @@
   background-size: auto 100%, 100% 100%;
 }
 
-.cat-card-ingredientes,
-.cat-card-ingredientes:hover {
+.cat-card-clara,
+.cat-card-clara:hover {
   background-image:
     var(--brand-ribbon-light),
     linear-gradient(135deg, #f2f8fa 0%, #e8f2f5 64%, #dbe8ed 100%);
@@ -55,8 +53,7 @@
 /* Evita que las diagonales decorativas anteriores dupliquen la A oficial. */
 .hero-shell::before,
 .hero-shell::after,
-.cd-hero-banner::after,
-.compact-dry-banner::after {
+.cd-hero-banner::after {
   display: none;
 }
 
@@ -113,10 +110,8 @@
 /* Superficies principales con el corte de esquina usado en el logo. */
 .ingredient-card,
 .timeline-card,
-.catalog-panel,
 .contact-form,
 .contact-form-map,
-.inocuidad-pillar-card,
 .cat-brand-card {
   border: 0 !important;
   border-radius: 0;
@@ -133,16 +128,10 @@
 .values article,
 .ingredient-card,
 .timeline-card,
-.catalog-panel,
 .contact-form,
 .contact-form-map,
-.inocuidad-pillar-card,
 .cat-brand-card,
-.compact-benefit-card,
-.step-card,
-.cd-section-tab,
 .cd-plate-card,
-.cv-metric-card,
 .cv-benefit-card,
 .cv-benefit-card-front,
 .cv-benefit-card-back,
@@ -151,15 +140,8 @@
   border: 0 !important;
 }
 
-.timeline-media-wrap,
-.timeline-media-slot {
-  border-radius: 0;
-}
-
 /* Acento diagonal discreto que une las tarjetas sin añadir ruido. */
 .ingredient-card::after,
-.inocuidad-pillar-card::after,
-.catalog-panel::after,
 .contact-form::after {
   content: '';
   position: absolute;
@@ -173,13 +155,10 @@
 }
 
 .ingredient-card::after,
-.inocuidad-pillar-card::after,
-.catalog-panel::after,
 .contact-form::after {
   display: none;
 }
 
-.catalog-panel,
 .contact-form {
   position: relative;
 }
@@ -187,23 +166,14 @@
 /* Sistema unificado de botones con los cortes diagonales de la marca. */
 :is(
   .button,
-  nav > a:last-child,
+  #main-nav > a:last-child,
   .section-rail a,
   .cd-filter-btn,
   .cd-empty-reset-btn,
   .cd-btn-cut,
-  .ec-category-nav-btn,
   .ec-documento,
   .inocuidad-subnav-card,
-  .compact-dry-btn,
-  .inocuidad-card-btn,
-  .inocuidad-featured-btn,
-  .cd-btn-medios,
-  .cd-btn-vision,
-  .cd-cta-card-btn,
-  .catalog-book__pdf,
   .catalog-book__download,
-  .catalog-book__button,
   .catalog-book__text-button
 ) {
   --control-cut: 11px;
@@ -228,23 +198,14 @@
 @media (hover: hover) and (pointer: fine) {
   :is(
     .button,
-    nav > a:last-child,
+    #main-nav > a:last-child,
     .section-rail a,
     .cd-filter-btn,
     .cd-empty-reset-btn,
     .cd-btn-cut,
-    .ec-category-nav-btn,
     .ec-documento,
     .inocuidad-subnav-card,
-    .compact-dry-btn,
-    .inocuidad-card-btn,
-    .inocuidad-featured-btn,
-    .cd-btn-medios,
-    .cd-btn-vision,
-    .cd-cta-card-btn,
-    .catalog-book__pdf,
     .catalog-book__download,
-    .catalog-book__button,
     .catalog-book__text-button
   ):hover {
     filter: saturate(1.06) brightness(.94);
@@ -255,23 +216,14 @@
 
 :is(
   .button,
-  nav > a:last-child,
+  #main-nav > a:last-child,
   .section-rail a,
   .cd-filter-btn,
   .cd-empty-reset-btn,
   .cd-btn-cut,
-  .ec-category-nav-btn,
   .ec-documento,
   .inocuidad-subnav-card,
-  .compact-dry-btn,
-  .inocuidad-card-btn,
-  .inocuidad-featured-btn,
-  .cd-btn-medios,
-  .cd-btn-vision,
-  .cd-cta-card-btn,
-  .catalog-book__pdf,
   .catalog-book__download,
-  .catalog-book__button,
   .catalog-book__text-button
 ):active {
   filter: brightness(.88);
@@ -315,23 +267,14 @@
 
   :is(
     .button,
-    nav > a:last-child,
+    #main-nav > a:last-child,
     .section-rail a,
     .cd-filter-btn,
     .cd-empty-reset-btn,
     .cd-btn-cut,
-    .ec-category-nav-btn,
     .ec-documento,
     .inocuidad-subnav-card,
-    .compact-dry-btn,
-    .inocuidad-card-btn,
-    .inocuidad-featured-btn,
-    .cd-btn-medios,
-    .cd-btn-vision,
-    .cd-cta-card-btn,
-    .catalog-book__pdf,
     .catalog-book__download,
-    .catalog-book__button,
     .catalog-book__text-button
   ) {
     --control-cut: 9px;
@@ -341,10 +284,8 @@
   .cd-hero-banner,
   .cv-grid,
   .ec-blue-hero,
-  .culture-layout,
-  .compact-dry-banner,
-  .cat-card-inocuidad,
-  .cat-card-inocuidad:hover,
+  .cat-card-oscura,
+  .cat-card-oscura:hover,
   .inocuidad-lines-grid > .is-featured .inocuidad-line-card,
   .page-intro:not(.page-intro-has-cover) {
     background-image:
@@ -354,8 +295,8 @@
     background-size: auto 100%, 100% 100%;
   }
 
-  .cat-card-ingredientes,
-  .cat-card-ingredientes:hover {
+  .cat-card-clara,
+  .cat-card-clara:hover {
     background-image:
       var(--brand-ribbon-light),
       linear-gradient(135deg, #f2f8fa 0%, #e8f2f5 64%, #dbe8ed 100%);
@@ -367,7 +308,6 @@
   .product-categories-heading h2::after,
   .timeline-header h2::after,
   .ingredients-catalog-section > .section-heading h2::after,
-  .catalog-content h2::after,
   .contact-form > h2::after,
   .legal-pending > h2::after,
   .cd-catalog-title-row h2::after,
@@ -403,9 +343,7 @@
 :is(
   .values article,
   .cat-brand-card,
-  .inocuidad-pillar-card,
-  .contact-info-card,
-  .catalog-item
+  .contact-info-card
 ) {
   box-shadow: 0 18px 42px -32px rgba(0, 54, 77, .5);
 }
@@ -414,9 +352,7 @@
   :is(
     .values article,
     .cat-brand-card,
-    .inocuidad-pillar-card,
-    .contact-info-card,
-    .catalog-item
+    .contact-info-card
   ):hover {
     box-shadow: 0 24px 48px -30px rgba(0, 54, 77, .58);
   }
@@ -425,29 +361,34 @@
 /* Franja de Contacto Institucional (Contact Strip) */
 .contact-strip {
   position: relative;
-  background: #eaf4f7;
+  background: transparent;
   color: var(--navy);
-  padding: 46px 54px;
+  padding: 46px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 24px;
+  flex-wrap: wrap;
   margin-bottom: 76px;
   border: 0;
-  clip-path: polygon(
-    0 0,
-    calc(100% - var(--brand-cut, 20px)) 0,
-    100% var(--brand-cut, 20px),
-    100% 100%,
-    var(--brand-cut, 20px) 100%,
-    0 calc(100% - var(--brand-cut, 20px))
-  );
+  clip-path: none;
   box-shadow: none;
   filter: none;
 }
 
-.contact-strip > div {
-  max-width: 720px;
+.contact-strip > div:first-child,
+.contact-strip > div:only-of-type {
+  max-width: none;
+  min-width: 0;
+}
+
+@media (min-width: 1200px) {
+  .contact-strip:not(.compact-contact-strip) { flex-wrap: nowrap; }
+  .contact-strip:not(.compact-contact-strip) > div:first-child { flex: 1 1 auto; }
+  .contact-strip:not(.compact-contact-strip) h2 { white-space: nowrap; }
+  .contact-strip:not(.compact-contact-strip) > .button,
+  .contact-strip:not(.compact-contact-strip) > div:last-child { margin-left: auto; }
+  .page-productos .contact-strip h2 { font-size: 26px; }
 }
 
 .contact-strip h2 {
@@ -456,7 +397,7 @@
   font-size: clamp(24px, 2.4vw, 34px);
   font-weight: 700;
   line-height: 1.28;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.4px;
   margin: 0;
 }
 
@@ -482,7 +423,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 14.5px;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.3px;
   padding: 15px 28px;
   min-height: 52px;
   display: inline-flex;
@@ -605,7 +546,7 @@
 
 @media (max-width: 860px) {
   .contact-strip {
-    padding: 38px 36px;
+    padding: 38px 0;
     gap: 32px;
   }
 }
@@ -614,7 +555,7 @@
   .contact-strip {
     flex-direction: column;
     align-items: stretch;
-    padding: 30px 22px;
+    padding: 30px 0;
     gap: 22px;
     margin-bottom: 44px;
   }

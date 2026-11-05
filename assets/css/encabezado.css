@@ -79,7 +79,7 @@ nav > a[aria-current=page]:not(:last-child)::after {
 }
 
 /* Botón Contacto en el header - Estilo unificado institucional Gambacua */
-nav > a:last-child {
+#main-nav > a:last-child {
   background: var(--action);
   color: #ffffff;
   border: none;
@@ -96,26 +96,26 @@ nav > a:last-child {
   transition: background-color 180ms ease, color 180ms ease, transform 180ms var(--ease-brand), box-shadow 180ms var(--ease-brand);
 }
 
-nav > a:last-child:hover,
-nav > a:last-child[aria-current=page] {
+#main-nav > a:last-child:hover,
+#main-nav > a:last-child[aria-current=page] {
   background: var(--action-hover);
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px -2px rgba(13, 73, 100, 0.38);
 }
 
-nav > a:last-child:active {
+#main-nav > a:last-child:active {
   transform: scale(0.97) translateY(0);
   box-shadow: 0 2px 6px -2px rgba(13, 73, 100, 0.25);
 }
 
-nav > a:last-child svg {
+#main-nav > a:last-child svg {
   width: 14px;
   height: 14px;
   transition: transform 180ms var(--ease-brand);
 }
 
-nav > a:last-child:hover svg {
+#main-nav > a:last-child:hover svg {
   transform: translate(3px, -3px);
 }
 
@@ -367,10 +367,6 @@ nav svg {
   transform: translateX(2px);
 }
 
-.nav-dropdown-parent-entry {
-  display: none;
-}
-
 .nav-dropdown-icon {
   width: 18px;
   height: 18px;
@@ -552,7 +548,7 @@ nav svg {
     right: auto;
     width: 25px;
   }
-  nav > a:last-child {
+  #main-nav > a:last-child {
     justify-content: space-between;
     min-height: 46px;
     height: 46px;
@@ -645,13 +641,6 @@ nav svg {
   }
   .nav-dropdown-group:not(.is-expanded) .nav-dropdown-category-arrow svg {
     transform: none;
-  }
-  .nav-dropdown-parent-entry {
-    display: block;
-  }
-  .nav-dropdown-parent-link {
-    color: var(--navy);
-    font-weight: 750;
   }
   .nav-dropdown-sublist::before {
     display: none;

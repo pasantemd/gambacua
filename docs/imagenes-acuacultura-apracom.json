@@ -1,0 +1,144 @@
+{
+  "carpetaOrigen": "C:/Users/pasantemd/Downloads/PAGINA APRACOM/PAGINA APRACOM/imagenes pagina web",
+  "catalogo": "Catálogo de Acuacultura 2026.pdf",
+  "imagenes": [
+    {
+      "origen": "tolva version 2.png",
+      "archivo": "silo-fijo-apracom.webp",
+      "pagina": 5,
+      "reemplaza": "silo-fijo-catalogo.webp"
+    },
+    {
+      "origen": "silo movil 2.png",
+      "archivo": "unidad-movil-apracom.webp",
+      "pagina": 7,
+      "reemplaza": "unidad-movil-catalogo.webp"
+    },
+    {
+      "origen": "FUNCIONAMIENTO DE CABEZA CICLÓNICA.png",
+      "archivo": "cabeza-ciclonica-apracom.webp",
+      "pagina": 7,
+      "reemplaza": "cabeza-ciclonica-indicaciones.webp"
+    },
+    {
+      "origen": "SISTEMA DE MONITOREO BINTRACK.png",
+      "archivo": "monitoreo-bintrac-apracom.webp",
+      "pagina": 8,
+      "reemplaza": "monitoreo-bintrac-catalogo.webp"
+    },
+    {
+      "origen": "CUSTODIA DEL ALIMENTO.png",
+      "archivo": "cadena-custodia-apracom.webp",
+      "pagina": 9,
+      "reemplaza": "cadena-custodia-catalogo.webp"
+    },
+    {
+      "origen": "MONITOREO EN TIEMPO REAL SILO MADRE.png",
+      "archivo": "monitoreo-silo-madre-apracom.webp",
+      "pagina": 11,
+      "reemplaza": "monitoreo-silo-madre-catalogo.webp"
+    },
+    {
+      "origen": "CONTROL GPS.png",
+      "archivo": "control-gps-apracom.webp",
+      "pagina": 11,
+      "reemplaza": "llenado-silo-movil-catalogo.webp"
+    },
+    {
+      "origen": "HISTORIAL DE RUTAS.png",
+      "archivo": "historial-rutas-apracom.webp",
+      "pagina": 12,
+      "reemplaza": "historial-rutas-catalogo.webp"
+    },
+    {
+      "origen": "VENTURI ECO2.png",
+      "archivo": "venturi-eco2-indicaciones.webp",
+      "pagina": 14,
+      "reemplaza": "venturi-eco2-03.webp"
+    },
+    {
+      "origen": "REPUESTO VENTURI ECO2.png",
+      "archivo": "venturi-eco2-boquillas.webp",
+      "pagina": 14,
+      "reemplaza": null
+    },
+    {
+      "origen": "VENTURIECOMAT.png",
+      "archivo": "venturi-ecomat-indicaciones.webp",
+      "pagina": 15,
+      "reemplaza": "venturi-ecomat-02.webp"
+    },
+    {
+      "origen": "AIREADOR FORCE7.png",
+      "archivo": "force7-indicaciones.webp",
+      "pagina": 16,
+      "reemplaza": "force7-motor-02.webp"
+    },
+    {
+      "origen": "MOTOR FORCE7.png",
+      "archivo": "force7-ajustes-motor.webp",
+      "pagina": 16,
+      "reemplaza": null
+    },
+    {
+      "origen": "CIRCULADOR RIO.png",
+      "archivo": "circulador-rio-indicaciones.webp",
+      "pagina": 17,
+      "reemplaza": "circulador-rio-frontal-02.webp"
+    },
+    {
+      "origen": "MOTOR CIRCULADOR RIO.png",
+      "archivo": "circulador-rio-modelos-motor.webp",
+      "pagina": 17,
+      "reemplaza": null
+    },
+    {
+      "origen": "AIREADOR SPLASH.png",
+      "archivo": "splash-indicaciones.webp",
+      "pagina": 18,
+      "reemplaza": "splash-lateral-02.webp"
+    },
+    {
+      "origen": "COMBITO.png",
+      "archivo": "combito-indicaciones.webp",
+      "pagina": 19,
+      "reemplaza": "combito-flotante-03.webp"
+    },
+    {
+      "origen": "COMBO.png",
+      "archivo": "combo-indicaciones.webp",
+      "pagina": 20,
+      "reemplaza": "combo-flotadores-blancos.webp"
+    },
+    {
+      "origen": "COMBIX.png",
+      "archivo": "combix-indicaciones.webp",
+      "pagina": 21,
+      "reemplaza": "combix-despiece-catalogo.webp"
+    },
+    {
+      "origen": "VARIOMAC.png",
+      "archivo": "variomac-indicaciones.webp",
+      "pagina": 22,
+      "reemplaza": "variomac-02.webp"
+    },
+    {
+      "origen": "EMA final.png",
+      "archivo": "ema-apracom.webp",
+      "pagina": 23,
+      "reemplaza": "estacion-medioambiental-autolimpiante.webp"
+    },
+    {
+      "origen": "SISTEMA MIXER PRO.png",
+      "archivo": "mixer-pro-indicaciones.webp",
+      "pagina": 26,
+      "reemplaza": "mixer-pro-equipo-completo.webp"
+    },
+    {
+      "origen": "ELECTRODO NEXWATER.png",
+      "archivo": "electrodo-nexwater-indicaciones.webp",
+      "pagina": 29,
+      "reemplaza": "electrodo-nexwater.webp"
+    }
+  ]
+}

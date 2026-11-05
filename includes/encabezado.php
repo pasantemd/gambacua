@@ -10,18 +10,18 @@
     <script>document.documentElement.classList.add('js');</script>
 
     <!-- Favicons -->
-    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/favicon.webp">
-    <link rel="apple-touch-icon" href="assets/images/favicon.webp">
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/compartidas/favicon.webp">
+    <link rel="apple-touch-icon" href="assets/images/compartidas/favicon.webp">
 
     <!-- Estilos modulares principales -->
-    <link rel="stylesheet" href="assets/css/sitio.css?v=129">
+    <link rel="stylesheet" href="assets/css/sitio.css?v=169">
 
     <!-- Scripts modulares -->
     <script src="assets/js/encabezado.js?v=9" defer></script>
     <script src="assets/js/sitio.js?v=8" defer></script>
-    <script src="assets/js/movimiento-sitio.js?v=6" defer></script>
+    <script src="assets/js/movimiento-sitio.js?v=7" defer></script>
     <?php if ($paginaActual === 'historia'): ?>
-        <script src="assets/js/historia.js?v=2" defer></script>
+        <script src="assets/js/historia.js?v=3" defer></script>
     <?php elseif ($paginaActual === 'contacto'): ?>
         <script src="assets/js/contacto.js?v=3" defer></script>
     <?php endif; ?>
@@ -48,7 +48,7 @@
         .preloader-bubble{fill:rgba(255,255,255,0.7);animation:bubble-rise 1.5s ease-in-out infinite}
         .pb-1{animation-delay:0.15s}.pb-2{animation-delay:0.65s}.pb-3{animation-delay:1.05s}
         @keyframes bubble-rise{0%{transform:translateY(0);opacity:0}30%{opacity:0.85}80%{opacity:0.85}100%{transform:translateY(-22px);opacity:0}}
-        .preloader-brand{font-family:'Montserrat',system-ui,sans-serif;font-size:15px;font-weight:700;letter-spacing:0.08em;color:#004766;text-transform:uppercase;opacity:0.92;animation:preloader-fade-in 800ms ease-out forwards}
+        .preloader-brand{font-family:'Montserrat',system-ui,sans-serif;font-size:15px;font-weight:700;letter-spacing:1.2px;color:#004766;text-transform:uppercase;opacity:0.92;animation:preloader-fade-in 800ms ease-out forwards}
         @keyframes preloader-fade-in{from{opacity:0;transform:translateY(4px)}to{opacity:0.95;transform:translateY(0)}}
         @media (prefers-reduced-motion:reduce){.site-preloader,#site-progress-bar,html.js body:not(.is-page-ready) #contenido,html.js body:not(.is-page-ready) .site-header,html.js body.is-page-ready #contenido,html.js body.is-page-ready .site-header,body.is-page-exiting #contenido,body.is-page-exiting .site-header{transition:none!important;transform:none!important;opacity:1!important}.site-preloader{display:none!important}.liquid-container,.wave-back,.wave-front,.wave-shine,.preloader-bubble,.preloader-brand{animation:none!important}}
     </style>
@@ -108,7 +108,7 @@
     <header class="site-header">
         <div class="wrap header-inner">
             <a href="index.php" class="brand" aria-label="Gambacua, inicio">
-                <img src="assets/images/logo-gambacua-horizontal.svg" alt="Gambacua" width="274" height="39">
+                <img src="assets/images/compartidas/logo-gambacua-horizontal.svg" alt="Gambacua" width="274" height="39">
             </a>
 
             <!-- Navegación centrada -->
@@ -129,18 +129,44 @@
                                         <?php
                                         $tieneSubsecciones = !empty($elemento['subsecciones']);
                                         $esGrupoActual = $paginaActual === ($elemento['identificador'] ?? '');
+                                        $subseccionesConEstado = [];
+                                        $algunaSubseccionActiva = false;
                                         if ($tieneSubsecciones) {
                                             foreach ($elemento['subsecciones'] as $subseccion) {
-                                                if ($paginaActual === pathinfo($subseccion['url'], PATHINFO_FILENAME)) {
-                                                    $esGrupoActual = true;
-                                                    break;
+                                                $partesSub = parse_url($subseccion['url']);
+                                                $archivoSub = pathinfo($partesSub['path'] ?? '', PATHINFO_FILENAME);
+                                                $esMismaRuta = ($paginaActual === $archivoSub);
+                                                $esActiva = false;
+                                                if ($esMismaRuta) {
+                                                    if (!empty($partesSub['query'])) {
+                                                        parse_str($partesSub['query'], $subQuery);
+                                                        $coincide = true;
+                                                        foreach ($subQuery as $k => $v) {
+                                                            if (!isset($_GET[$k]) || (string)$_GET[$k] !== (string)$v) {
+                                                                $coincide = false;
+                                                                break;
+                                                            }
+                                                        }
+                                                        $esActiva = $coincide;
+                                                    } else {
+                                                        $esActiva = empty($_GET);
+                                                    }
                                                 }
+                                                if ($esActiva) {
+                                                    $algunaSubseccionActiva = true;
+                                                    $esGrupoActual = true;
+                                                }
+                                                $subseccionesConEstado[] = [
+                                                    'subseccion' => $subseccion,
+                                                    'activa' => $esActiva
+                                                ];
                                             }
                                         }
                                         $idSubmenu = 'submenu-'.($elemento['identificador'] ?? 'categoria');
+                                        $esCategoriaActual = ($paginaActual === ($elemento['identificador'] ?? '')) && !$algunaSubseccionActiva;
                                         ?>
                                         <li class="nav-dropdown-group<?= $tieneSubsecciones && $esGrupoActual ? ' is-expanded' : '' ?>">
-                                            <a href="<?= $elemento['url'] ?>" class="nav-dropdown-item<?= $tieneSubsecciones ? ' has-subcategories' : '' ?><?= $esGrupoActual ? ' is-active' : '' ?>"<?= $tieneSubsecciones ? ' aria-expanded="'.($esGrupoActual ? 'true' : 'false').'" aria-controls="'.$idSubmenu.'"' : '' ?><?= $paginaActual === ($elemento['identificador'] ?? '') ? ' aria-current="page"' : '' ?>>
+                                            <a href="<?= $elemento['url'] ?>" class="nav-dropdown-item<?= $tieneSubsecciones ? ' has-subcategories' : '' ?><?= $esGrupoActual ? ' is-active' : '' ?>"<?= $tieneSubsecciones ? ' aria-expanded="'.($esGrupoActual ? 'true' : 'false').'" aria-controls="'.$idSubmenu.'"' : '' ?><?= $esCategoriaActual ? ' aria-current="page"' : '' ?>>
                                                 <span class="nav-dropdown-icon" aria-hidden="true"><?= icono($elemento['icono']) ?></span>
                                                 <div class="nav-dropdown-text">
                                                     <strong class="nav-dropdown-title"><?= $elemento['titulo'] ?></strong>
@@ -154,10 +180,10 @@
                                             </a>
                                             <?php if ($tieneSubsecciones): ?>
                                                 <ul class="nav-dropdown-sublist" id="<?= $idSubmenu ?>">
-                                                    <?php foreach ($elemento['subsecciones'] as $subseccion): ?>
+                                                    <?php foreach ($subseccionesConEstado as $item): ?>
+                                                        <?php $subseccion = $item['subseccion']; ?>
                                                         <li>
-                                                            <?php $esSubseccionActual = $paginaActual === pathinfo($subseccion['url'], PATHINFO_FILENAME); ?>
-                                                            <a href="<?= $subseccion['url'] ?>" class="nav-dropdown-subitem<?= $esSubseccionActual ? ' is-active' : '' ?>"<?= $esSubseccionActual ? ' aria-current="page"' : '' ?>>
+                                                            <a href="<?= $subseccion['url'] ?>" class="nav-dropdown-subitem<?= $item['activa'] ? ' is-active' : '' ?>"<?= $item['activa'] ? ' aria-current="page"' : '' ?>>
                                                                 <span class="nav-dropdown-subtitle"><?= $subseccion['titulo'] ?></span>
                                                             </a>
                                                         </li>

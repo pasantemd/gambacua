@@ -1,4 +1,5 @@
 const {chromium}=require('C:/xampp/htdocs/compact-dry/node_modules/playwright');
+const {capturarWebp}=require('./capturar-webp.cjs');
 (async()=>{
  const browser=await chromium.launch({headless:true});
  const page=await browser.newPage();
@@ -7,7 +8,7 @@ const {chromium}=require('C:/xampp/htdocs/compact-dry/node_modules/playwright');
   await page.goto('http://localhost/gambacua/contacto.php',{waitUntil:'domcontentloaded'});
   await page.evaluate(()=>document.fonts.ready);
   if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Overflow '+width);
-  if(width!==320)await page.screenshot({path:`tools/screenshots/contact-${width}.png`,fullPage:true});
+  if(width!==320)await capturarWebp(page,`tools/screenshots/contact-${width}.webp`,true);
  }
  await page.locator('#nombres').fill('Prueba');
  await page.locator('#apellidos').fill('Técnica');

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('[data-section-rail]').forEach(navegador => {
+  document.querySelectorAll('[data-section-rail], [data-section-panels]').forEach(navegador => {
     const enlaces = [...navegador.querySelectorAll('a[href^="#"]')];
     const secciones = enlaces
       .map(enlace => document.querySelector(enlace.getAttribute('href')))
@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!enlaces.length || !secciones.length) return;
 
-    let navegandoPorClic = false;
-    let temporizadorClic = null;
     const campoMovil = document.createElement('div');
     const etiquetaMovil = document.createElement('span');
     const controlMovil = document.createElement('details');
@@ -34,20 +32,23 @@ document.addEventListener('DOMContentLoaded', () => {
     resumenMovil.append(valorMovil);
     controlMovil.append(resumenMovil, opcionesMoviles);
     campoMovil.append(etiquetaMovil, controlMovil);
-    navegador.prepend(campoMovil);
-    navegador.classList.add('has-mobile-select');
+    if (navegador.hasAttribute('data-section-rail')) {
+      navegador.prepend(campoMovil);
+      navegador.classList.add('has-mobile-select');
+    }
 
     const enlacesMoviles = [...opcionesMoviles.querySelectorAll('a[href^="#"]')];
 
-    const activar = (id, centrarEnlace = false) => {
+    const activar = id => {
+      secciones.forEach(seccion => {
+        seccion.setAttribute('data-section-panel', '');
+        seccion.hidden = seccion.id !== id;
+      });
       enlaces.forEach(enlace => {
         const activo = enlace.getAttribute('href') === `#${id}`;
         enlace.classList.toggle('is-active', activo);
         enlace.setAttribute('aria-current', activo ? 'location' : 'false');
         if (activo) valorMovil.textContent = enlace.textContent.trim();
-        if (activo && centrarEnlace && window.innerWidth <= 800 && !navegador.classList.contains('has-mobile-select')) {
-          enlace.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        }
       });
 
       enlacesMoviles.forEach(enlace => {
@@ -57,43 +58,42 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     };
 
-    let actualizacionPendiente = false;
-    const actualizarPorDesplazamiento = () => {
-      if (navegandoPorClic || actualizacionPendiente) return;
-      actualizacionPendiente = true;
-      requestAnimationFrame(() => {
-        const posicion = window.scrollY + 220;
-        const estaAlFinal = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80;
-        let idActual = secciones[0].id;
-
-        if (estaAlFinal) {
-          idActual = secciones[secciones.length - 1].id;
-        } else {
-          secciones.forEach(seccion => {
-            if (posicion >= seccion.offsetTop) idActual = seccion.id;
-          });
-        }
-
-        activar(idActual, true);
-        actualizacionPendiente = false;
-      });
+    const destinoHash = hash => {
+      try { return document.getElementById(decodeURIComponent(hash.slice(1))); }
+      catch { return null; }
     };
-
-    window.addEventListener('scroll', actualizarPorDesplazamiento, { passive: true });
-    window.addEventListener('resize', actualizarPorDesplazamiento, { passive: true });
-
-    const registrarClic = (enlace, cerrarDesplegable) => {
-      enlace.addEventListener('click', () => {
-        navegandoPorClic = true;
-        clearTimeout(temporizadorClic);
-        activar(enlace.hash.slice(1), !cerrarDesplegable);
-        if (cerrarDesplegable) controlMovil.open = false;
-        temporizadorClic = setTimeout(() => { navegandoPorClic = false; }, 800);
-      });
+    const seccionDe = destino => secciones.find(seccion => seccion === destino || seccion.contains(destino));
+    const sincronizar = () => {
+      const destino = destinoHash(location.hash);
+      const seccion = seccionDe(destino) || secciones[0];
+      activar(seccion.id);
+      if (destino && seccion.contains(destino)) requestAnimationFrame(() => destino.scrollIntoView({ behavior: 'instant', block: 'start' }));
     };
-
-    enlaces.forEach(enlace => registrarClic(enlace, false));
-    enlacesMoviles.forEach(enlace => registrarClic(enlace, true));
+    document.addEventListener('click', evento => {
+      if (evento.defaultPrevented || evento.button !== 0 || evento.ctrlKey || evento.metaKey || evento.shiftKey || evento.altKey) return;
+      const enlace = evento.target.closest('a[href]');
+      if (!enlace || enlace.hasAttribute('download') || (enlace.target && enlace.target !== '_self')) return;
+      const url = new URL(enlace.href, location.href);
+      if (url.origin !== location.origin || url.pathname !== location.pathname || url.search !== location.search || !url.hash) return;
+      const destino = destinoHash(url.hash);
+      const seccion = seccionDe(destino);
+      if (!seccion) return;
+      evento.preventDefault();
+      const origenOculto = seccionDe(enlace) && seccionDe(enlace) !== seccion;
+      activar(seccion.id);
+      if (origenOculto) {
+        const titulo = seccion.querySelector('h2, h3') || seccion;
+        titulo.setAttribute('tabindex', '-1');
+        titulo.focus({ preventScroll: true });
+      }
+      if (location.hash !== url.hash) history.pushState(null, '', url.hash);
+      if (controlMovil.open) {
+        controlMovil.open = false;
+        resumenMovil.focus({ preventScroll: true });
+      }
+      destino.scrollIntoView({ behavior: 'instant', block: 'start' });
+    });
+    window.addEventListener('hashchange', sincronizar);
 
     controlMovil.addEventListener('keydown', evento => {
       if (evento.key === 'Escape' && controlMovil.open) {
@@ -102,6 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    actualizarPorDesplazamiento();
+    sincronizar();
   });
 });

@@ -22,14 +22,12 @@ p {
 }
 
 .button,
-.compact-dry-btn,
 .cd-btn-cut,
 .form-submit button {
-  letter-spacing: .01em;
+  letter-spacing: 0.2px;
 }
 
 .button:focus-visible,
-.compact-dry-btn:focus-visible,
 .cd-btn-cut:focus-visible {
   outline: 3px solid #67cad9;
   outline-offset: 4px;
@@ -44,7 +42,6 @@ p {
 /* Profundidad contenida: una sola lectura de superficie por tarjeta. */
 .ingredient-card,
 .timeline-card,
-.catalog-item,
 .contact-form,
 .contact-form-map,
 .cd-plate-card {
@@ -53,7 +50,6 @@ p {
 
 .ingredient-card:hover,
 .timeline-card:hover,
-.catalog-item:hover,
 .cd-plate-card:hover {
   box-shadow: var(--shadow-raised);
 }
@@ -173,8 +169,6 @@ p {
 .culture-media-card:active,
 .cat-brand-card:active,
 .cd-plate-card:active,
-.inocuidad-pillar-card:active,
-.ec-category-nav-btn:active,
 .ec-detalle-miniatura:active,
 .ec-documento:active {
   transform: translateY(0) scale(0.985);
@@ -202,7 +196,6 @@ p {
   .ingredient-card:hover,
   .timeline-card:hover,
   .cat-brand-card:hover,
-  .inocuidad-pillar-card:hover,
   .values article:hover {
     transform: none;
   }
@@ -215,28 +208,13 @@ p {
   .cat-brand-card:hover .cat-card-circle-btn,
   .cat-brand-card:hover .cat-card-circle-btn svg,
   .inocuidad-subnav-card:hover,
-  .inocuidad-card-btn:hover svg,
-  .inocuidad-featured-btn:hover svg,
-  .compact-dry-btn:hover,
-  .cd-cta-card-btn:hover,
-  .compact-dry-btn:hover svg,
-  .cd-cta-card-btn:hover svg,
-  .compact-benefit-card:hover,
   .contact-info-card:hover,
   .nav-dropdown-subitem:hover,
   .nav-dropdown-item:hover .nav-dropdown-icon,
   .nav-dropdown-item:hover .nav-dropdown-title,
-  nav > a:last-child:hover svg {
+  #main-nav > a:last-child:hover svg {
     transform: none;
   }
-}
-
-@media (max-width: 1080px) {
-  .compact-dry-inner {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -259,8 +237,6 @@ p {
   .culture-media-card:active,
   .cat-brand-card:active,
   .cd-plate-card:active,
-  .inocuidad-pillar-card:active,
-  .ec-category-nav-btn:active,
   .ec-detalle-miniatura:active,
   .ec-documento:active,
   .nav-dropdown-subitem,
@@ -281,8 +257,7 @@ p {
     line-height: 1.72;
   }
 
-  .button,
-  .compact-dry-btn {
+  .button {
     width: 100%;
     min-height: 52px;
   }

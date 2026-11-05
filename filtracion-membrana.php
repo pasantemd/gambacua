@@ -358,7 +358,7 @@ introduccionPagina(
     </div>
 </div>
 
-<script src="assets/js/navegador-secciones.js?v=7" defer></script>
+<script src="assets/js/navegador-secciones.js?v=8" defer></script>
 <script src="assets/js/filtracion-membrana.js?v=2" defer></script>
 
 <?php require __DIR__.'/includes/pie.php'; ?>

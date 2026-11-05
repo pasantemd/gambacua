@@ -1,4 +1,5 @@
 const { chromium } = require('C:/xampp/htdocs/compact-dry/node_modules/playwright');
+const { capturarWebp } = require('./capturar-webp.cjs');
 
 (async () => {
   const browser = await chromium.launch({ headless: true });
@@ -34,11 +35,30 @@ const { chromium } = require('C:/xampp/htdocs/compact-dry/node_modules/playwrigh
     'Micotoxinas',
     'Histamina'
   ];
-  const actualSubcategories = (await page.locator('.nav-dropdown-subitem:not(.nav-dropdown-parent-link)').allTextContents())
+  const actualSubcategories = (await page.locator('#submenu-inocuidad .nav-dropdown-subitem').allTextContents())
     .map(label => label.trim());
   if (JSON.stringify(actualSubcategories) !== JSON.stringify(expectedSubcategories)) {
     throw new Error(`Orden de subcategorías incorrecto: ${actualSubcategories.join(', ')}.`);
   }
+
+  const expectedAcuaculturaSubcategories = [
+    'KOI',
+    'Acopio',
+    'Aqua&Co',
+    'Mixer Pro',
+    'Nexwater'
+  ];
+  const actualAcuaculturaSubcategories = (await page.locator('#submenu-acuacultura .nav-dropdown-subitem').allTextContents())
+    .map(label => label.trim());
+  if (JSON.stringify(actualAcuaculturaSubcategories) !== JSON.stringify(expectedAcuaculturaSubcategories)) {
+    throw new Error(`Orden de marcas de Acuacultura incorrecto: ${actualAcuaculturaSubcategories.join(', ')}.`);
+  }
+
+  const categoryAcuacultura = page.getByRole('link', { name: 'Acuacultura', exact: true });
+  const subcategoryAcuacultura = page.getByRole('link', { name: 'Aqua&Co', exact: true });
+  await categoryAcuacultura.hover();
+  await page.waitForTimeout(100);
+  if (!await subcategoryAcuacultura.isVisible()) throw new Error('Las marcas de Acuacultura no aparecen al pasar el cursor sobre Acuacultura.');
 
   const gap = await page.evaluate(() => {
     const triggerBox = document.querySelector('.nav-dropdown-trigger').getBoundingClientRect();
@@ -59,7 +79,7 @@ const { chromium } = require('C:/xampp/htdocs/compact-dry/node_modules/playwrigh
   if (!await page.locator('body').evaluate(body => body.classList.contains('has-mobile-nav'))) {
     throw new Error('El menú móvil no bloquea el contenido de fondo.');
   }
-  await page.screenshot({ path: 'tools/screenshots/mobile-menu-open.png', fullPage: false });
+  await capturarWebp(page, 'tools/screenshots/mobile-menu-open.webp');
   await trigger.click();
   await page.waitForTimeout(220);
   if (!await dropdown.isVisible()) throw new Error('El dropdown no abre en móvil.');
@@ -72,7 +92,7 @@ const { chromium } = require('C:/xampp/htdocs/compact-dry/node_modules/playwrigh
   if (await mobileCategory.getAttribute('aria-expanded') !== 'true') {
     throw new Error('El submenú de Inocuidad no comunica su estado expandido.');
   }
-  await page.screenshot({ path: 'tools/screenshots/mobile-menu-products.png', fullPage: false });
+  await capturarWebp(page, 'tools/screenshots/mobile-menu-products.webp');
   await trigger.click();
   await page.waitForTimeout(220);
   if (await dropdown.isVisible()) throw new Error('El dropdown no cierra en móvil.');

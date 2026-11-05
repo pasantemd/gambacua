@@ -115,7 +115,7 @@
   font-size: 11.5px;
   font-weight: 750;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 1px;
   border: none;
 }
 
@@ -204,7 +204,7 @@
   border: none;
   padding: 0;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 1px;
 }
 
 .timeline-card.is-present .timeline-badge {
@@ -219,14 +219,14 @@
   font-weight: 800;
   color: var(--navy);
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.5px;
 }
 
 .timeline-year.is-present-year {
   color: var(--teal);
   font-size: clamp(24px, 2.2vw, 30px);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.6px;
 }
 
 .timeline-title {

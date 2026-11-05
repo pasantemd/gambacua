@@ -2,6 +2,7 @@ const { chromium } = require('C:/xampp/htdocs/compact-dry/node_modules/playwrigh
 const { execFileSync } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
+const { capturarWebp } = require('./capturar-webp.cjs');
 
 for (const dir of ['.', 'includes']) {
   for (const file of fs.readdirSync(dir).filter(item => item.endsWith('.php'))) {
@@ -13,7 +14,7 @@ for (const dir of ['.', 'includes']) {
   const browser = await chromium.launch({ headless: true });
   const errors = [];
   const page = await browser.newPage();
-  const routes = ['index', 'historia', 'productos', 'ingredientes', 'inocuidad', 'micotoxinas', 'histamina', 'medios-cultivo', 'filtracion-membrana', 'materiales-insumos', 'compact-dry', 'catalogos', 'contacto', 'legal'];
+  const routes = ['index', 'historia', 'productos', 'ingredientes', 'acuacultura', 'inocuidad', 'micotoxinas', 'histamina', 'medios-cultivo', 'filtracion-membrana', 'materiales-insumos', 'compact-dry', 'catalogos', 'contacto', 'legal'];
 
   page.on('pageerror', error => errors.push(error.message));
   fs.mkdirSync('tools/screenshots', { recursive: true });
@@ -33,7 +34,7 @@ for (const dir of ['.', 'includes']) {
         errors.push({ width, route, status: response.status(), ...state });
       }
       if (['index', 'inocuidad'].includes(route) && [1440, 390].includes(width)) {
-        await page.screenshot({ path: `tools/screenshots/${route}-${width}.png`, fullPage: true });
+        await capturarWebp(page, `tools/screenshots/${route}-${width}.webp`, true);
       }
     }
 

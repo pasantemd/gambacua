@@ -7,7 +7,7 @@ $histamina = [
     'product' => [
         'name' => 'Bio-Shield Histamine',
         'details' => [
-            'Presentación' => 'Placa de tiras',
+            'Presentación' => 'Placa de tiras · 576 pruebas',
             'Pruebas' => '48 y 96 pruebas',
         ],
         'image' => 'assets/images/histamina/bioshield-histamine-kit-transparent.webp',

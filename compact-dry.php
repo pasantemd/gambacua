@@ -101,20 +101,20 @@ introduccionPagina(
             </div>
 
             <div class="cd-catalog-toolbar">
-                <label class="cd-search-bar" for="cd-search-input">
+                <div class="cd-search-bar" role="search">
                     <span class="cd-search-icon" aria-hidden="true"><?= icon('search') ?></span>
-                    <span class="sr-only">Buscar placas Compact Dry</span>
+                    <label class="cd-search-label" for="cd-search-input">Buscar placas Compact Dry</label>
                     <input
                         class="cd-search-input"
                         id="cd-search-input"
                         type="search"
-                        placeholder="Buscar por placa, código, microorganismo o matriz"
+                        placeholder="Buscar placas, códigos o microorganismos"
                         autocomplete="off"
                     >
                     <button class="cd-search-clear" id="cd-search-clear" type="button" aria-label="Limpiar búsqueda" hidden>
                         <?= icon('x') ?>
                     </button>
-                </label>
+                </div>
             </div>
         </div>
 
@@ -122,7 +122,7 @@ introduccionPagina(
         <div class="cd-plates-grid" id="cd-plates-container">
             <?php foreach ($placas as $p): ?>
                 <?php
-                $searchText = $p['codigo'] . ' ' . $p['nombre'] . ' ' . $p['organismo'] . ' ' . $p['descripcionCorta'] . ' ' . $p['matriz'];
+                $searchText = $p['codigo'] . ' ' . $p['nombre'] . ' ' . $p['organismo'] . ' ' . $p['descripcionCorta'] . ' ' . ($p['resumen'] ?? '') . ' ' . $p['matriz'];
                 $jsonPlaca = htmlspecialchars(json_encode($p, JSON_UNESCAPED_UNICODE), ENT_QUOTES, 'UTF-8');
                 ?>
                 <article
@@ -213,8 +213,10 @@ introduccionPagina(
                         <div class="cv-stage-pedestal" aria-hidden="true"></div>
                         <img
                             src="assets/images/compact-dry/compact-vision-angulo-02.webp"
-                            alt="Lector de placas Compact Vision con Inteligencia Artificial"
+                            alt="Lector de placas Compact Vision"
                             class="cv-stage-img"
+                            width="832"
+                            height="666"
                             loading="lazy"
                             decoding="async"
                         >
@@ -317,7 +319,7 @@ introduccionPagina(
 
 
         <!-- ==========================================================
-             CATEGORÍA 1: EC Blue para detección de Coliformes y Escherichia coli en aguas
+             CATEGORÍA 1: EC Blue para detección de Coliformes y E. coli en aguas
              ========================================================== -->
         <article class="ec-category-card" id="cat-deteccion-agua">
             <!-- Cabecera de Producto: Galería + Información Principal + Documentos -->
@@ -327,7 +329,7 @@ introduccionPagina(
                     <figure class="ec-detalle-galeria__principal">
                         <span class="ec-detalle-galeria__marco">
                             <img
-                                src="assets/images/ec-blue/ec-blue-2.webp"
+                                src="assets/images/compact-dry/ec-blue-2.webp"
                                 alt="Comparación de resultados EC Blue bajo luz natural"
                                 data-ec-blue-main-image
                                 decoding="async"
@@ -336,18 +338,18 @@ introduccionPagina(
                         <figcaption data-ec-blue-main-caption>Comparación bajo luz natural</figcaption>
                     </figure>
 
-                    <div class="ec-detalle-galeria__miniaturas" aria-label="Imágenes de EC Blue para detección de Coliformes y Escherichia coli en aguas">
+                    <div class="ec-detalle-galeria__miniaturas" aria-label="Imágenes de EC Blue para detección de Coliformes y E. coli en aguas">
                         <button
                             class="ec-detalle-miniatura ec-detalle-miniatura--activa"
                             type="button"
                             data-ec-blue-thumbnail
-                            data-image="assets/images/ec-blue/ec-blue-2.webp"
+                            data-image="assets/images/compact-dry/ec-blue-2.webp"
                             data-alt="Comparación de resultados EC Blue bajo luz natural"
                             data-caption="Comparación bajo luz natural"
                             aria-label="Mostrar Comparación bajo luz natural"
                             aria-pressed="true"
                         >
-                            <img src="assets/images/ec-blue/ec-blue-2.webp" alt="" loading="lazy" decoding="async">
+                            <img src="assets/images/compact-dry/ec-blue-2.webp" alt="" loading="lazy" decoding="async">
                             <span>Comparación bajo luz natural</span>
                         </button>
 
@@ -355,13 +357,13 @@ introduccionPagina(
                             class="ec-detalle-miniatura"
                             type="button"
                             data-ec-blue-thumbnail
-                            data-image="assets/images/ec-blue/ec.-blue.webp"
+                            data-image="assets/images/compact-dry/ec.-blue.webp"
                             data-alt="Comparación de resultados EC Blue bajo luz ultravioleta"
                             data-caption="Comparación bajo luz UV"
                             aria-label="Mostrar Comparación bajo luz UV"
                             aria-pressed="false"
                         >
-                            <img src="assets/images/ec-blue/ec.-blue.webp" alt="" loading="lazy" decoding="async">
+                            <img src="assets/images/compact-dry/ec.-blue.webp" alt="" loading="lazy" decoding="async">
                             <span>Comparación bajo luz UV</span>
                         </button>
                     </div>
@@ -369,13 +371,13 @@ introduccionPagina(
 
                 <!-- Información Principal de Producto -->
                 <div class="ec-producto-informacion">
-                    <h3 class="ec-category-title">EC Blue para detección de Coliformes y Escherichia coli en aguas</h3>
+                    <h3 class="ec-category-title">EC Blue para detección de Coliformes y <em>E. coli</em> en aguas</h3>
                     
                     <div class="ec-producto-descripcion">
                         <h4 class="ec-subheading">Descripción</h4>
                         <div class="ec-prosa">
                             <p>
-                                Tanto el Ministerio de Salud, Trabajo y Bienestar (MHLW) en 2003 como la Asociación de Obras Hidráulicas de Japón (JWWA) en 2001 aprobaron oficialmente EC Blue como uno de los métodos oficiales para la detección de <em>Escherichia coli</em> y coliformes en el agua. EC Blue se desarrolló con base en el método de cultivo por sustrato enzimático específico para la detección de <em>E. coli</em> y coliformes en agua.
+                                Tanto el Ministerio de Salud, Trabajo y Bienestar (MHLW) en 2003 como la Asociación de Obras Hidráulicas de Japón (JWWA) en 2001 aprobaron oficialmente EC Blue como uno de los métodos oficiales para la detección de <em>E. coli</em> y coliformes en el agua. EC Blue se desarrolló con base en el método de cultivo por sustrato enzimático específico para la detección de <em>E. coli</em> y coliformes en agua.
                             </p>
                         </div>
                     </div>
@@ -423,7 +425,7 @@ introduccionPagina(
                     <article class="ec-procedimiento-card">
                         <figure class="ec-procedimiento-figura">
                             <img
-                                src="assets/images/ec-blue/EC-BLUE-100P.webp"
+                                src="assets/images/compact-dry/EC-BLUE-100P.webp"
                                 alt="Paquetes EC Blue 100P"
                                 loading="lazy"
                                 decoding="async"
@@ -436,7 +438,7 @@ introduccionPagina(
                                 <li><span>Separe una pieza del paquete Snap de los 5 paquetes de acoplamiento.</span></li>
                                 <li><span>Prepare un tubo de cultivo esterilizado (botella). Dispense 100 ml de la muestra capturada limpia de la botella de recolección en un tubo de cultivo esterilizado (botella).</span></li>
                                 <li><span>Consulte las siguientes figuras y agregue un paquete de EC Blue 100P en el tubo de cultivo (botella). Apriete la tapa y agite bien para disolver el medio en la muestra de agua.</span></li>
-                                <li><span>Juzgue el cambio de color (azul – azul verde) del medio después de 24 horas de incubación a 35 – 37 ℃. Cuando confirme el cambio de color azul-azul verde, verifique la fluorescencia adicionalmente (para la detección de <em>E. coli</em> ).</span></li>
+                                <li><span>Juzgue el cambio de color (azul – azul verde) del medio después de 24 horas de incubación a 35 – 37 ℃. Cuando confirme el cambio de color azul-azul verde, verifique la fluorescencia adicionalmente (para la detección de <em>E. coli</em>).</span></li>
                             </ol>
                         </div>
                     </article>
@@ -445,7 +447,7 @@ introduccionPagina(
                     <article class="ec-procedimiento-card">
                         <figure class="ec-procedimiento-figura">
                             <img
-                                src="assets/images/ec-blue/EC-BLUE-100.webp"
+                                src="assets/images/compact-dry/EC-BLUE-100.webp"
                                 alt="Frascos EC Blue 100"
                                 loading="lazy"
                                 decoding="async"
@@ -457,7 +459,7 @@ introduccionPagina(
                             <ol class="ec-pasos-lista">
                                 <li><span>Prepare EC Blue 100 (botella) y dispense 100 ml de muestra de prueba en la botella en condiciones de esterilización. El frasco está graduado con una marca de 100 ml en la circunferencia.</span></li>
                                 <li><span>Apriete la tapa y agite bien para disolver el medio en la muestra de agua.</span></li>
-                                <li><span>Evalúe el cambio de color (azul – azul verde) del medio después de 24 horas de incubación a 35 – 37 ℃. Cuando confirme el cambio de color azul-azul verde, verifique la fluorescencia adicionalmente (para la detección de <em>E. coli</em> ).</span></li>
+                                <li><span>Evalúe el cambio de color (azul – azul verde) del medio después de 24 horas de incubación a 35 – 37 ℃. Cuando confirme el cambio de color azul-azul verde, verifique la fluorescencia adicionalmente (para la detección de <em>E. coli</em>).</span></li>
                             </ol>
                         </div>
                     </article>
@@ -466,7 +468,7 @@ introduccionPagina(
                     <article class="ec-procedimiento-card">
                         <figure class="ec-procedimiento-figura">
                             <img
-                                src="assets/images/ec-blue/EC-BLUE-10.webp"
+                                src="assets/images/compact-dry/EC-BLUE-10.webp"
                                 alt="Tubos EC Blue 10"
                                 loading="lazy"
                                 decoding="async"
@@ -554,7 +556,7 @@ introduccionPagina(
                 <div class="ec-nmp-galeria">
                     <div class="ec-nmp-galeria__principal">
                         <img
-                            src="assets/images/ec-blue/EC-Blue-plato-para-MPN-scaled.webp"
+                            src="assets/images/compact-dry/EC-Blue-plato-para-MPN-scaled.webp"
                             alt="Placa EC Blue para NMP bajo luz natural y luz UV"
                             decoding="async"
                             loading="lazy"
@@ -591,7 +593,7 @@ introduccionPagina(
                 <h4 class="ec-seccion-titulo">Placa patentada</h4>
                 <figure class="ec-nmp-recurso">
                     <img
-                        src="assets/images/ec-blue/EC-Blue-plato-para-MPN-1.webp"
+                        src="assets/images/compact-dry/EC-Blue-plato-para-MPN-1.webp"
                         alt="Placa patentada EC Blue para NMP"
                         loading="lazy"
                         decoding="async"
@@ -932,7 +934,7 @@ introduccionPagina(
 </section>
 
 <!-- Script de interactividad -->
-<script src="assets/js/compact-dry.js?v=11" defer></script>
-<script src="assets/js/navegador-secciones.js?v=7" defer></script>
+<script src="assets/js/compact-dry.js?v=12" defer></script>
+<script src="assets/js/navegador-secciones.js?v=8" defer></script>
 
 <?php require __DIR__.'/includes/pie.php'; ?>

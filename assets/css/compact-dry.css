@@ -113,7 +113,7 @@
   font-size: clamp(28px, 3.3vw, 42px);
   font-weight: 800;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.5px;
   color: #ffffff;
   margin: 0 0 16px 0;
 }
@@ -199,10 +199,9 @@
   font-size: 13px;
   font-weight: 700;
   color: #115d74;
-  background: var(--pale);
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid #cce5eb;
+  background: transparent;
+  padding: 0;
+  border: 0;
 }
 
 .cd-catalog-toolbar {
@@ -232,6 +231,19 @@
   color: #668895;
   pointer-events: none;
 }
+
+.cd-search-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.cd-search-clear[hidden] { display: none; }
 
 .cd-search-input {
   width: 100%;
@@ -352,7 +364,11 @@
   }
 }
 
-.compact-contact-strip {
+.contact-strip.compact-contact-strip {
+  background: transparent;
+  clip-path: none;
+  box-shadow: none;
+  border: 0;
   margin-top: 28px;
   margin-bottom: 60px;
   padding-block: clamp(38px, 5vw, 54px);
@@ -377,12 +393,6 @@
   justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
-}
-
-.cd-filter-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
 }
 
 .cd-filter-btn {
@@ -475,7 +485,7 @@
   font-weight: 800;
   padding: 4px 10px;
   border-radius: 6px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.6px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -807,7 +817,7 @@
   align-items: center;
   gap: 10px;
   margin: 0 0 12px 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.2px;
 }
 
 .cv-block-title svg {
@@ -936,41 +946,6 @@
   display: none;
 }
 
-.cv-back-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-.cv-back-icon {
-  width: 26px;
-  height: 26px;
-  background: rgba(113, 208, 223, 0.2);
-  color: #71d0df;
-  clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.cv-back-icon svg {
-  width: 14px;
-  height: 14px;
-}
-
-.cv-back-header h4 {
-  font-size: 15px;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0;
-  line-height: 1.25;
-  text-align: center;
-}
-
 .cv-benefit-card-back p {
   font-size: 13.5px;
   line-height: 1.55;
@@ -1019,24 +994,6 @@
   outline: 2px solid #71d0df;
   outline-offset: 4px;
   border-radius: 4px;
-}
-
-.cv-resource-icon {
-  width: 44px;
-  height: 44px;
-  background: rgba(113, 208, 223, 0.15);
-  color: #71d0df;
-  border: 1px solid rgba(113, 208, 223, 0.3);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.cv-resource-icon svg {
-  width: 22px;
-  height: 22px;
 }
 
 .cv-resource-info {
@@ -1347,8 +1304,7 @@
 .cv-benefit-card-front h4,
 .cv-benefit-card-back h4 { color: #fff; }
 
-.cv-benefit-badge,
-.cv-back-icon {
+.cv-benefit-badge {
   width: auto;
   height: auto;
   margin-bottom: 18px;
@@ -1359,8 +1315,7 @@
   color: #72d1df;
 }
 
-.cv-benefit-badge svg,
-.cv-back-icon svg {
+.cv-benefit-badge svg {
   width: 38px;
   height: 38px;
   stroke-width: 1.7;
@@ -1372,8 +1327,7 @@
     height: 164px;
   }
 
-  .cv-benefit-badge svg,
-  .cv-back-icon svg {
+  .cv-benefit-badge svg {
     width: 34px;
     height: 34px;
   }
@@ -1440,7 +1394,7 @@
   font-weight: 800;
   color: #062635;
   margin: 0 0 8px 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.2px;
 }
 
 .cd-faq-intro {
@@ -1763,7 +1717,7 @@
   color: var(--navy);
   margin: 0 0 10px 0;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.5px;
 }
 
 .cd-modal-organism-wrap {
@@ -1895,14 +1849,6 @@
   color: #ffffff !important;
 }
 
-.cd-modal-footer {
-  margin-top: 32px;
-  padding-top: 20px;
-  border-top: none;
-  display: flex;
-  justify-content: flex-end;
-}
-
 /* 2. Secciones del Modal */
 .cd-modal-section {
   margin-bottom: 30px;
@@ -1913,7 +1859,7 @@
   font-weight: 800;
   color: var(--navy);
   margin: 0 0 14px 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.2px;
 }
 
 .cd-modal-desc {
@@ -1959,22 +1905,6 @@
   line-height: 1.5;
   display: flex;
   align-items: center;
-}
-
-.cd-modal-certs-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.cd-badge-cert {
-  background: #e8f4f6;
-  color: var(--teal);
-  font-size: 11.5px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 4px;
-  border: 1px solid #cce5eb;
 }
 
 /* 4. Modo de Uso (Pasos 1-4) */
@@ -2056,20 +1986,11 @@
     clip-path: none;
     border-radius: 8px;
   }
-  .cv-metrics-strip {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .cv-capabilities-list {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
   .cv-action-links {
     flex-direction: column;
     align-items: stretch;
   }
-  .cv-hub-btn,
-  .cv-quote-btn {
+  .cv-hub-btn {
     width: 100%;
     justify-content: center;
   }
@@ -2128,7 +2049,7 @@
   font-size: clamp(30px, 4.2vw, 44px);
   font-weight: 800;
   color: #ffffff;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.7px;
   line-height: 1.1;
   margin: 0 0 16px 0;
 }
@@ -2148,124 +2069,6 @@
 .ec-blue-lead em {
   font-style: italic;
   color: #ffffff;
-}
-
-.ec-blue-btn-quote {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 13px 24px;
-  background: #2e97ae;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 14.5px;
-  text-decoration: none;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
-  box-shadow: 0 6px 18px rgba(46, 151, 174, 0.35);
-  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
-}
-
-.ec-blue-btn-quote:hover {
-  background: #247d91;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(46, 151, 174, 0.45);
-}
-
-.ec-blue-btn-quote svg {
-  width: 16px;
-  height: 16px;
-}
-
-.ec-blue-hero-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px 20px 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 20px 48px rgba(5, 27, 37, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.ec-blue-hero-img {
-  width: 100%;
-  max-height: 240px;
-  object-fit: contain;
-  transition: transform 260ms ease;
-}
-
-.ec-blue-hero-card:hover .ec-blue-hero-img {
-  transform: scale(1.04);
-}
-
-.ec-blue-hero-card-footer {
-  margin-top: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  text-align: center;
-}
-
-.ec-blue-hero-model {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--navy);
-}
-
-/* 2. Selector de Categorías de EC Blue */
-.ec-categories-nav {
-  display: flex;
-  gap: 16px;
-  margin: 32px 0 40px;
-  flex-wrap: wrap;
-}
-
-.ec-category-nav-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 22px;
-  background: #ffffff;
-  color: var(--navy);
-  border: 1px solid #d8e6e9;
-  font-weight: 700;
-  font-size: 14px;
-  text-decoration: none;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
-  box-shadow: 0 4px 14px rgba(13, 73, 100, 0.05);
-  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms var(--ease-brand), box-shadow 180ms ease;
-  flex: 1 1 320px;
-}
-
-.ec-category-nav-btn svg {
-  width: 20px;
-  height: 20px;
-  color: #2e97ae;
-  flex-shrink: 0;
-  transition: transform 180ms ease;
-}
-
-.ec-category-nav-btn:hover {
-  background: #f0f7f9;
-  border-color: #2e97ae;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(13, 73, 100, 0.1);
-}
-
-.ec-category-nav-btn:hover svg {
-  transform: scale(1.1);
-}
-
-.ec-category-nav-btn.is-active {
-  background: var(--navy);
-  color: #ffffff;
-  border-color: var(--navy);
-}
-
-.ec-category-nav-btn.is-active svg {
-  color: #71d0df;
 }
 
 /* 3. Contenedor de Categoría y Cabecera de Producto */
@@ -2296,7 +2099,37 @@
   color: var(--navy);
   line-height: 1.25;
   margin: 0 0 16px 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.5px;
+}
+
+/* Énfasis y nombres biológicos (E. coli, coliformes, etc.) en cursiva */
+.ec-blue-section em,
+.ec-pasos-lista em,
+.ec-interpretacion-card em,
+.ec-nmp-pasos em,
+.diagrama-ec-blue em,
+.cd-main-section em,
+.cd-modal em {
+  font-style: italic;
+  color: inherit;
+}
+
+.ec-category-title em {
+  font-style: italic;
+  color: inherit;
+}
+
+.ec-interpretacion-card h5 em,
+.diagrama-ec-blue__resultados p em {
+  font-style: italic;
+  font-weight: 800;
+  color: inherit;
+}
+
+.cd-modal-organism-pill em {
+  font-style: italic;
+  font-weight: 700;
+  color: inherit;
 }
 
 .ec-subheading {
@@ -2541,95 +2374,7 @@
   font-weight: 800;
   color: var(--navy);
   margin: 0 0 16px 0;
-  letter-spacing: -0.01em;
-}
-
-.ec-seccion-cabecera {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-
-.ec-seccion-cabecera .ec-seccion-titulo {
-  margin: 0;
-}
-
-.ec-icon-tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: #e7f4f6;
-  color: #2e97ae;
-}
-
-.ec-icon-tag svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* Tabla Composición */
-.ec-composicion {
-  background: #f9fcfd;
-  border: 1px solid #d8e6e9;
-  border-radius: 14px;
-  padding: 24px;
-}
-
-.ec-tabla-contenedor {
-  overflow-x: auto;
-  margin-top: 8px;
-}
-
-.ec-tabla {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
-}
-
-.ec-tabla thead th {
-  background: #0d4964;
-  color: #ffffff;
-  padding: 12px 18px;
-  text-align: left;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-.ec-tabla thead th:last-child {
-  text-align: right;
-  width: 160px;
-}
-
-.ec-tabla tbody tr {
-  border-bottom: 1px solid #e2ecef;
-  transition: background-color 140ms ease;
-}
-
-.ec-tabla tbody tr:nth-child(even) {
-  background: #f3f8fa;
-}
-
-.ec-tabla tbody tr:hover {
-  background: #e8f3f6;
-}
-
-.ec-tabla tbody th {
-  padding: 11px 18px;
-  font-weight: 600;
-  color: var(--navy);
-  text-align: left;
-}
-
-.ec-tabla tbody td {
-  padding: 11px 18px;
-  color: #3b5a68;
-  font-weight: 700;
-  text-align: right;
-  font-feature-settings: "tnum";
+  letter-spacing: -0.2px;
 }
 
 /* 7. Procedimientos de Operación */
@@ -2936,7 +2681,7 @@
   font-weight: 800;
   color: var(--navy);
   margin: 0 0 6px 0;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.4px;
 }
 
 .diagrama-ec-blue__encabezado p {
@@ -3205,15 +2950,11 @@
 }
 
 @media (hover: none), (pointer: coarse) {
-  .cd-section-tab:hover .cd-tab-arrow,
   .cd-hero-capsule:hover,
   .cd-plate-card:hover,
   .cd-plate-card:hover .cd-card-media img,
-  .cv-metric-card:hover,
   .cv-hub-btn:hover,
   .cv-hub-btn:hover svg,
-  .cv-quote-btn:hover,
-  .cv-quote-btn:hover svg,
   .cv-stage-card:hover,
   .cv-stage-card:hover .cv-stage-img,
   .cv-benefit-card:hover,
@@ -3225,10 +2966,6 @@
   .cd-thumb-btn:hover,
   .cd-btn-cut:hover,
   .cd-btn-cut:hover > svg,
-  .ec-blue-btn-quote:hover,
-  .ec-blue-hero-card:hover .ec-blue-hero-img,
-  .ec-category-nav-btn:hover,
-  .ec-category-nav-btn:hover svg,
   .ec-detalle-miniatura:hover,
   .ec-documento:hover,
   .ec-documento:hover svg,
@@ -3265,12 +3002,7 @@
   }
 
   .cd-btn-cut:hover,
-  .cd-btn-cut-outline:hover,
-  .ec-blue-btn-quote:hover,
-  .ec-duo-card:hover,
-  .ec-product-card:hover,
-  .ec-step-card:hover,
-  .ec-resource-card:hover {
+  .cd-btn-cut-outline:hover {
     transform: none !important;
   }
 

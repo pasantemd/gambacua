@@ -57,6 +57,34 @@ $elementosMenuProductos = [
                 'url' => 'histamina.php'
             ]
         ]
+    ],
+    [
+        'titulo' => 'Acuacultura',
+        'url' => 'acuacultura.php',
+        'icono' => 'waves',
+        'identificador' => 'acuacultura',
+        'subsecciones' => [
+            [
+                'titulo' => 'KOI',
+                'url' => 'acuacultura.php?marca=koi'
+            ],
+            [
+                'titulo' => 'Acopio',
+                'url' => 'acuacultura.php?marca=acopio'
+            ],
+            [
+                'titulo' => 'Aqua&Co',
+                'url' => 'acuacultura.php?marca=acqua-co'
+            ],
+            [
+                'titulo' => 'Mixer Pro',
+                'url' => 'acuacultura.php?marca=mixer-pro'
+            ],
+            [
+                'titulo' => 'Nexwater',
+                'url' => 'acuacultura.php?marca=nexwater'
+            ]
+        ]
     ]
 ];
 
@@ -68,6 +96,12 @@ $elementosMenuProductos = [
  */
 function icono($nombre) {
     $trazados = [
+        'bolsa-alambre' => '<path d="M2 8h20M2 11h20M5 11v11M19 11v11M3 6h18v2"/>',
+        'bolsa-escritura' => '<path d="M3 5h18M5 5v17M19 5v17"/><path d="M5 11h14v6H5z" fill="currentColor"/>',
+        'bolsa-sello' => '<path d="M4 4h15v18M4 7h12v15M18 5l3 2m-3 3 3 2m-3 3 3 2m-3 3 3 2"/>',
+        'bolsa-esteril' => '<path d="M3 12h10M8 7v10M17 8l3-2v12"/>',
+        'bolsa-pelicula' => '<path d="M3 4h18M5 4v18M19 4v18M7 13h10M12 8v10m-4-8 8 6m-8 0 8-6"/>',
+        'bolsa-tyvek' => '<path d="M2 6h20M5 6v16M19 6v16"/><path d="M4 8h6v6H4zm10 0h6v6h-6z" fill="currentColor"/>',
         'arrow' => '<path d="M4 12h15m-6-6 6 6-6 6"/>',
         'arrow-right' => '<path d="M5 12h14m-7-7 7 7-7 7"/>',
         'diagonal' => '<path d="M6 18 18 6M6 6h12v12"/>',
@@ -99,7 +133,8 @@ function icono($nombre) {
         'calendar' => '<rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/>',
         'flask' => '<path d="M10 2v7.31L4.1 19.4A2 2 0 0 0 5.8 22h12.4a2 2 0 0 0 1.7-2.6L14 9.31V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/>',
         'pipette' => '<path d="m19 5-2-2a2 2 0 0 0-2.8 0L9.4 7.8 8 7 6 9l.8 1.4-5.6 5.6a1 1 0 0 0 0 1.4l2.8 2.8a1 1 0 0 0 1.4 0L11 14.6l1.4.8 2-2-.8-1.4 4.8-4.8a2 2 0 0 0 0-2.8Z"/><path d="m18 6-4 4"/>',
-        'tube' => '<path d="M7 2h10M9 2v15a3 3 0 0 0 6 0V2"/>'
+        'tube' => '<path d="M7 2h10M9 2v15a3 3 0 0 0 6 0V2"/>',
+        'waves' => '<path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>'
     ];
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'.($trazados[$nombre] ?? $trazados['arrow']).'</svg>';
 }

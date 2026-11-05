@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const grupos = [...document.querySelectorAll([
     '.values', '.ingredient-grid', '.timeline-grid', '.categories-carousel-track',
     '.inocuidad-lines-grid', '.contact-info-grid', '.supply-tips-grid',
-    '.sampling-bags-grid', '.micotoxin-methods', '.histamine-product-details'
+    '.sampling-bags-grid', '.micotoxin-methods', '.histamine-product-details', '.acuacultura-marcas'
   ].join(','))];
   const candidatas = [...document.querySelectorAll([
     '.culture-media-card', '.culture-media-card-minimal', '.cat-brand-card',
@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     '.sampling-bag-card', '.sampling-bags-features', '.sampling-bags-applications',
     '.inoculation-product', '.centrifuge-rack', '.centrifuge-details',
     '.centrifuge-standard', '.filtros-diagram-wrapper', '.filtros-conversion-section',
-    '.culture-ready-minimal', '.micotoxin-family', '.micotoxin-approval', '.histamine-product'
+    '.culture-ready-minimal', '.micotoxin-family', '.micotoxin-approval', '.histamine-product',
+    '.acuacultura-producto'
   ].join(','))];
   const tarjetas = candidatas.filter(tarjeta => !grupos.some(grupo => grupo.contains(tarjeta)));
   const secciones = [...document.querySelectorAll('main > section:not(.page-intro):not(.hero-shell)')]

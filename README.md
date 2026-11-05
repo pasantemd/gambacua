@@ -18,7 +18,7 @@ Sitio institucional de Gambacua en PHP nativo, CSS modular y JavaScript vanilla.
 
 ## Identidad
 
-El Manual de Identidad Corporativa es la referencia visual. La interfaz usa Montserrat, azul profundo `#004766`, azul medio `#3097B2`, blanco y superficies azuladas claras. Couture Bold se reserva para el logotipo. Los logotipos oficiales están en `assets/images/logo-gambacua-*.svg`.
+El Manual de Identidad Corporativa es la referencia visual. La interfaz usa Montserrat, azul profundo `#004766`, azul medio `#3097B2`, blanco y superficies azuladas claras. Couture Bold se reserva para el logotipo. Los logotipos oficiales están en `assets/images/compartidas/identidad/logo-gambacua-*.svg`.
 
 La “A” recortada de la marca aparece como marca de agua proporcional en fondos oscuros mediante `assets/css/identidad-marca.css`. Botones y tarjetas de acción usan cortes en la esquina superior derecha e inferior izquierda; el hover conserva el matiz de cada variante.
 

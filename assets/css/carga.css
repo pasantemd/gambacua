@@ -185,7 +185,7 @@ body.is-page-exiting .site-header {
   font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 1px;
   color: var(--navy, #004766);
   text-transform: uppercase;
   opacity: 0.92;

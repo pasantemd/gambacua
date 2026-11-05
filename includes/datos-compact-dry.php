@@ -18,7 +18,7 @@ return [
         'matriz' => 'Amplia gama de alimentos: productos pesqueros, lácteos, carnes y aves, frutas, vegetales, piensos y muestras ambientales.',
         'incubacion' => '35 ± 1 °C (AOAC) o 30 ± 1 °C (MicroVal, AFNOR, NordVal) durante 48 ± 3 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_TC.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_TC.webp',
         'colorColonias' => 'Colonias rojas',
         'certificaciones' => ['AOAC', 'MicroVal', 'NordVal']
     ],
@@ -34,7 +34,7 @@ return [
         'matriz' => 'Productos lácteos, productos pesqueros, alimentos procesados, carnes y muestras de higiene.',
         'incubacion' => '35 ± 1 °C durante 24 ± 2 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_TCR.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_TCR.webp',
         'colorColonias' => 'Colonias rojas rápidas (24 h)',
         'certificaciones' => ['AOAC']
     ],
@@ -50,7 +50,7 @@ return [
         'matriz' => 'Productos cárnicos, pesqueros, lácteos, alimentos preparados y muestras ambientales de proceso.',
         'incubacion' => '37 ± 1 °C durante 24 ± 2 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_ETB.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_ETB.webp',
         'colorColonias' => 'Colonias rojas a moradas',
         'certificaciones' => ['MicroVal', 'NordVal']
     ],
@@ -59,14 +59,14 @@ return [
         'nombre' => 'Compact Dry EC',
         'categoria' => 'coliformes',
         'categoriaLabel' => 'Coliformes & E. coli',
-        'organismo' => 'Escherichia coli y coliformes',
+        'organismo' => 'E. coli y coliformes',
         'descripcionCorta' => 'Detección simultánea y diferenciada de E. coli y coliformes en una sola placa.',
         'resumen' => 'Permite cuantificar coliformes y E. coli al mismo tiempo mediante dos sustratos cromogénicos específicos (Magenta-Gal y X-Gluc).',
         'descripcion' => 'Compact Dry EC contiene dos sustratos cromogénicos enzimáticos. E. coli forma colonias azules a azul púrpura por la acción de la β-glucuronidasa, mientras que el resto de coliformes forman colonias de color magenta por la β-galactosidasa. La suma de ambas corresponde a los coliformes totales.',
         'matriz' => 'Alimentos sólidos, aguas, bebidas, piensos acuícolas y superficies de contacto.',
         'incubacion' => '35 ± 1 °C (AOAC) o 37 ± 1 °C (MicroVal, AFNOR, NordVal) durante 24 ± 2 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_EC.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_EC.webp',
         'colorColonias' => 'Azules (E. coli) y Magenta (Coliformes)',
         'certificaciones' => ['AOAC', 'MicroVal', 'NordVal']
     ],
@@ -82,7 +82,7 @@ return [
         'matriz' => 'Agua de proceso, productos pesqueros y acuícolas, carnes, mariscos y lácteos.',
         'incubacion' => '35 ± 2 °C (AOAC) o 37 ± 1 °C (MicroVal, NordVal) durante 24 ± 2 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_CF.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_CF.webp',
         'colorColonias' => 'Colonias azules / azul verdoso',
         'certificaciones' => ['AOAC', 'MicroVal', 'NordVal']
     ],
@@ -98,7 +98,7 @@ return [
         'matriz' => 'Leche, quesos madurados y frescos, yogur y productos fermentados.',
         'incubacion' => '37 ± 1 °C durante 24 ± 2 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_CFL.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_CFL.webp',
         'colorColonias' => 'Colonias azules a azul verdosas',
         'certificaciones' => ['MicroVal']
     ],
@@ -114,7 +114,7 @@ return [
         'matriz' => 'Leche cruda, productos procesados térmicamente y líneas de producción continuas.',
         'incubacion' => '35 ± 1 °C durante 16 – 18 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_CFR.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_CFR.webp',
         'colorColonias' => 'Colonias azul-verdosas rápidas',
         'certificaciones' => ['AOAC']
     ],
@@ -123,14 +123,14 @@ return [
         'nombre' => 'Compact Dry ECO',
         'categoria' => 'coliformes',
         'categoriaLabel' => 'E. coli Selectivo',
-        'organismo' => 'Escherichia coli',
+        'organismo' => 'E. coli',
         'descripcionCorta' => 'Placa selectiva cromogénica para detección exclusiva de E. coli en 24 horas.',
-        'resumen' => 'Permite el cultivo y enumeración selectiva de Escherichia coli en alimentos, agua potable y control de superficies con hisopos.',
+        'resumen' => 'Permite el cultivo y enumeración selectiva de E. coli (Escherichia coli) en alimentos, agua potable y control de superficies con hisopos.',
         'descripcion' => 'E. coli forma colonias de color azul gracias a la presencia del sustrato enzimático cromogénico X-Gluc, inhibiendo la interferencia de otras bacterias entéricas no coliformes.',
         'matriz' => 'Muestras de alimentos, aguas de proceso y frotis ambientales en áreas de empaque.',
         'incubacion' => '37 ± 1 °C durante 24 ± 2 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_ECO.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_ECO.webp',
         'colorColonias' => 'Colonias azules',
         'certificaciones' => ['MicroVal']
     ],
@@ -146,7 +146,7 @@ return [
         'matriz' => 'Camarón, langostinos, mariscos, crustáceos, agua salobre y superficies de plantas procesadoras de mariscos.',
         'incubacion' => '35 ± 1 °C durante 19 ± 1 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_VP.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_VP.webp',
         'colorColonias' => 'Azul / verde (V. parahaemolyticus) vs blancas (otros Vibrios)',
         'certificaciones' => ['Validación industrial']
     ],
@@ -162,7 +162,7 @@ return [
         'matriz' => 'Ovoproductos, carnes, harinas de pescado, alimentos balanceados y muestras ambientales.',
         'incubacion' => '42 ± 1 °C durante 22 ± 2 horas (tras preenriquecimiento).',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_SL.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_SL.webp',
         'colorColonias' => 'Medio amarillo con colonias negras / verde oscuro',
         'certificaciones' => ['MicroVal', 'NordVal']
     ],
@@ -178,7 +178,7 @@ return [
         'matriz' => 'Alimentos procesados, platos listos para consumir, carnes, lácteos y control de manipuladores.',
         'incubacion' => '37 ± 1 °C durante 24 ± 2 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_XSA.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_XSA.webp',
         'colorColonias' => 'Colonias azul claro a azul brillante',
         'certificaciones' => ['AOAC', 'MicroVal', 'NordVal']
     ],
@@ -194,7 +194,7 @@ return [
         'matriz' => 'Cereales secos, harinas, productos pesqueros, vegetales, lácteos y productos cárnicos.',
         'incubacion' => '30 ± 1 °C durante 24 – 48 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_BC.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_BC.webp',
         'colorColonias' => 'Colonias azul/verdosas',
         'certificaciones' => ['MicroVal']
     ],
@@ -210,7 +210,7 @@ return [
         'matriz' => 'Mariscos y pescados procesados, carnes frías (RTE), lácteos y superficies de cuartos fríos.',
         'incubacion' => '37 ± 1 °C durante 24 ± 2 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_LM.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_LM.webp',
         'colorColonias' => 'Colonias azul turquesa',
         'certificaciones' => ['MicroVal ISO 11290']
     ],
@@ -226,7 +226,7 @@ return [
         'matriz' => 'Muestras ambientales, drenajes, bandas transportadoras y materias primas.',
         'incubacion' => '37 ± 1 °C durante 24 a 48 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_LS.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_LS.webp',
         'colorColonias' => 'Colonias azuladas',
         'certificaciones' => ['NordVal']
     ],
@@ -242,7 +242,7 @@ return [
         'matriz' => 'Agua embotellada, agua potable, cosméticos y líneas de enjuague de plantas.',
         'incubacion' => '36 ± 1 °C durante 24 a 48 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_PA.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_PA.webp',
         'colorColonias' => 'Colonia roja con halo amarillo verdoso',
         'certificaciones' => ['AOAC RI']
     ],
@@ -258,7 +258,7 @@ return [
         'matriz' => 'Harinas, alimentos balanceados, jugos, frutas, confitería, huevos y aire ambiental.',
         'incubacion' => '25 ± 1 °C durante 5 a 7 días.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_YM.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_YM.webp',
         'colorColonias' => 'Levaduras azules / Mohos algodonosos',
         'certificaciones' => ['AOAC', 'MicroVal', 'NordVal']
     ],
@@ -274,7 +274,7 @@ return [
         'matriz' => 'Alimentos procesados, materias primas de molienda, pastas, productos secos y bebidas.',
         'incubacion' => '25 ± 1 °C durante 72 ± 3 horas (lectura preliminar a 48 h).',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_YMR.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_YMR.webp',
         'colorColonias' => 'Levaduras azules / Mohos filamentosos rápidos',
         'certificaciones' => ['AOAC', 'MicroVal']
     ],
@@ -290,7 +290,7 @@ return [
         'matriz' => 'Agua potable, agua desionizada, agua para calderas y circuitos de producción.',
         'incubacion' => '36 ± 2 °C por 44 ± 4 h (SMEWW) o 22 ± 2 °C por 68 ± 4 h (ISO 6222).',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_AQ.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_AQ.webp',
         'colorColonias' => 'Colonias rojas',
         'certificaciones' => ['ISO 6222']
     ],
@@ -306,7 +306,7 @@ return [
         'matriz' => 'Aguas recreativas, aguas de proceso, alimentos procesados y superficies.',
         'incubacion' => '37 ± 1 °C durante 24 horas.',
         'presentacion' => 'Paquetes por 4 unidades.',
-        'imagen' => 'assets/images/compact-dry/placas/Compact_Dry_ETC.webp',
+        'imagen' => 'assets/images/compact-dry/Compact_Dry_ETC.webp',
         'colorColonias' => 'Colonias azul claro a azul oscuro',
         'certificaciones' => ['MicroVal']
     ]

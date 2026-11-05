@@ -10,7 +10,7 @@ Actualizado: 2026-10-06. Fuente principal: Manual de Identidad Corporativa de Ga
 - Fondos: blanco y azules muy claros con contraste suficiente.
 - Tipografía de interfaz: Montserrat.
 - Couture Bold se limita al logotipo; no se recrea el logotipo con texto HTML.
-- Usar los SVG oficiales `assets/images/logo-gambacua-*.svg` según el fondo.
+- Usar los SVG oficiales `assets/images/compartidas/identidad/logo-gambacua-*.svg` según el fondo.
 
 ## Forma gráfica
 

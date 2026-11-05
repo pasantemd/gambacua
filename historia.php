@@ -102,7 +102,6 @@ introduccionPagina('Nuestra historia', 'Innovación, calidad y acompañamiento t
 <section class="wrap contact-strip">
   <div>
     <h2>Hablemos de lo que tu operación necesita</h2>
-    <p>Acompañamos técnicamente cada etapa de tu proceso con soluciones eficientes y confiables.</p>
   </div>
   <a class="button button-light" href="contacto.php">Contacta a nuestro equipo <?= icono('diagonal') ?></a>
 </section>

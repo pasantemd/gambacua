@@ -55,19 +55,11 @@
   font-weight: 800;
   color: #0d4964;
   margin: 0 0 10px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.5px;
 }
 
 .filtros-header h2::after {
   margin-inline: auto;
-}
-
-.filtros-lead {
-  font-size: clamp(16px, 1.8vw, 19px);
-  color: #476877;
-  margin: 0;
-  line-height: 1.45;
-  font-weight: 500;
 }
 
 /* Diagrama Anatómico */
@@ -221,7 +213,7 @@
   font-weight: 800;
   color: #0d4964;
   margin: 0 0 28px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.2px;
 }
 
 .filtros-conversion-grid {
@@ -275,7 +267,7 @@
   font-size: 15px;
   font-weight: 800;
   box-shadow: 0 4px 12px rgba(13, 73, 100, 0.2);
-  letter-spacing: 0.01em;
+  letter-spacing: 0.2px;
 }
 
 .filtros-steps-list {
@@ -329,12 +321,7 @@
   font-weight: 800;
   color: #0d4964;
   text-align: center;
-  letter-spacing: 0.01em;
-}
-
-.filtros-actions-center {
-  display: flex;
-  justify-content: center;
+  letter-spacing: 0.2px;
 }
 
 /* ----------------------------------------------------------
@@ -368,7 +355,7 @@
   font-weight: 800;
   color: #0d4964;
   margin: 0 0 10px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.5px;
 }
 
 .dispensadores-header h2::after {
@@ -496,7 +483,7 @@
   font-weight: 800;
   color: #0d4964;
   margin: 0 0 20px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.5px;
 }
 
 .dispensador-specs-list {
@@ -517,7 +504,7 @@
   font-size: 14.5px;
   font-weight: 800;
   color: #0d4964;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.3px;
 }
 
 .dispensador-spec-item dd {
@@ -526,11 +513,6 @@
   font-weight: 500;
   color: #3b5a69;
   line-height: 1.5;
-}
-
-.dispensador-actions {
-  display: flex;
-  margin-top: 8px;
 }
 
 .dispensador-visual-col {

@@ -213,3 +213,4 @@
       color 120ms ease;
   }
 }
+[data-section-panel][hidden] { display: none !important; }

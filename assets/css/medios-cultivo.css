@@ -129,7 +129,7 @@
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.8px;
 }
 
 .culture-media-life strong {
@@ -149,7 +149,7 @@
   color: #ffffff;
   font-size: clamp(17px, 1.6vw, 19px);
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.2px;
 }
 
 .culture-media-group ul {
@@ -171,7 +171,7 @@
 .culture-media-group li::before {
   content: '';
   position: absolute;
-  top: 0.52em;
+  top: 8px;
   left: 0;
   width: 7px;
   height: 7px;
@@ -228,7 +228,7 @@
   color: rgba(255, 255, 255, 0.7);
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.6px;
 }
 
 .culture-media-indicators strong {
@@ -979,7 +979,7 @@
   margin-right: 9px;
   border-radius: 50%;
   background: var(--action);
-  vertical-align: .12em;
+  vertical-align: 1.4px;
 }
 
 .page-medios-cultivo .culture-minimal-table {

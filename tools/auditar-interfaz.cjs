@@ -1,6 +1,6 @@
 const { chromium } = require('C:/xampp/htdocs/compact-dry/node_modules/playwright');
 
-const routes = ['index', 'historia', 'productos', 'ingredientes', 'inocuidad', 'micotoxinas', 'histamina', 'medios-cultivo', 'filtracion-membrana', 'materiales-insumos', 'compact-dry', 'catalogos', 'contacto', 'legal'];
+const routes = ['index', 'historia', 'productos', 'ingredientes', 'acuacultura', 'inocuidad', 'micotoxinas', 'histamina', 'medios-cultivo', 'filtracion-membrana', 'materiales-insumos', 'compact-dry', 'catalogos', 'contacto', 'legal'];
 const viewports = [
   { width: 1440, height: 900 },
   { width: 1024, height: 768 },
@@ -34,7 +34,8 @@ const viewports = [
         const visible = element => {
           const style = getComputedStyle(element);
           const rect = element.getBoundingClientRect();
-          return style.display !== 'none' && style.visibility !== 'hidden' && Number(style.opacity) > 0 && rect.width > 0 && rect.height > 0;
+          const hiddenForLayout = element.matches('.sr-only, [class*="visually-hidden"]');
+          return !hiddenForLayout && style.display !== 'none' && style.visibility !== 'hidden' && Number(style.opacity) > 0 && rect.width > 0 && rect.height > 0;
         };
         const clipped = [...document.querySelectorAll('h1,h2,h3,h4,.button,button')]
           .filter(visible)

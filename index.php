@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="hero-media">
-      <?php espacioMultimedia('historia/presente-innovacion.webp', 'Acompañamiento técnico en una operación acuícola', 'hero-main'); ?>
+      <?php espacioMultimedia('inicio/presente-innovacion.webp', 'Acompañamiento técnico en una operación acuícola', 'hero-main'); ?>
       <div class="hero-caption">
         <span>Cerca de tu operación.<br><strong>Cerca de ti.</strong></span>
         <span>GAMBACUA · MÉXICO</span>
@@ -33,13 +33,13 @@
       <a class="button" href="historia.php">Conoce nuestra trayectoria <?= icono('diagonal') ?></a>
     </div>
   </div>
-  <?php espacioMultimedia('historia/oficina-equipo.webp', 'Equipo de atención y especialistas Gambacua', 'story-media'); ?>
+  <?php espacioMultimedia('inicio/oficina-equipo.webp', 'Equipo de atención y especialistas Gambacua', 'story-media'); ?>
 </section>
 
 <!-- 3. Soluciones Acuícolas -->
 <section class="solution-section">
   <div class="wrap solution-grid">
-    <?php espacioMultimedia('historia/operacion-laboratorio.webp', 'Acompañamiento técnico y control analítico en laboratorio', 'solution-media'); ?>
+    <?php espacioMultimedia('inicio/operacion-laboratorio.webp', 'Acompañamiento técnico y control analítico en laboratorio', 'solution-media'); ?>
     <div>
       <h2>Tu operación<br>Nuestro compromiso</h2>
       <p>Sistemas especializados de alimentación para camarón, con atención personalizada y soporte técnico durante todo el proceso.</p>
@@ -83,7 +83,7 @@
 
 <!-- 5. Cintillo de Contacto -->
 <section class="contact-strip wrap">
-  <h2>Hablemos de lo que<br>tu operación necesita</h2>
+  <h2>Hablemos de lo que tu operación necesita</h2>
   <a class="button button-light" href="contacto.php">Contacta a nuestro equipo <?= icono('diagonal') ?></a>
 </section>
 

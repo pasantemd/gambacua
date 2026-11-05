@@ -30,13 +30,13 @@ introduccionPagina(
     <!-- Carrusel de categorías con los colores de la página -->
     <div class="categories-carousel-track" id="categories-carousel-track" tabindex="0" role="region" aria-label="Carrusel de categorías de producto">
         <!-- 1. Ingredientes (Pale Ice Blue de la página) -->
-        <a class="cat-brand-card cat-card-ingredientes" href="ingredientes.php" aria-label="Ver categoría Ingredientes">
+        <a class="cat-brand-card cat-card-clara" href="ingredientes.php" aria-label="Ver categoría Ingredientes">
             <div class="cat-card-header">
                 <h3 class="cat-card-title">Ingredientes</h3>
                 <span class="cat-card-sub">Ovoproductos pasteurizados</span>
             </div>
             <div class="cat-card-media">
-                <img src="assets/images/huevo-en-polvo.webp" alt="Ingredientes ovoproductos en polvo Gambacua" loading="lazy">
+                <img src="assets/images/productos/huevo-en-polvo.webp" alt="Ingredientes ovoproductos en polvo Gambacua" loading="lazy">
             </div>
             <div class="cat-card-corner">
                 <span class="cat-card-circle-btn" aria-hidden="true">
@@ -46,13 +46,29 @@ introduccionPagina(
         </a>
 
         <!-- 2. Inocuidad alimentaria (Navy de la página) -->
-        <a class="cat-brand-card cat-card-inocuidad" href="inocuidad.php" aria-label="Ver categoría Inocuidad alimentaria">
+        <a class="cat-brand-card cat-card-oscura" href="inocuidad.php" aria-label="Ver categoría Inocuidad alimentaria">
             <div class="cat-card-header">
                 <h3 class="cat-card-title">Inocuidad alimentaria</h3>
                 <span class="cat-card-sub">Control microbiológico</span>
             </div>
             <div class="cat-card-media">
-                <img src="assets/images/inocuidad-cat.webp" alt="Inocuidad alimentaria y control microbiológico Gambacua" loading="lazy">
+                <img src="assets/images/productos/lector.webp" alt="Inocuidad alimentaria y control microbiológico Gambacua" loading="lazy">
+            </div>
+            <div class="cat-card-corner">
+                <span class="cat-card-circle-btn" aria-hidden="true">
+                    <?= icono('diagonal') ?>
+                </span>
+            </div>
+        </a>
+
+        <!-- 3. Acuacultura (variante clara compartida) -->
+        <a class="cat-brand-card cat-card-clara" href="acuacultura.php" aria-label="Ver categoría Acuacultura">
+            <div class="cat-card-header">
+                <h3 class="cat-card-title">Acuacultura</h3>
+                <span class="cat-card-sub">Equipamiento y tecnología</span>
+            </div>
+            <div class="cat-card-media">
+                <img src="assets/images/productos/acuacultura.webp" alt="Equipamiento y tecnología acuícola Gambacua" loading="lazy">
             </div>
             <div class="cat-card-corner">
                 <span class="cat-card-circle-btn" aria-hidden="true">

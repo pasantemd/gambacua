@@ -242,22 +242,6 @@
   line-height: 1.25;
 }
 
-.sampling-bag-desc {
-  margin: 0 0 8px;
-  color: #10225a;
-  font-size: clamp(12px, 0.95vw, 14px);
-  line-height: 1.28;
-}
-
-.sampling-bag-volume {
-  margin: 0;
-  display: block;
-  color: #10225a;
-  font-size: clamp(13px, 1.05vw, 15px);
-  font-weight: 700;
-  line-height: 1.2;
-}
-
 .sampling-bags-features {
   max-width: 880px;
   margin: clamp(36px, 5vw, 64px) auto 0;
@@ -279,7 +263,7 @@
 
 .sampling-bags-features ul {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(14px, 2vw, 24px);
   margin: 22px 0 0;
   padding: 0;
@@ -287,12 +271,57 @@
 }
 
 .sampling-bags-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   color: #10225a;
   font-size: clamp(13px, 1vw, 15px);
   font-weight: 700;
   line-height: 1.34;
-  text-align: center;
+  text-align: left;
 }
+
+.sampling-bag-feature-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #91a3a6;
+  color: #fff;
+  overflow: hidden;
+}
+
+.sampling-bag-feature-icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.sampling-bags-applications {
+  max-width: 880px;
+  margin: 32px auto 0;
+}
+
+.sampling-bags-applications h3 { margin: 0 0 16px; }
+
+.sampling-bags-applications ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sampling-bags-applications li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sampling-bags-applications li span { display: flex; }
+.sampling-bags-applications svg { width: 22px; height: 22px; }
+.sampling-bags-applications small { font-size: 14px; }
 
 .sampling-bags-life {
   display: block;

@@ -79,7 +79,7 @@
   color: #ffffff;
   line-height: 1.15;
   margin: 0 0 12px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.5px;
 }
 
 .inocuidad-featured-content p {
@@ -88,23 +88,6 @@
   line-height: 1.65;
   max-width: 620px;
   margin: 0;
-}
-
-.inocuidad-featured-btn {
-  width: min(100%, 330px);
-  min-height: 54px;
-  justify-content: space-between;
-  background: #ffffff;
-  color: var(--navy);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 13px 22px;
-  box-shadow: none;
-}
-
-.inocuidad-featured-btn:hover {
-  background: #f0f8fa;
-  color: var(--teal);
 }
 
 /* Panel de subcategorías */
@@ -213,121 +196,6 @@
   transform: translate(2px, -2px);
 }
 
-/* ----------------------------------------------------------
-   3. Tarjetas Estándar (.is-standard)
-   ---------------------------------------------------------- */
-.inocuidad-lines-grid > .is-standard .inocuidad-line-card {
-  min-height: 290px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
-  overflow: hidden;
-  padding: 34px 34px;
-  background: #edf5f6;
-  color: var(--ink);
-  border: 0;
-  border-radius: 0;
-  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
-  box-shadow: 0 14px 32px -28px rgba(13, 73, 100, 0.5);
-  transition: transform 200ms var(--ease-brand), background-color 180ms ease, box-shadow 200ms var(--ease-brand);
-}
-
-.inocuidad-lines-grid > .is-standard .inocuidad-line-card:hover {
-  transform: translateY(-4px);
-  background: #e3f0f2;
-  box-shadow: 0 20px 38px -26px rgba(13, 73, 100, 0.5);
-}
-
-.inocuidad-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 18px;
-}
-
-.inocuidad-card-icon {
-  width: 46px;
-  height: 46px;
-  background: rgba(46, 151, 174, 0.12);
-  color: #147086;
-  border: 0;
-  clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 7px 100%, 0 calc(100% - 7px));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 200ms ease, transform 200ms var(--ease-brand);
-}
-
-.inocuidad-card-icon svg {
-  width: 22px;
-  height: 22px;
-}
-
-.inocuidad-lines-grid > .is-standard .inocuidad-line-card:hover .inocuidad-card-icon {
-  background: var(--navy);
-  color: #ffffff;
-  border-color: var(--navy);
-  transform: scale(1.05);
-}
-
-.inocuidad-card-copy {
-  flex-grow: 1;
-  margin-bottom: 22px;
-}
-
-.inocuidad-card-copy h3 {
-  font-size: clamp(21px, 1.8vw, 25px);
-  font-weight: 800;
-  color: var(--navy);
-  line-height: 1.2;
-  margin: 0 0 10px;
-}
-
-.inocuidad-card-copy p {
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--muted);
-  margin: 0;
-}
-
-.inocuidad-card-btn {
-  width: 100%;
-  justify-content: space-between;
-  background: var(--action);
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 12px 20px;
-  min-height: 48px;
-  box-shadow: none;
-  border: 0;
-  border-radius: 0;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
-}
-
-.inocuidad-card-btn:hover {
-  background: var(--action-hover);
-  color: #ffffff;
-}
-
-.inocuidad-featured-btn svg,
-.inocuidad-card-btn svg {
-  width: 17px;
-  height: 17px;
-  flex: 0 0 auto;
-  transition: transform 180ms var(--ease-brand);
-}
-
-.inocuidad-featured-btn:hover svg,
-.inocuidad-card-btn:hover svg {
-  transform: translate(2px, -2px);
-}
-
-.inocuidad-featured-btn:active,
-.inocuidad-card-btn:active,
 .inocuidad-subnav-card:active {
   transform: scale(0.98);
 }
@@ -359,10 +227,6 @@
     gap: 28px;
   }
 
-  .inocuidad-lines-grid > .is-standard .inocuidad-line-card {
-    min-height: auto;
-    padding: 28px 24px;
-  }
 }
 
 @media (max-width: 600px) {
@@ -375,13 +239,4 @@
     padding: 26px 20px;
   }
 
-  .inocuidad-featured-btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .inocuidad-card-btn {
-    width: 100%;
-    justify-content: center;
-  }
 }

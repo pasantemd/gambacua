@@ -7,7 +7,7 @@
                 <!-- Identidad y redes sociales -->
                 <div class="footer-identity">
                     <a href="index.php" class="footer-brand" aria-label="Gambacua inicio">
-                        <img src="assets/images/logo-gambacua-oficial.svg" alt="Gambacua" width="265" height="95">
+                        <img src="assets/images/compartidas/logo-gambacua-oficial.svg" alt="Gambacua" width="265" height="95">
                     </a>
                     <div class="footer-socials" aria-label="Redes sociales">
                         <a href="https://www.instagram.com/gambacua/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -46,6 +46,7 @@
                 <div class="footer-column footer-contact">
                     <h2>Contacto</h2>
                     <a href="tel:+526621101511"><?= icono('phone') ?> +52 662 110 1511</a>
+                    <a href="tel:+5216442909674"><?= icono('phone') ?> +52 1 644 290 9674</a>
                     <a href="mailto:ventas@gambacua.com"><?= icono('mail') ?> ventas@gambacua.com</a>
                     <a href="mailto:ventasingredientes@gambacua.com"><?= icono('mail') ?> ventasingredientes@gambacua.com</a>
                     <address>

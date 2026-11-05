@@ -79,8 +79,8 @@
    ---------------------------------------------------------- */
 .categories-carousel-track {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
   padding: 8px 2px 20px 2px;
 }
 
@@ -116,7 +116,7 @@
 .cat-card-title {
   font-size: clamp(28px, 2.6vw, 36px);
   font-weight: 800;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.7px;
   margin: 0;
   line-height: 1.15;
 }
@@ -127,7 +127,7 @@
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 1px;
 }
 
 /* Centro de la Tarjeta: Objeto 3D Flotante */
@@ -154,9 +154,9 @@
 }
 
 /* ----------------------------------------------------------
-   1. Tarjeta INGREDIENTES (Color Pale Ice Blue)
+   Variante clara compartida
    ---------------------------------------------------------- */
-.cat-card-ingredientes {
+.cat-card-clara {
   background-color: #e8f2f5;
   background-image:
     var(--brand-ribbon-light),
@@ -168,19 +168,19 @@
   box-shadow: 0 14px 34px -8px rgba(13, 73, 100, 0.12);
 }
 
-.cat-card-ingredientes .cat-card-title {
+.cat-card-clara .cat-card-title {
   color: var(--navy);
 }
 
-.cat-card-ingredientes .cat-card-sub {
+.cat-card-clara .cat-card-sub {
   color: #55727e;
 }
 
-.cat-card-ingredientes .cat-card-media img {
+.cat-card-clara .cat-card-media img {
   filter: drop-shadow(0 16px 22px rgba(13, 73, 100, 0.18));
 }
 
-.cat-card-ingredientes:hover {
+.cat-card-clara:hover {
   background-color: #deedf1;
   background-image:
     var(--brand-ribbon-light),
@@ -190,8 +190,8 @@
   transform: translateY(-6px);
 }
 
-/* Bolsillo esquinero de Ingredientes */
-.cat-card-ingredientes .cat-card-corner {
+/* Bolsillo esquinero de variante clara */
+.cat-card-clara .cat-card-corner {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -206,7 +206,7 @@
   transition: background-color 220ms ease;
 }
 
-.cat-card-ingredientes .cat-card-corner::before {
+.cat-card-clara .cat-card-corner::before {
   content: '';
   position: absolute;
   top: -18px;
@@ -220,7 +220,7 @@
   transition: box-shadow 220ms ease;
 }
 
-.cat-card-ingredientes .cat-card-corner::after {
+.cat-card-clara .cat-card-corner::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -234,16 +234,16 @@
   transition: box-shadow 220ms ease;
 }
 
-.cat-card-ingredientes:hover .cat-card-corner {
+.cat-card-clara:hover .cat-card-corner {
   background: #cde1e7;
 }
 
-.cat-card-ingredientes:hover .cat-card-corner::before,
-.cat-card-ingredientes:hover .cat-card-corner::after {
+.cat-card-clara:hover .cat-card-corner::before,
+.cat-card-clara:hover .cat-card-corner::after {
   box-shadow: 6px 6px 0 6px #cde1e7;
 }
 
-.cat-card-ingredientes .cat-card-circle-btn {
+.cat-card-clara .cat-card-circle-btn {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -255,15 +255,15 @@
   transition: background-color 220ms ease, transform 220ms var(--ease-brand);
 }
 
-.cat-card-ingredientes:hover .cat-card-circle-btn {
+.cat-card-clara:hover .cat-card-circle-btn {
   background: var(--teal);
   transform: scale(1.08);
 }
 
 /* ----------------------------------------------------------
-   2. Tarjeta INOCUIDAD (Color Deep Navy)
+   Variante oscura compartida
    ---------------------------------------------------------- */
-.cat-card-inocuidad {
+.cat-card-oscura {
   background-color: var(--navy);
   background-image:
     var(--brand-ribbon-dark),
@@ -275,19 +275,19 @@
   box-shadow: 0 16px 38px -8px rgba(13, 73, 100, 0.4);
 }
 
-.cat-card-inocuidad .cat-card-title {
+.cat-card-oscura .cat-card-title {
   color: #ffffff;
 }
 
-.cat-card-inocuidad .cat-card-sub {
+.cat-card-oscura .cat-card-sub {
   color: #8fd3df;
 }
 
-.cat-card-inocuidad .cat-card-media img {
+.cat-card-oscura .cat-card-media img {
   filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.35));
 }
 
-.cat-card-inocuidad:hover {
+.cat-card-oscura:hover {
   background-color: #093c52;
   background-image:
     var(--brand-ribbon-dark),
@@ -297,8 +297,8 @@
   transform: translateY(-6px);
 }
 
-/* Bolsillo esquinero de Inocuidad */
-.cat-card-inocuidad .cat-card-corner {
+/* Bolsillo esquinero de variante oscura */
+.cat-card-oscura .cat-card-corner {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -313,7 +313,7 @@
   transition: background-color 220ms ease;
 }
 
-.cat-card-inocuidad .cat-card-corner::before {
+.cat-card-oscura .cat-card-corner::before {
   content: '';
   position: absolute;
   top: -18px;
@@ -327,7 +327,7 @@
   transition: box-shadow 220ms ease;
 }
 
-.cat-card-inocuidad .cat-card-corner::after {
+.cat-card-oscura .cat-card-corner::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -341,16 +341,16 @@
   transition: box-shadow 220ms ease;
 }
 
-.cat-card-inocuidad:hover .cat-card-corner {
+.cat-card-oscura:hover .cat-card-corner {
   background: #062837;
 }
 
-.cat-card-inocuidad:hover .cat-card-corner::before,
-.cat-card-inocuidad:hover .cat-card-corner::after {
+.cat-card-oscura:hover .cat-card-corner::before,
+.cat-card-oscura:hover .cat-card-corner::after {
   box-shadow: 6px 6px 0 6px #062837;
 }
 
-.cat-card-inocuidad .cat-card-circle-btn {
+.cat-card-oscura .cat-card-circle-btn {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -362,7 +362,7 @@
   transition: background-color 220ms ease, transform 220ms var(--ease-brand), color 220ms ease;
 }
 
-.cat-card-inocuidad:hover .cat-card-circle-btn {
+.cat-card-oscura:hover .cat-card-circle-btn {
   background: #5fc2d1;
   color: var(--navy);
   transform: scale(1.08);
@@ -404,6 +404,23 @@
 .cat-dot.is-active {
   transform: scaleX(1);
   background: var(--navy);
+}
+
+@media (max-width: 1040px) and (min-width: 769px) {
+  .categories-carousel-track {
+    gap: 16px;
+  }
+  .cat-brand-card {
+    height: 420px;
+    padding: 26px 16px 20px 16px;
+  }
+  .cat-card-title {
+    font-size: clamp(22px, 2.2vw, 28px);
+  }
+  .cat-card-media img {
+    max-width: 230px;
+    max-height: 190px;
+  }
 }
 
 /* ----------------------------------------------------------

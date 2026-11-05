@@ -108,8 +108,9 @@ introduccionPagina(
                     <section class="sampling-bags-features" aria-labelledby="sampling-bags-features-title">
                         <h3 id="sampling-bags-features-title">Bolsas THIO para análisis de agua / Bolsas en presentación plana o de pie (Stand Up)</h3>
                         <ul>
-                            <?php foreach ($category['facts'] as $fact): ?>
-                                <li><span><?= icon('check') ?></span><?= htmlspecialchars($fact, ENT_QUOTES, 'UTF-8') ?></li>
+                            <?php $iconosBolsas = ['bolsa-alambre', 'bolsa-escritura', 'bolsa-sello', 'bolsa-esteril', 'bolsa-pelicula', 'bolsa-tyvek']; ?>
+                            <?php foreach ($category['facts'] as $indice => $fact): ?>
+                                <li><span class="sampling-bag-feature-icon"><?= icon($iconosBolsas[$indice]) ?></span><?= htmlspecialchars($fact, ENT_QUOTES, 'UTF-8') ?></li>
                             <?php endforeach; ?>
                         </ul>
                     </section>
@@ -292,6 +293,6 @@ introduccionPagina(
     </div>
 </div>
 
-<script src="assets/js/navegador-secciones.js?v=7" defer></script>
+<script src="assets/js/navegador-secciones.js?v=8" defer></script>
 
 <?php require __DIR__.'/includes/pie.php'; ?>

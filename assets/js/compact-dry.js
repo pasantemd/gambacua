@@ -204,9 +204,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const items = [
       { src: plateData.imagen || '', alt: plateData.nombre || 'Placa Compact Dry' },
-      { src: 'assets/images/compact-dry/placas/caja-lado.webp', alt: 'Caja Compact Dry' },
-      { src: 'assets/images/compact-dry/placas/caja-lado-placas.webp', alt: 'Caja y placas Compact Dry' },
-      { src: 'assets/images/compact-dry/placas/caja-abierta.webp', alt: 'Empaque abierto con placas' }
+      { src: 'assets/images/compact-dry/caja-lado.webp', alt: 'Caja Compact Dry' },
+      { src: 'assets/images/compact-dry/caja-lado-placas.webp', alt: 'Caja y placas Compact Dry' },
+      { src: 'assets/images/compact-dry/caja-abierta.webp', alt: 'Empaque abierto con placas' }
     ];
 
     modalThumbs.innerHTML = '';
@@ -240,10 +240,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lastFocusedElement = triggerElement || document.activeElement;
 
+    const formatSpeciesItalics = text => {
+      if (!text) return '';
+      const temp = document.createElement('div');
+      temp.textContent = text;
+      return temp.innerHTML
+        .replace(/\bEscherichia coli\b/g, '<em>Escherichia coli</em>')
+        .replace(/\bE\. coli\b/g, '<em>E. coli</em>');
+    };
+
     if (modalTitle) modalTitle.textContent = data.nombre || 'Compact Dry';
-    if (modalOrganism) modalOrganism.textContent = data.organismo || '';
-    if (modalSummary) modalSummary.textContent = data.resumen || data.descripcionCorta || '';
-    if (modalDesc) modalDesc.textContent = data.descripcion || '';
+    if (modalOrganism) modalOrganism.innerHTML = formatSpeciesItalics(data.organismo || '');
+    if (modalSummary) modalSummary.innerHTML = formatSpeciesItalics(data.resumen || data.descripcionCorta || '');
+    if (modalDesc) modalDesc.innerHTML = formatSpeciesItalics(data.descripcion || '');
     if (modalIncubation) modalIncubation.textContent = data.incubacion || 'Estándar según protocolo';
     if (modalMatrix) modalMatrix.textContent = data.matriz || 'Alimentos, aguas y superficies ambientales';
     if (modalPresentation) modalPresentation.textContent = data.presentacion || 'Paquetes por 4 unidades';
