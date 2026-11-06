@@ -61,7 +61,7 @@ $elementosMenuProductos = [
     [
         'titulo' => 'Acuacultura',
         'url' => 'acuacultura.php',
-        'icono' => 'waves',
+        'icono' => 'camaron',
         'identificador' => 'acuacultura',
         'subsecciones' => [
             [
@@ -96,6 +96,7 @@ $elementosMenuProductos = [
  */
 function icono($nombre) {
     $trazados = [
+        'camaron' => '<path d="M12 17c5 0 8-3 8-7a6 6 0 0 0-6-6H5l3 3h5a3 3 0 0 1 0 6H9l-4-2 1 4-3 3 5 1 4-2Z"/><path d="M9 4C8 2 6 1.5 3 2m11 11 1 3m1-5 3 1m-3-4 3-1M9 13l-1 6"/><circle cx="12" cy="5.5" r=".7" fill="currentColor" stroke="none"/>',
         'bolsa-alambre' => '<path d="M2 8h20M2 11h20M5 11v11M19 11v11M3 6h18v2"/>',
         'bolsa-escritura' => '<path d="M3 5h18M5 5v17M19 5v17"/><path d="M5 11h14v6H5z" fill="currentColor"/>',
         'bolsa-sello' => '<path d="M4 4h15v18M4 7h12v15M18 5l3 2m-3 3 3 2m-3 3 3 2m-3 3 3 2"/>',
