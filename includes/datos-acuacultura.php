@@ -157,11 +157,77 @@ $marcasAcuacultura = [
             ],
         ],
     ],
+    'nexwater' => [
+        'nombre' => 'Nexwater',
+        'resumen' => 'Agua electrolizada para desinfección y control microbiológico.',
+        'logo' => 'logo-nexwater-transparente.webp',
+        'descripcion' => 'NEXWATER emplea agua electrolizada como solución de desinfección para diferentes procesos productivos. Su aplicación abarca los sectores acuícola, lácteo, avícola, porcícola y de frutas y verduras, adaptándose a necesidades de higiene, sanitización y control microbiológico.',
+        'productos' => [
+            [
+                'nombre' => 'Electrodo Nexwater',
+                'imagen' => 'electrodo-nexwater-indicaciones.webp',
+                'pagina' => 29,
+                'descripcion' => 'El electrodo NEXWATER utiliza un proceso de electrólisis que transforma el agua en una solución de gran poder desinfectante. Durante el proceso se genera ácido hipocloroso (HOCl) y radicales libres de hidrógeno y oxígeno, logrando una acción oxidante eficaz sin dejar residuos tóxicos.',
+                'detalles' => [
+                    'Lavado del camarón en recepción y proceso.',
+                    'Tratamiento del agua de proceso y del hielo.',
+                    'Sanitización de bandas, mesas de trabajo y utensilios.',
+                    'Desinfección de cámaras de frío y áreas de empaque.',
+                ],
+                'titulo_detalles' => 'Usos',
+                'aplicaciones' => [
+                    'titulo' => 'Aplicaciones',
+                    'imagenes' => ['nexwater-acuicola.webp', 'nexwater-lactea.webp', 'nexwater-porcicola.webp', 'nexwater-avicola.webp', 'nexwater-frutas-verduras.webp'],
+                    'elementos' => [
+                        'ACUÍCOLA: Aplicada al lavado del camarón, tratamiento del agua de proceso y hielo, sanitización de superficies, utensilios, cámaras de frío y áreas de empaque. Ayuda a reducir la carga microbiana sin dejar residuos químicos en el producto.',
+                        'LÁCTEA: Permite desinfectar pezones y ubres, realizar limpieza CIP de tanques y tuberías y sanitizar salas de ordeño, utensilios y equipos de proceso, sin residuos que alteren el sabor ni la inocuidad.',
+                        'PORCÍCOLA: Aplicable en la desinfección de instalaciones, corrales y equipos, tratamiento del agua de bebida, control sanitario y sanitización de áreas y vehículos de carga.',
+                        'AVÍCOLA: Se utiliza para potabilizar el agua de bebida, sanitizar galpones, jaulas y comederos, controlar microorganismos como Salmonella spp. y Campylobacter spp. y desinfectar equipos de incubación y transporte.',
+                        'FRUTAS Y VERDURAS: Se emplea en lavado y desinfección durante recepción y proceso, reducción de patógenos, sanitización de tinas y bandas, tratamiento del agua de lavado y extensión de la vida de anaquel.',
+                    ],
+                ],
+                'beneficios' => [
+                    'titulo' => 'Beneficios',
+                    'elementos' => [
+                        'Control microbiológico: Ayuda a reducir microorganismos durante diferentes etapas del proceso.',
+                        'Inocuidad y calidad: Contribuye al control sanitario de los productos dentro de producción.',
+                        'Desinfección sin residuos tóxicos: Adecuada para superficies, equipos y procesos relacionados con alimentos.',
+                        'Aplicación en múltiples industrias: Una misma tecnología puede utilizarse en diferentes sectores productivos.',
+                        'Reducción de carga microbiana.',
+                        'Desinfección sin residuos químicos en el producto.',
+                        'Mayor inocuidad durante el proceso.',
+                        'Contribuye a una mayor vida de anaquel.',
+                    ],
+                ],
+            ],
+        ],
+    ],
     'acqua-co' => [
         'nombre' => 'Aqua&Co',
         'logo' => 'logo-acqua-co-transparente.webp',
         'descripcion' => 'Circulación & Aireación. Tratamiento de aguas en acuacultura a través de aireadores y circuladores.',
         'productos' => [
+            [
+                'nombre' => 'VARIOMAC',
+                'imagen' => 'variomac-indicaciones.webp',
+                'pagina' => 22,
+                'descripcion' => 'VARIOMAC es un aireador sumergible con variador y sonda de oxígeno disuelto que ajusta automáticamente la potencia del motor según la necesidad de la piscina, optimizando el consumo energético y mejorando la oxigenación del agua.',
+                'detalles' => [
+                    'Caudal de aire: 450 m³/h',
+                    'Variador: 15 kW',
+                    'Potencia: 0,2–13,9 kW',
+                    'Velocidad: 1.700–3.600 rpm',
+                    'Consumo en operación: 8–25 A',
+                    'Voltaje: 380–480 V · 50–60 Hz',
+                    'Peso: 26 kg',
+                    'Control manual o automático por sonda de OD',
+                    'Montaje en flotador, soporte fijo o riel',
+                    'Tecnología Acquaeco — Italia',
+                ],
+                'secciones' => [
+
+                ],
+            ],
             [
                 'nombre' => 'Venturi Eco2',
                 'imagen' => 'venturi-eco2-indicaciones.webp',
@@ -335,7 +401,7 @@ $marcasAcuacultura = [
             ],
             [
                 'nombre' => 'Combix',
-                'imagen' => 'combix-sin-tabla.png',
+                'imagen' => 'combix-sin-tabla.webp',
                 'pagina' => 21,
                 'descripcion' => 'El Combix es un equipo con estructura compuesta por elementos galvanizados mediante el proceso de inmersión en caliente, que combina las características de resistencia mecánica del acero y le da la resistencia necesaria a la corrosión. La estructura está ensamblada con pernos y, además, consta de varios motores que permiten oxigenar el agua de las piscinas de camarones, contribuyendo a mantener condiciones adecuadas de oxigenación y circulación.',
                 'detalles' => [],
@@ -359,31 +425,10 @@ $marcasAcuacultura = [
                 ],
             ],
             [
-                'nombre' => 'VARIOMAC',
-                'imagen' => 'variomac-indicaciones.webp',
-                'pagina' => 22,
-                'descripcion' => 'VARIOMAC es un aireador sumergible con variador y sonda de oxígeno disuelto que ajusta automáticamente la potencia del motor según la necesidad de la piscina, optimizando el consumo energético y mejorando la oxigenación del agua.',
-                'detalles' => [
-                    'Caudal de aire: 450 m³/h',
-                    'Variador: 15 kW',
-                    'Potencia: 0,2–13,9 kW',
-                    'Velocidad: 1.700–3.600 rpm',
-                    'Consumo en operación: 8–25 A',
-                    'Voltaje: 380–480 V · 50–60 Hz',
-                    'Peso: 26 kg',
-                    'Control manual o automático por sonda de OD',
-                    'Montaje en flotador, soporte fijo o riel',
-                    'Tecnología Acquaeco — Italia',
-                ],
-                'secciones' => [
-
-                ],
-            ],
-            [
                 'nombre' => 'EMA: sistema autolimpiante',
                 'imagen' => 'ema-apracom.webp',
                 'pagina' => 23,
-                'figura' => ['imagen' => 'ema-partes.png', 'titulo' => 'Partes del EMA autolimpiable'],
+                'figura' => ['imagen' => 'ema-partes.webp', 'titulo' => 'Partes del EMA autolimpiable'],
                 'descripcion' => 'La EMA (Estación Medioambiental) con sistema autolimpiante es un equipo con estructura compuesta por elementos galvanizados mediante el proceso de inmersión en caliente, que combina las características de resistencia mecánica del acero y le da la resistencia necesaria a la corrosión. La estructura está ensamblada con pernos y, además, consta de varios equipos que, trabajando en conjunto, permiten el monitoreo de la temperatura y el oxígeno de las piscinas mediante un sensor, el cual es limpiado con aire a presión, haciendo uso de energía solar.',
                 'detalles' => [
                     'Medidas: 2 160 × 2 015 × 1 680 mm (ancho × largo × alto).',
@@ -448,54 +493,6 @@ $marcasAcuacultura = [
                         'elementos' => [
                             '5 años.',
                         ],
-                    ],
-                ],
-            ],
-        ],
-    ],
-    'nexwater' => [
-        'introduccion' => [
-                    [
-                        'titulo' => 'Aplicaciones',
-                        'iconos' => ['waves', 'droplet', 'shield-check', 'egg', 'sparkles'],
-                        'elementos' => [
-                            'ACUÍCOLA: Aplicada al lavado del camarón, tratamiento del agua de proceso y hielo, sanitización de superficies, utensilios, cámaras de frío y áreas de empaque. Ayuda a reducir la carga microbiana sin dejar residuos químicos en el producto.',
-                            'LÁCTEA: Permite desinfectar pezones y ubres, realizar limpieza CIP de tanques y tuberías y sanitizar salas de ordeño, utensilios y equipos de proceso, sin residuos que alteren el sabor ni la inocuidad.',
-                            'PORCÍCOLA: Aplicable en la desinfección de instalaciones, corrales y equipos, tratamiento del agua de bebida, control sanitario y sanitización de áreas y vehículos de carga.',
-                            'AVÍCOLA: Se utiliza para potabilizar el agua de bebida, sanitizar galpones, jaulas y comederos, controlar microorganismos como Salmonella spp. y Campylobacter spp. y desinfectar equipos de incubación y transporte.',
-                            'FRUTAS Y VERDURAS: Se emplea en lavado y desinfección durante recepción y proceso, reducción de patógenos, sanitización de tinas y bandas, tratamiento del agua de lavado y extensión de la vida de anaquel.',
-                        ],
-                    ],
-        ],
-
-        'nombre' => 'Nexwater',
-        'resumen' => 'Agua electrolizada para desinfección y control microbiológico.',
-        'logo' => 'logo-nexwater-transparente.webp',
-        'descripcion' => 'NEXWATER emplea agua electrolizada como solución de desinfección para diferentes procesos productivos. Su aplicación abarca los sectores acuícola, lácteo, avícola, porcícola y de frutas y verduras, adaptándose a necesidades de higiene, sanitización y control microbiológico.',
-        'productos' => [
-            [
-                'nombre' => 'Electrodo Nexwater',
-                'imagen' => 'electrodo-nexwater-indicaciones.webp',
-                'pagina' => 29,
-                'descripcion' => 'El electrodo NEXWATER utiliza un proceso de electrólisis que transforma el agua en una solución de gran poder desinfectante. Durante el proceso se genera ácido hipocloroso (HOCl) y radicales libres de hidrógeno y oxígeno, logrando una acción oxidante eficaz sin dejar residuos tóxicos.',
-                'detalles' => [
-                    'Lavado del camarón en recepción y proceso.',
-                    'Tratamiento del agua de proceso y del hielo.',
-                    'Sanitización de bandas, mesas de trabajo y utensilios.',
-                    'Desinfección de cámaras de frío y áreas de empaque.',
-                ],
-                'titulo_detalles' => 'Usos',
-                'beneficios' => [
-                    'titulo' => 'Beneficios',
-                    'elementos' => [
-                        'Control microbiológico: Ayuda a reducir microorganismos durante diferentes etapas del proceso.',
-                        'Inocuidad y calidad: Contribuye al control sanitario de los productos dentro de producción.',
-                        'Desinfección sin residuos tóxicos: Adecuada para superficies, equipos y procesos relacionados con alimentos.',
-                        'Aplicación en múltiples industrias: Una misma tecnología puede utilizarse en diferentes sectores productivos.',
-                        'Reducción de carga microbiana.',
-                        'Desinfección sin residuos químicos en el producto.',
-                        'Mayor inocuidad durante el proceso.',
-                        'Contribuye a una mayor vida de anaquel.',
                     ],
                 ],
             ],

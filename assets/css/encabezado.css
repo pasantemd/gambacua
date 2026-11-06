@@ -367,6 +367,18 @@ nav svg {
   transform: translateX(2px);
 }
 
+@media (min-width: 861px) {
+  #submenu-acuacultura {
+    min-width: 155px;
+    gap: 0;
+  }
+
+  #submenu-acuacultura .nav-dropdown-subitem {
+    min-height: 32px;
+    padding-block: 5px;
+  }
+}
+
 .nav-dropdown-icon {
   width: 18px;
   height: 18px;

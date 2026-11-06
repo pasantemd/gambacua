@@ -165,6 +165,13 @@ introduccionPagina(
         </div>
 
     </section>
+    <section class="wrap contact-strip">
+        <div>
+            <h2>¿Necesitas placas Compact Dry?</h2>
+            <p>Solicita información sobre las placas, muestras y cotizaciones para tu laboratorio o planta.</p>
+        </div>
+        <a class="button button-light" href="contacto.php?asunto=Consulta%20sobre%20placas%20Compact%20Dry">Consultar sobre placas <?= icon('diagonal') ?></a>
+    </section>
 </div>
 
 <!-- ==========================================================
@@ -298,6 +305,13 @@ introduccionPagina(
             </div>
         </div>
     </div>
+    <section class="contact-strip">
+        <div>
+            <h2>¿Quieres conocer el lector Compact Vision?</h2>
+            <p>Solicita una demostración del lector o consulta con nuestro equipo sobre su funcionamiento y cotización.</p>
+        </div>
+        <a class="button button-light" href="contacto.php?asunto=Consulta%20sobre%20el%20lector%20Compact%20Vision">Consultar sobre el lector <?= icon('diagonal') ?></a>
+    </section>
 </section>
 
 <!-- ==========================================================
@@ -921,17 +935,6 @@ introduccionPagina(
         </div>
     </div>
 </div>
-
-<!-- Franja de Contacto / Asesoría Técnica -->
-<section class="wrap contact-strip compact-contact-strip">
-    <div>
-        <h2>¿Requieres placas Compact Dry o demostración de Compact Vision?</h2>
-        <p>Nuestro equipo de especialistas en inocuidad alimentaria te orientará con muestras, protocolos y cotizaciones para tu laboratorio o planta.</p>
-    </div>
-    <div class="compact-contact-actions">
-        <a class="button button-light" href="contacto.php">Hablar con un asesor <?= icon('diagonal') ?></a>
-    </div>
-</section>
 
 <!-- Script de interactividad -->
 <script src="assets/js/compact-dry.js?v=12" defer></script>

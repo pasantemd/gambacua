@@ -73,16 +73,16 @@ $elementosMenuProductos = [
                 'url' => 'acuacultura.php?marca=acopio'
             ],
             [
+                'titulo' => 'Nexwater',
+                'url' => 'acuacultura.php?marca=nexwater'
+            ],
+            [
                 'titulo' => 'Aqua&Co',
                 'url' => 'acuacultura.php?marca=acqua-co'
             ],
             [
                 'titulo' => 'Mixer Pro',
                 'url' => 'acuacultura.php?marca=mixer-pro'
-            ],
-            [
-                'titulo' => 'Nexwater',
-                'url' => 'acuacultura.php?marca=nexwater'
             ]
         ]
     ]

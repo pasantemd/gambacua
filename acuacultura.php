@@ -23,13 +23,14 @@ $mostrarFigura = static function ($figura) use ($escapar, $rutaImagenes) {
     $titulo = $escapar($figura['titulo']);
     echo '<figure class="acuacultura-figura">' . (!empty($figura['mostrar_titulo']) ? '<figcaption>' . $titulo . (!empty($figura['descripcion']) ? '<p>' . $escapar($figura['descripcion']) . '</p>' : '') . '</figcaption>' : '') . '<a href="' . $ruta . '" aria-label="Ampliar: ' . $titulo . '"><img src="' . $ruta . '" alt="' . $titulo . '" loading="lazy"></a></figure>';
 };
-$mostrarBloque = static function ($bloque, $pagina) use ($escapar, $formatear, $mostrarFigura) {
-    if (!empty($bloque['iconos'])) {
-        echo '<section class="acuacultura-aplicaciones"><h3>' . $escapar($bloque['titulo']) . '</h3><ul>';
+$mostrarBloque = static function ($bloque, $pagina) use ($escapar, $formatear, $mostrarFigura, $rutaImagenes) {
+    if (!empty($bloque['imagenes'])) {
+        echo '<details class="acuacultura-bloque acuacultura-desplegable acuacultura-aplicaciones"><summary>' . $escapar($bloque['titulo']) . '</summary><div class="acuacultura-bloque-contenido"><ul>';
         foreach ($bloque['elementos'] as $indice => $elemento) {
-            echo '<li><span class="acuacultura-aplicacion-icono">' . icono($bloque['iconos'][$indice]) . '</span><span>' . $formatear($elemento, $pagina) . '</span></li>';
+            $ruta = $escapar($rutaImagenes . $bloque['imagenes'][$indice]);
+            echo '<li><img src="' . $ruta . '" alt="" width="208" height="110" loading="lazy"><span>' . $formatear($elemento, $pagina) . '</span></li>';
         }
-        echo '</ul></section>';
+        echo '</ul></div></details>';
         return;
     }
     echo '<details class="acuacultura-bloque acuacultura-desplegable"><summary>' . $escapar($bloque['titulo']) . '</summary><div class="acuacultura-bloque-contenido">';
@@ -73,11 +74,6 @@ introduccionPagina($marca ? $marca['nombre'] : 'Acuacultura', $marca ? $marca['d
             <img src="<?= $escapar($rutaImagenes . $marca['logo']) ?>" alt="<?= $escapar($marca['nombre']) ?>" width="240" height="90">
         <?php endif; ?>
     </div>
-    <?php if (!empty($marca['introduccion'])): ?>
-        <section class="acuacultura-introduccion" aria-label="Introducción de <?= $escapar($marca['nombre']) ?>">
-            <?php foreach ($marca['introduccion'] as $bloque) $mostrarBloque($bloque, 28); ?>
-        </section>
-    <?php endif; ?>
     <details class="acuacultura-indice" open>
         <summary>Explorar productos de <?= $escapar($marca['nombre']) ?></summary>
         <nav data-section-panels aria-label="Productos de <?= $escapar($marca['nombre']) ?>">
@@ -112,12 +108,10 @@ introduccionPagina($marca ? $marca['nombre'] : 'Acuacultura', $marca ? $marca['d
                     </a>
 
                 </div>
-                <?php if (!empty($producto['secciones_despues_imagen'])): ?>
-                    <?php foreach ($producto['secciones'] ?? [] as $bloque) $mostrarBloque($bloque, $producto['pagina']); ?>
-                <?php endif; ?>
                 <div class="acuacultura-producto-info<?= !empty($producto['figura_junto_detalles']) ? ' acuacultura-producto-info--figura-lateral' : '' ?>">
-                    <?php if (!empty($producto['secciones_primero'])): ?>
-                        <?php foreach ($producto['secciones'] as $bloque) $mostrarBloque($bloque, $producto['pagina']); ?>
+                    <?php if (!empty($producto['secciones_despues_imagen']) && !empty($producto['figura'])) $mostrarFigura($producto['figura']); ?>
+                    <?php if (!empty($producto['secciones_primero']) || !empty($producto['secciones_despues_imagen'])): ?>
+                        <?php foreach ($producto['secciones'] ?? [] as $bloque) $mostrarBloque($bloque, $producto['pagina']); ?>
                     <?php endif; ?>
                     <?php if (!empty($producto['detalles'])): ?><details class="acuacultura-bloque acuacultura-desplegable acuacultura-caracteristicas">
                         <summary><?= $escapar($producto['titulo_detalles'] ?? 'Características') ?></summary>
@@ -132,7 +126,7 @@ introduccionPagina($marca ? $marca['nombre'] : 'Acuacultura', $marca ? $marca['d
                     <?php if (empty($producto['secciones_primero']) && empty($producto['secciones_despues_imagen'])): ?>
                         <?php foreach ($producto['secciones'] ?? [] as $bloque) $mostrarBloque($bloque, $producto['pagina']); ?>
                     <?php endif; ?>
-                    <?php if (!empty($producto['figura'])) $mostrarFigura($producto['figura']); ?>
+                    <?php if (!empty($producto['figura']) && empty($producto['secciones_despues_imagen'])) $mostrarFigura($producto['figura']); ?>
                     <?php if (!empty($producto['tabla'])): ?>
                         <div class="acuacultura-tabla-wrap">
                             <table class="acuacultura-tabla">
@@ -143,6 +137,7 @@ introduccionPagina($marca ? $marca['nombre'] : 'Acuacultura', $marca ? $marca['d
                         </div>
                     <?php endif; ?>
                     <?php if (!empty($producto['nota'])): ?><p class="acuacultura-nota"><?= $formatear($producto['nota'], $producto['pagina']) ?></p><?php endif; ?>
+                    <?php if (!empty($producto['aplicaciones'])) $mostrarBloque($producto['aplicaciones'], 28); ?>
                     <?php if (!empty($producto['beneficios'])) $mostrarBloque($producto['beneficios'], 28); ?>
                 </div>
                 <?php if (count($marca['productos']) > 1): ?>

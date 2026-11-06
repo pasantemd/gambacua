@@ -29,7 +29,6 @@
 .acuacultura-indice a { display: inline-flex; align-items: center; justify-content: center; width: 104px; height: 88px; padding: 8px; border: 1px solid #b9d0d6; color: #004766; text-decoration: none; }
 .acuacultura-indice a img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .acuacultura-indice a.is-active { background: #e2f0f3; border-color: #004766; box-shadow: inset 0 0 0 1px #004766; }
-.acuacultura-introduccion { max-width: 900px; margin: 0 auto 32px; }
 .acuacultura-desplegable > summary { display: inline-block; margin: 0 0 16px; padding: 12px 22px; color: #fff; background: #004766; font-size: 18px; font-weight: 800; line-height: 1.35; cursor: pointer; list-style: none; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px)); }
 .acuacultura-desplegable > summary::-webkit-details-marker { display: none; }
 .acuacultura-desplegable > summary::before { content: '›'; display: inline-block; margin-right: 10px; transition: transform 180ms ease; }
@@ -38,14 +37,10 @@
 @keyframes acuacultura-contenido-entra { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
 .acuacultura-desplegable[open] > .acuacultura-bloque-contenido { animation: acuacultura-contenido-entra 180ms ease both; }
 .acuacultura-desplegable > summary:active { transform: translateY(1px); }
-.acuacultura-introduccion ul { padding-left: 20px; }
-.acuacultura-introduccion li { margin: 12px 0; line-height: 1.75; }
-.acuacultura-introduccion li::marker { color: #3097b2; }
-.acuacultura-aplicaciones h3 { display: inline-block; margin: 0 0 20px; padding: 12px 22px; color: #fff; background: #004766; font-size: 18px; line-height: 1.35; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px)); }
 .acuacultura-aplicaciones ul { display: grid; gap: 16px; padding: 0; margin: 0 0 28px; list-style: none; }
-.acuacultura-aplicaciones li { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 14px; align-items: start; margin: 0; }
-.acuacultura-aplicacion-icono { display: grid; place-items: center; width: 36px; height: 36px; color: #004766; background: #e9f4f7; border-radius: 50%; }
-.acuacultura-aplicacion-icono svg { width: 20px; height: 20px; }
+.acuacultura-producto-info .acuacultura-aplicaciones li { display: grid; grid-template-columns: clamp(88px, 18vw, 156px) minmax(0, 1fr); gap: 14px; align-items: start; margin: 0; padding: 0; }
+.acuacultura-producto-info .acuacultura-aplicaciones li::before { content: none; }
+.acuacultura-aplicaciones img { display: block; width: 100%; height: auto; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); }
 .acuacultura-recorrido { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px; margin: 32px auto 0; }
 .acuacultura-recorrido > span { font-size: 13px; font-weight: 700; }
 .acuacultura-recorrido .button { display: inline-flex; align-items: center; justify-content: center; width: 150px; min-height: 52px; padding: 12px 16px; border: 0; border-radius: 0; box-shadow: none; color: #004766; background: transparent; font-weight: 800; text-align: center; text-decoration: none; clip-path: none; transition: background-color 180ms ease, color 180ms ease; }
@@ -57,7 +52,9 @@
 .acuacultura-recorrido .button::after { display: none; }
 .acuacultura-catalogo :is(summary, .acuacultura-indice a, .acuacultura-ampliar, .acuacultura-figura a):focus-visible { outline: 3px solid #004766; outline-offset: 4px; }
 .acuacultura-productos { display: grid; gap: 24px; }
-.acuacultura-producto { min-width: 0; padding: 36px 32px; background: #fff; scroll-margin-top: 110px; }
+.acuacultura-producto { min-width: 0; padding: 36px 32px; scroll-margin-top: 110px; }
+.acuacultura-producto img[src$="propuesta-valor-catalogo.webp"],
+.acuacultura-visor img[src$="propuesta-valor-catalogo.webp"] { mix-blend-mode: multiply; }
 .acuacultura-producto-cabecera { max-width: 900px; margin: 0 auto 28px; text-align: left; }
 .acuacultura-producto-cabecera h3 { margin: 0 0 14px; font-size: 32px; line-height: 1.25; color: #004766; text-wrap: balance; }
 .acuacultura-producto-descripcion { max-width: 820px; margin: 0; font-size: 15.5px; line-height: 1.75; color: #24536a; text-wrap: pretty; }
@@ -91,6 +88,22 @@
 .acuacultura-destacado img { grid-row: span 2; width: 44px; height: 44px; }
 .acuacultura-destacado h4, .acuacultura-destacado p { margin: 0; }
 .acuacultura-bloque { min-width: 0; margin-top: 24px; padding-top: 20px; }
+.acuacultura-producto-info:has(> .acuacultura-figura:first-child + .acuacultura-bloque) {
+  max-width: 825px;
+}
+.acuacultura-producto-info > .acuacultura-figura:first-child:has(+ .acuacultura-bloque) a {
+  padding: 0;
+}
+.acuacultura-producto-info > .acuacultura-figura + .acuacultura-bloque {
+  margin-top: 12px;
+  padding-top: 0;
+}
+.acuacultura-producto-info > .acuacultura-figura + .acuacultura-bloque > summary {
+  margin-bottom: 0;
+}
+.acuacultura-producto-info > .acuacultura-figura + .acuacultura-bloque[open] > summary {
+  margin-bottom: 16px;
+}
 .acuacultura-bloque.acuacultura-desplegable h4 { color: #fff; }
 .acuacultura-bloque ul { margin: 0; padding: 0; }
 .acuacultura-bloque li { margin-bottom: 12px; }
@@ -188,7 +201,6 @@
   .acuacultura-indice { padding: 14px 18px; }
   .acuacultura-indice nav { gap: 8px; }
   .acuacultura-indice a { width: 76px; height: 72px; }
-  .acuacultura-acciones, .acuacultura-acciones .button { width: 100%; }
   .acuacultura-recorrido .button { width: 150px; }
   .acuacultura-visor { padding: 16px; }
   .acuacultura-visor-barra { align-items: flex-start; }

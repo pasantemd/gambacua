@@ -44,9 +44,9 @@ const { capturarWebp } = require('./capturar-webp.cjs');
   const expectedAcuaculturaSubcategories = [
     'KOI',
     'Acopio',
+    'Nexwater',
     'Aqua&Co',
-    'Mixer Pro',
-    'Nexwater'
+    'Mixer Pro'
   ];
   const actualAcuaculturaSubcategories = (await page.locator('#submenu-acuacultura .nav-dropdown-subitem').allTextContents())
     .map(label => label.trim());

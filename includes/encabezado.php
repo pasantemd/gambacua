@@ -14,7 +14,7 @@
     <link rel="apple-touch-icon" href="assets/images/compartidas/favicon.webp">
 
     <!-- Estilos modulares principales -->
-    <link rel="stylesheet" href="assets/css/sitio.css?v=169">
+    <link rel="stylesheet" href="assets/css/sitio.css?v=176">
 
     <!-- Scripts modulares -->
     <script src="assets/js/encabezado.js?v=9" defer></script>

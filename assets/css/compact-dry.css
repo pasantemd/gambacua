@@ -364,37 +364,6 @@
   }
 }
 
-.contact-strip.compact-contact-strip {
-  background: transparent;
-  clip-path: none;
-  box-shadow: none;
-  border: 0;
-  margin-top: 28px;
-  margin-bottom: 60px;
-  padding-block: clamp(38px, 5vw, 54px);
-  padding-inline: clamp(24px, 4vw, 52px);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.compact-contact-strip > div:first-child {
-  display: grid;
-  justify-items: center;
-}
-
-.compact-contact-strip p {
-  max-width: 720px;
-}
-
-.compact-contact-actions {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
 .cd-filter-btn {
   background: #ffffff;
   border: 1px solid var(--line);
